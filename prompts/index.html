@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca de prompts — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Biblioteca consolidada de prompts do treinamento Claude para a liderança da PRIMETOUR. Copie e use direto no claude.ai.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Biblioteca de prompts</div>
+  <a class="btn btn-ghost" href="../index.html">← Início</a>
+</header>
+
+<section class="home-section">
+  <div class="section-tag">Biblioteca consolidada</div>
+  <h1>Todos os prompts, em um só lugar</h1>
+  <hr class="accent-bar">
+  <p class="lead">Esta biblioteca cresce a cada sessão entregue. Clique em <strong>Copiar</strong>, cole no <strong>claude.ai</strong> e adapte os campos entre colchetes ao seu caso.</p>
+
+  <div class="flex gap-s wrap mb-2">
+    <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s1"><strong style="font-family:var(--font-head)">Sessão 1 · Fundamentos</strong><span class="muted"> — 10 prompts de uso direto.</span></a>
+    <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s2"><strong style="font-family:var(--font-head)">Sessão 2 · Comunicação</strong><span class="muted"> — 10 templates de prompt e escrita.</span></a>
+    <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s3"><strong style="font-family:var(--font-head)">Sessão 3 · Projects</strong><span class="muted"> — 10 receitas de Project.</span></a>
+    <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s4"><strong style="font-family:var(--font-head)">Sessão 4 · Casos C-level</strong><span class="muted"> — 10 prompts de caso por cadeira.</span></a>
+    <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s5"><strong style="font-family:var(--font-head)">Sessão 5 · Microsoft</strong><span class="muted"> — 10 prompts para Outlook, OneDrive e Excel.</span></a>
+    <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s6"><strong style="font-family:var(--font-head)">Sessão 6 · Governança</strong><span class="muted"> — 10 ferramentas de LGPD e política.</span></a>
+    <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s7"><strong style="font-family:var(--font-head)">Sessão 7 · Adoção</strong><span class="muted"> — 10 ferramentas de plano e hábito.</span></a>
+  </div>
+  <h2 id="s1" style="scroll-margin-top:80px">Sessão 1 · Fundamentos</h2>
+
+  <!-- Legenda de categorias -->
+  <div class="grid grid-4 mb-2" style="gap:.7rem">
+    <div class="card card-soft side-blue" style="padding:.8rem 1rem"><strong class="t-blue" style="font-family:var(--font-head)">Análise</strong><div class="ft-desc">Ler, comparar ou extrair sentido.</div></div>
+    <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Comunicação</strong><div class="ft-desc">Mensagem para alguém.</div></div>
+    <div class="card card-soft side-green" style="padding:.8rem 1rem"><strong class="t-green" style="font-family:var(--font-head)">Preparação</strong><div class="ft-desc">Reunião, decisão ou conversa.</div></div>
+    <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Decisão</strong><div class="ft-desc">Testar uma escolha.</div></div>
+  </div>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Análise · S1</span>
+    <h3>01 — Síntese executiva de documento longo</h3>
+    <p class="when"><strong>Quando usar:</strong> Você recebeu um relatório, white paper ou apresentação extensa e precisa entender o essencial em poucos minutos, sem perder profundidade.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q01', this)">Copiar</button><pre id="q01">Anexei um documento. Atue como analista sênior preparando um briefing para o board.
+
+Devolva:
+1. Síntese executiva em 5 linhas
+2. Três pontos de atenção que mereceriam aprofundamento
+3. Duas oportunidades implícitas que o documento não nomeia explicitamente
+4. Uma pergunta que eu deveria fazer ao autor
+
+Tom: direto, sem rodeios, sem repetir o óbvio do documento.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Funciona melhor com PDFs de até 100 páginas. Para arquivos maiores, divida. Troque “briefing para o board” por “briefing para discussão com [área]” se quiser foco específico.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Análise · S1</span>
+    <h3>02 — Leitura crítica de um briefing recebido</h3>
+    <p class="when"><strong>Quando usar:</strong> Um parceiro, agência ou área interna te mandou um briefing e você precisa avaliar a qualidade antes de aprovar, responder ou repassar.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q02', this)">Copiar</button><pre id="q02">Anexei um briefing recebido. Faça uma leitura crítica em três camadas:
+
+1. O QUE ESTÁ CLARO: pontos bem definidos e acionáveis
+2. O QUE ESTÁ AMBÍGUO: trechos que admitem mais de uma interpretação
+3. O QUE ESTÁ AUSENTE: informações que faltam para execução segura
+
+Para cada camada, seja específico (cite trechos). Ao final, sugira 3 perguntas que eu deveria devolver para qualificar o briefing.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Excelente também para briefings que você mesmo redigiu. Antes de enviar, peça que o Claude leia como se fosse o destinatário.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Análise · S1</span>
+    <h3>03 — Comparativo neutro entre duas opções</h3>
+    <p class="when"><strong>Quando usar:</strong> Você está pendendo para um lado de uma decisão e quer um comparativo honesto, sem ser influenciado pelo seu viés inicial.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q03', this)">Copiar</button><pre id="q03">Quero comparar duas opções para uma decisão. NÃO me dê sua recomendação.
+
+OPÇÃO A: [descreva em um parágrafo]
+OPÇÃO B: [descreva em um parágrafo]
+CRITÉRIOS QUE IMPORTAM PARA MIM: [liste 3 a 5]
+
+Devolva:
+- Tabela comparativa por critério
+- O argumento mais forte de cada opção
+- O risco mais sério de cada opção
+- Uma pergunta que, se eu responder, vai destravar a decisão
+
+Mantenha estrita neutralidade. Se uma das opções for objetivamente fraca em algum critério, diga.</pre></div>
+    <p class="tip"><strong>Dica:</strong> A instrução explícita de não recomendar é o que faz funcionar. Sem ela, o Claude tende a inferir sua preferência pelo tom da pergunta.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Comunicação · S1</span>
+    <h3>04 — Comunicado interno de mudança</h3>
+    <p class="when"><strong>Quando usar:</strong> Você precisa anunciar à equipe uma mudança organizacional, de processo ou de direção. Tom precisa ser firme, claro e humano.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q04', this)">Copiar</button><pre id="q04">Preciso redigir um comunicado interno para a equipe da PRIMETOUR.
+
+CONTEXTO: [descreva a mudança em 2 a 3 frases]
+PÚBLICO: [quem recebe — área toda, liderança, time específico]
+SENTIMENTO QUE QUERO GERAR: [confiança / urgência / acolhimento / clareza]
+O QUE NÃO QUERO: tom de release de imprensa, jargão corporativo, falsa empolgação
+
+Estruture em:
+1. Frase de abertura (que entrega a informação principal)
+2. Por quê (contexto suficiente, sem narrar demais)
+3. O que muda na prática (lista curta e concreta)
+4. O que esperamos de cada um a partir de agora
+5. Como esclarecer dúvidas
+
+Comprimento: máximo 250 palavras.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Sempre peça versões em comprimentos diferentes. Após a primeira, peça também uma versão de 80 palavras para o canal informal (WhatsApp do time).</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Comunicação · S1</span>
+    <h3>05 — E-mail difícil para parceiro</h3>
+    <p class="when"><strong>Quando usar:</strong> Você precisa comunicar algo desconfortável a um parceiro estratégico (atraso, mudança de termos, recusa, reclamação) sem queimar a relação.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q05', this)">Copiar</button><pre id="q05">Preciso escrever um e-mail difícil para um parceiro estratégico.
+
+SITUAÇÃO: [descreva em 2 a 3 frases o que aconteceu e por que esta mensagem é necessária]
+RELAÇÃO ATUAL: [há quanto tempo somos parceiros, peso comercial, histórico recente]
+RESULTADO QUE QUERO: [o que essa pessoa deve sentir e fazer ao terminar de ler]
+O QUE NÃO POSSO: [restrições, palavras a evitar, posições inegociáveis]
+
+Devolva 3 versões em tons diferentes:
+A — Direta e profissional (assume responsabilidade, vai ao ponto)
+B — Diplomática (preserva relação, abre janela de negociação)
+C — Firme (estabelece limite, sem agredir)
+
+Para cada versão, em uma linha: quando faz mais sentido usar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> As três versões te dão repertório. Geralmente a melhor resposta é uma combinação: abertura de B, corpo de A, fechamento de C.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Preparação · S1</span>
+    <h3>06 — Preparação de reunião com interlocutor novo</h3>
+    <p class="when"><strong>Quando usar:</strong> Você vai conversar com alguém pela primeira vez (cliente, parceiro, candidato, jornalista) e quer chegar preparado, não improvisando.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q06', this)">Copiar</button><pre id="q06">Vou ter uma reunião amanhã com uma pessoa que não conheço bem.
+
+QUEM É: [nome, cargo, empresa, contexto]
+OBJETIVO DA REUNIÃO: [o que quero sair de lá tendo conseguido]
+O QUE EU JÁ SEI: [resumo do que tenho de contexto]
+
+Me ajude a preparar:
+1. Cinco pontos de provável interesse dessa pessoa (o que importa para ela)
+2. Três perguntas inteligentes que demonstrem que eu fiz a lição de casa
+3. Duas objeções prováveis ao que eu vou propor — e resposta curta para cada
+4. Um gancho de abertura (não 'como vai', algo específico)
+5. Sinal de que a conversa foi bem (o que ouvir ou ver)</pre></div>
+    <p class="tip"><strong>Dica:</strong> Combine com pesquisa na web ativada se for figura pública. Para conhecidos, cole trechos de e-mails recentes (sem dados sensíveis) para dar contexto real.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Preparação · S1</span>
+    <h3>07 — Antecipação de 5 objeções</h3>
+    <p class="when"><strong>Quando usar:</strong> Você vai apresentar uma proposta, ideia ou decisão a um grupo e quer chegar pronto para as resistências reais — não para as confortáveis.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q07', this)">Copiar</button><pre id="q07">Vou apresentar a seguinte proposta:
+[descreva a proposta em 1 ou 2 parágrafos. Inclua: o que é, por que faz sentido, o que muda]
+
+PÚBLICO: [quem está na sala, posições prováveis]
+
+Atue como advogado do diabo experiente. Me dê:
+- As 5 objeções mais sérias que vou ouvir (não as fáceis)
+- Para cada uma: o argumento real por trás dela (o que essa pessoa de fato está sentindo)
+- Para cada uma: resposta em até 3 frases — que reconhece o ponto e segue avançando
+
+Não amoleça. Se há um furo de verdade na proposta, aponte.</pre></div>
+    <p class="tip"><strong>Dica:</strong> A instrução “não amoleça” é fundamental. O Claude tende a oferecer objeções de baixa fricção se você não pedir o contrário.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Preparação · S1</span>
+    <h3>08 — Crítica afiada do meu próprio texto</h3>
+    <p class="when"><strong>Quando usar:</strong> Você escreveu algo importante — discurso, ensaio, e-mail, comunicado — e quer feedback honesto antes de enviar, em vez de validação.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q08', this)">Copiar</button><pre id="q08">Vou colar um texto que escrevi. NÃO me elogie. Sua tarefa é ser o editor mais exigente que esse texto vai encontrar.
+
+[cole o texto]
+
+PROPÓSITO DO TEXTO: [para quem é, o que precisa fazer]
+
+Devolva:
+1. O ponto mais fraco do texto (1 linha)
+2. Três trechos específicos que pioram a leitura — cite e diga por quê
+3. Duas frases que poderiam ser cortadas sem perda
+4. Uma sugestão de reordenamento se fizer sentido
+5. Uma frase de abertura alternativa, mais forte que a atual
+
+Não reescreva o texto inteiro. Aponte cirurgicamente.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Funciona melhor com textos entre 200 e 1.000 palavras. Para textos maiores, peça a crítica seção por seção.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">Decisão · S1</span>
+    <h3>09 — Brainstorm com 10 ângulos contrastantes</h3>
+    <p class="when"><strong>Quando usar:</strong> Você precisa de quantidade e variedade — para campanha, nome de produto, abordagem de cliente — e sente que sua lista atual é repetitiva.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q09', this)">Copiar</button><pre id="q09">Preciso de 10 ângulos genuinamente diferentes para o seguinte desafio:
+
+DESAFIO: [descreva em 2 a 3 frases]
+CONTEXTO: [restrições, público, o que já foi tentado]
+
+Cada um dos 10 ângulos deve:
+- Partir de uma premissa diferente dos outros
+- Ser nomeado em até 4 palavras
+- Vir acompanhado de uma frase explicativa
+- Incluir um exemplo concreto de como ficaria na prática
+
+Importante: NÃO me dê variações do mesmo ângulo com outras palavras. Quero ângulos que possam, eles próprios, ser opções contrastantes para uma escolha estratégica.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Depois dos 10, peça: “Quais dois são os mais arriscados e interessantes? E quais dois os mais seguros e menos interessantes?” Isso te dá um mapa de risco.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">Decisão · S1</span>
+    <h3>10 — Tradução de tom: técnico para humano</h3>
+    <p class="when"><strong>Quando usar:</strong> Você tem um texto técnico (jurídico, financeiro, operacional) que precisa ser entendido por quem não é da área — sem infantilizar nem perder precisão.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q10', this)">Copiar</button><pre id="q10">Vou colar um texto técnico. Preciso de uma versão acessível para o seguinte público:
+
+PÚBLICO: [descreva: cargo, nível de familiaridade com o tema, contexto em que vão ler]
+ONDE VAI APARECER: [e-mail, slide, comunicado, conversa]
+
+Regras:
+- Não usar jargão sem traduzir
+- Não simplificar ao ponto de perder precisão técnica
+- Substituir abreviações por nomes completos na primeira menção
+- Trocar voz passiva por ativa onde possível
+- Quebrar frases longas (acima de 25 palavras) em duas
+
+[cole o texto]
+
+Devolva: versão acessível + uma lista de 3 termos técnicos que você manteve por serem inevitáveis (e por quê).</pre></div>
+    <p class="tip"><strong>Dica:</strong> Ótimo para comunicar decisões financeiras a áreas não-financeiras, ou explicar termos jurídicos de contrato em comunicados internos.</p>
+  </article>
+
+  <h2 id="s2" style="scroll-margin-top:80px;margin-top:3rem">Sessão 2 · Comunicação eficaz</h2>
+  <hr class="accent-bar">
+  <p class="lead">Templates de construção de prompt e comunicação. Preencha os campos entre colchetes.</p>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Construção · S2</span>
+    <h3>11 — Template universal dos 4 elementos</h3>
+    <p class="when"><strong>Quando usar:</strong> Como esqueleto de qualquer pedido sério. Preencha as quatro lacunas e você tem um prompt completo.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q11', this)">Copiar</button><pre id="q11">Você é [PAPEL: o especialista ideal para esta tarefa].
+
+Contexto: [SITUAÇÃO, PÚBLICO, HISTÓRICO E O QUE ESTÁ EM JOGO].
+(Anexe os arquivos relevantes em vez de descrevê-los.)
+
+Tarefa: [UM VERBO CLARO + O OBJETO. Ex.: "reescreva este e-mail", "compare estas duas propostas"].
+
+Formato: [TAMANHO, ESTRUTURA E TOM. Ex.: "máximo 150 palavras, tom executivo, em 3 parágrafos"].
+
+Restrições: [O QUE EVITAR. Ex.: "sem jargão, sem floreio, não repita o óbvio"].</pre></div>
+    <p class="tip"><strong>Dica:</strong> Salve como seu template-mãe. Com o tempo você preenche as lacunas quase sem pensar — e o prompt vira hábito.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Construção · S2</span>
+    <h3>12 — Construtor: o Claude escreve seu prompt</h3>
+    <p class="when"><strong>Quando usar:</strong> Você sabe o resultado que quer, mas não sabe como pedir. Deixe o Claude montar o prompt.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q12', this)">Copiar</button><pre id="q12">Quero obter o seguinte resultado de você, mas não tenho certeza de como pedir da melhor forma:
+
+RESULTADO QUE QUERO: [descreva em 2 a 3 frases]
+CONTEXTO QUE TENHO: [o que sei, o que posso anexar]
+
+Antes de responder, escreva o prompt ideal que EU deveria ter te enviado — com papel, contexto, tarefa e formato bem definidos. Depois me pergunte se quero ajustar algo antes de você executar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Compare o prompt que ele sugeriu com o que você teria escrito — a diferença ensina mais que qualquer manual.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Construção · S2</span>
+    <h3>13 — Diagnóstico de um prompt fraco</h3>
+    <p class="when"><strong>Quando usar:</strong> Um prompt seu vem rendendo respostas medianas e você não sabe por quê.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q13', this)">Copiar</button><pre id="q13">Vou colar um prompt que tenho usado e que não rende o que eu queria. Diagnostique-o pela anatomia dos 4 elementos:
+
+[cole seu prompt]
+
+Para cada elemento — Papel, Contexto, Tarefa, Formato — diga: está presente? Está claro? O que falta?
+Ao final, reescreva o prompt corrigido e explique em uma linha o que mudou de mais impactante.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Use nos templates que você salvou. Um prompt revisado uma vez economiza dezenas de iterações depois.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Few-shot · S2</span>
+    <h3>14 — Ensinar pelo exemplo (few-shot)</h3>
+    <p class="when"><strong>Quando usar:</strong> Há um formato ou estilo específico que é mais fácil mostrar do que descrever.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q14', this)">Copiar</button><pre id="q14">Quero que você produza [TIPO DE TEXTO] seguindo exatamente o estilo e a estrutura dos exemplos abaixo.
+
+EXEMPLO 1:
+[cole um exemplo bom]
+
+EXEMPLO 2:
+[cole outro, se tiver]
+
+Agora produza um novo, para o seguinte caso:
+[descreva o caso novo]
+
+Mantenha o mesmo tom, ritmo e formato dos exemplos. Não explique o que fez — apenas entregue.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Dois exemplos já fazem milagre. É o jeito mais confiável de capturar “o jeito da casa” de escrever.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Comunicação · S2</span>
+    <h3>15 — Fixar tom de voz da marca</h3>
+    <p class="when"><strong>Quando usar:</strong> Você quer que todo texto saia na voz editorial da PRIMETOUR, sem reexplicar o estilo toda vez. Encoda as regras do Manual de Redação.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q15', this)">Copiar</button><pre id="q15">A partir de agora, escreva tudo nesta conversa na voz editorial da PRIMETOUR. Aplique estas regras sem que eu precise repetir.
+
+NOME DA MARCA: sempre PRIMETOUR, em caixa alta. Nunca "Primetour" nem "PrimeTour".
+
+MOOD: luxo que não grita — elegância contida, quiet luxury, low profile. Exclusividade é discrição e refinamento, jamais ostentação.
+
+TOM: curadoria que conversa com um viajante exigente. Direto, íntimo e convidativo. Autoridade leve — seguro, mas caloroso. Venda o "como" (a experiência, o ritual, o acesso), não só o "onde".
+
+ESCRITA:
+- Traduza abstrações em cenas sensoriais (luz, som, textura, silêncio) e em microdetalhes de serviço.
+- Adjetivação controlada e precisa, sem exagero.
+- Alterne frases curtas de impacto com períodos longos de imersão.
+- Luxo é tempo, silêncio, cuidado e acesso — não preço.
+
+REGRAS DURAS:
+- "para", nunca "pra". "traslado", nunca "transfer".
+- Sem diminutivos.
+- Termos proibidos: luxuoso, refúgio, escapada, paraíso, idílico, de tirar o fôlego, explorar, desbravar, instagramável, de alto nível, águas cristalinas.
+
+Confirme em uma frase que entendeu a voz. Depois, aplique a tudo que eu pedir.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Baseado no Manual de Redação PRIMETOUR (jan/2026). Na Sessão 3 este bloco vira instrução fixa de um Project — e passa a valer em todas as conversas.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">Comunicação · S2</span>
+    <h3>16 — Três versões em graus diferentes</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma mensagem delicada em que você quer escolher o grau certo de firmeza ou formalidade.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q16', this)">Copiar</button><pre id="q16">Preciso de [TIPO DE MENSAGEM] sobre [ASSUNTO], para [PÚBLICO].
+
+Contexto: [o que está em jogo, histórico]
+
+Me dê 3 versões variando em [DIMENSÃO: ex. firmeza / formalidade / calor]:
+A — [extremo 1, ex. mais suave]
+B — [meio-termo]
+C — [extremo 2, ex. mais firme]
+
+Para cada versão, uma linha dizendo em que situação ela é a escolha certa. Mesmo tamanho nas três.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Quase sempre a melhor mensagem é uma combinação: abertura de uma, corpo de outra. Peça para fundir depois de escolher.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Comunicação · S2</span>
+    <h3>17 — Responder e-mail no meu tom</h3>
+    <p class="when"><strong>Quando usar:</strong> Chegou um e-mail e você quer uma resposta pronta que soe como você — não como um robô educado.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q17', this)">Copiar</button><pre id="q17">Vou colar um e-mail que recebi. Escreva minha resposta.
+
+E-MAIL RECEBIDO:
+[cole o e-mail]
+
+O QUE QUERO RESPONDER (em tópicos soltos): [seus pontos, mesmo desorganizados]
+RELAÇÃO COM A PESSOA: [formal / próxima / nova]
+RESULTADO QUE QUERO: [o que essa pessoa deve fazer ao terminar de ler]
+
+Escreva em tom [seu tom]. Máximo [N] palavras. Se faltar alguma informação para responder bem, pergunte antes de escrever.</pre></div>
+    <p class="tip"><strong>Dica:</strong> O “pergunte antes de escrever” evita que ele invente um detalhe que você não deu. Vale para qualquer tarefa com lacunas.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Análise · S2</span>
+    <h3>18 — Resumo em três níveis</h3>
+    <p class="when"><strong>Quando usar:</strong> Um mesmo conteúdo que precisa servir a públicos diferentes — manchete, parágrafo e página.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q18', this)">Copiar</button><pre id="q18">Anexei/colei um conteúdo. Resuma-o em três níveis, do mais curto ao mais completo:
+
+NÍVEL 1 — Uma frase: o essencial que cabe num título ou numa mensagem de WhatsApp.
+NÍVEL 2 — Um parágrafo: para quem decide se vai ou não ler o todo.
+NÍVEL 3 — Uma página: síntese executiva com pontos de atenção e próximos passos.
+
+Tom executivo, sem repetir as mesmas palavras entre os níveis.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Você escolhe o nível certo na hora de comunicar — manchete para o grupo, parágrafo para o par, página para o board.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Comunicação · S2</span>
+    <h3>19 — Bullets ↔ texto corrido</h3>
+    <p class="when"><strong>Quando usar:</strong> Você tem tópicos soltos e precisa de um texto fluido — ou um texto longo que precisa virar tópicos.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q19', this)">Copiar</button><pre id="q19">Vou colar um conteúdo. Quero a conversão abaixo:
+
+[escolha uma direção]
+→ DE bullets PARA texto corrido: transforme estes tópicos em [N] parágrafos fluidos, com transições naturais, tom [tom], mantendo todas as informações.
+→ DE texto PARA bullets: extraia os pontos-chave em no máximo [N] bullets, cada um com até 12 palavras, ordenados por importância.
+
+[cole o conteúdo]
+
+Não invente informação que não esteja no original.</pre></div>
+    <p class="tip"><strong>Dica:</strong> A restrição final (“não invente”) mantém a conversão fiel. Sem ela, ele às vezes “melhora” com dados que você não deu.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Preparação · S2</span>
+    <h3>20 — Checklist de revisão antes de enviar</h3>
+    <p class="when"><strong>Quando usar:</strong> Antes de mandar algo importante, para um par de olhos exigente que pega o que você não vê mais.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q20', this)">Copiar</button><pre id="q20">Vou colar uma mensagem que estou prestes a enviar. Antes de eu mandar, revise como um editor exigente e cético.
+
+[cole a mensagem]
+
+DESTINATÁRIO: [quem é]
+OBJETIVO: [o que preciso que aconteça]
+
+Devolva:
+1. Algo que pode ser mal interpretado — e como
+2. Uma frase que enfraquece a mensagem (e pode sair)
+3. O que falta para o destinatário agir sem precisar perguntar nada
+4. Veredicto em uma linha: enviar como está, ou ajustar antes?
+
+Não reescreva tudo. Aponte o que importa.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Combine com o template 16 quando o veredicto for “ajustar”: peça as 3 versões e escolha o grau certo.</p>
+  </article>
+
+  <h2 id="s3" style="scroll-margin-top:80px;margin-top:3rem">Sessão 3 · Projects</h2>
+  <hr class="accent-bar">
+  <p class="lead">Receitas de Project: cole no campo de <strong>instruções</strong> do Project (ou na conversa, quando indicado).</p>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Instruções · S3</span>
+    <h3>21 — Instruções base de um Project</h3>
+    <p class="when"><strong>Quando usar:</strong> O esqueleto de qualquer Project. Cole no campo de instruções e preencha.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q21', this)">Copiar</button><pre id="q21">PAPEL: Você é [o especialista ideal para este contexto, ex.: redator sênior da PRIMETOUR].
+
+CONTEXTO PERMANENTE: [o que é sempre verdade aqui — cliente, tema, objetivo recorrente].
+
+COMO RESPONDER:
+- Tom: [a voz desejada].
+- Formato padrão: [como gosto de receber — ex.: direto, em tópicos, máximo 1 página].
+- Sempre considere: [regras fixas deste contexto].
+
+NUNCA: [o que evitar sempre].
+
+Quando faltar uma informação para responder bem, pergunte antes de assumir.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Mantenha enxuto. Instrução é para o que é estável; o que muda a cada caso vai na mensagem da conversa.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Instruções · S3</span>
+    <h3>22 — Project “Comunicação PRIMETOUR”</h3>
+    <p class="when"><strong>Quando usar:</strong> Um Project para todo texto da marca sair na voz certa. Some o Manual de Redação como conhecimento.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q22', this)">Copiar</button><pre id="q22">PAPEL: Você é redator sênior da PRIMETOUR e conhece o Manual de Redação anexado.
+
+VOZ: luxo que não grita — elegância contida, quiet luxury. Curadoria que conversa com um viajante exigente. Autoridade leve. Venda a experiência (o "como"), não só o destino.
+
+REGRAS DURAS:
+- A marca é sempre PRIMETOUR, em caixa alta.
+- "para", nunca "pra". "traslado", nunca "transfer". Sem diminutivos.
+- Termos proibidos: luxuoso, refúgio, escapada, paraíso, idílico, de tirar o fôlego, explorar, desbravar, instagramável.
+
+FORMATO: traduza abstrações em cenas sensoriais; adjetivação controlada; alterne frases curtas de impacto com períodos de imersão.
+
+Antes de finalizar qualquer texto, revise-o contra estas regras.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Anexe o arquivo do Manual de Redação ao conhecimento do Project. Assim o Claude consulta a fonte, não só o resumo acima.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Instruções · S3</span>
+    <h3>23 — Project “Cliente VIP [Nome]”</h3>
+    <p class="when"><strong>Quando usar:</strong> Um cliente de alto valor recorrente. Cada conversa já conhece a relação.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q23', this)">Copiar</button><pre id="q23">PAPEL: Você é o gerente de relacionamento dedicado ao cliente [Nome/codinome].
+
+QUEM É O CLIENTE: [perfil, há quanto tempo viaja conosco, peso, estilo de viagem].
+PREFERÊNCIAS: [destinos, ritmo, hospedagem, restrições, o que valoriza].
+HISTÓRICO RELEVANTE: [viagens recentes, elogios, atritos a evitar].
+
+COMO RESPONDER:
+- Tom: caloroso, atencioso, à altura de um cliente exigente.
+- Sempre proteja a relação de longo prazo.
+- Antecipe o próximo passo: o que oferecer, o que confirmar.
+
+NUNCA exponha dado pessoal sensível em textos que saem para fora.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Use codinome em vez do nome real enquanto a política de dados (Sessão 6) não estiver fechada. O contexto funciona igual.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Instruções · S3</span>
+    <h3>24 — Project “Propostas &amp; Fornecedores”</h3>
+    <p class="when"><strong>Quando usar:</strong> Analisar propostas, contratos e atas com a mesma régua, sempre.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q24', this)">Copiar</button><pre id="q24">PAPEL: Você é analista sênior de contratos e propostas da PRIMETOUR.
+
+CONTEXTO: avalio propostas de fornecedores de hospedagem, traslados e experiências. Tenho um contrato-modelo e uma tabela de referência anexados.
+
+AO ANALISAR QUALQUER PROPOSTA, SEMPRE DEVOLVA:
+1. Resumo em 5 linhas
+2. As 3 cláusulas ou pontos de maior risco para nós
+3. Comparação com nosso padrão de referência (o que foge)
+4. Uma pergunta a devolver ao fornecedor antes de fechar
+
+Tom direto, sem rodeios. Aponte o risco mesmo quando a proposta parecer boa.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Anexe o contrato-modelo e a tabela ao conhecimento. Aí cada nova proposta é comparada com o padrão automaticamente.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Instruções · S3</span>
+    <h3>25 — Project “Board &amp; Reuniões”</h3>
+    <p class="when"><strong>Quando usar:</strong> Preparar reuniões de board e encontros decisivos com contexto recorrente.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q25', this)">Copiar</button><pre id="q25">PAPEL: Você é meu chefe de gabinete, preparando reuniões decisivas.
+
+CONTEXTO: participo do board da PRIMETOUR. As pautas recorrentes envolvem [temas]. O conselho costuma pesar [critérios].
+
+AO PREPARAR QUALQUER REUNIÃO, ME ENTREGUE:
+1. Síntese do que está em jogo (5 linhas)
+2. As 3 perguntas que o conselho fará primeiro
+3. Duas objeções prováveis e resposta curta para cada
+4. Um único ponto que eu não posso esquecer de dizer
+
+Tom executivo. Antecipe o difícil, não o confortável.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Combine com o prompt 07 (antecipação de objeções) dentro deste Project para preparar reuniões específicas.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Montagem · S3</span>
+    <h3>26 — O Claude escreve as instruções do seu Project</h3>
+    <p class="when"><strong>Quando usar:</strong> Você sabe o contexto, mas não sabe como redigir as instruções. Use numa conversa avulsa.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q26', this)">Copiar</button><pre id="q26">Quero criar um Project no Claude para o seguinte contexto recorrente:
+
+CONTEXTO: [descreva: cliente, tema ou rotina; o que se repete]
+O QUE EU SEMPRE PRECISO: [tipo de entregável, tom, regras]
+ARQUIVOS QUE TENHO PARA ANEXAR: [liste]
+
+Escreva as instruções ideais para esse Project — papel, contexto permanente, como responder e o que evitar. Deixe enxuto e pronto para colar. Ao final, sugira que arquivos vale anexar como conhecimento.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Compare o que ele escreveu com o template 21. Ajuste e cole no campo de instruções do Project.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Montagem · S3</span>
+    <h3>27 — Checklist do que anexar como conhecimento</h3>
+    <p class="when"><strong>Quando usar:</strong> Na dúvida sobre quais arquivos colocar no conhecimento do Project.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q27', this)">Copiar</button><pre id="q27">Vou montar um Project sobre [contexto]. Tenho estes arquivos candidatos a conhecimento:
+
+[liste os arquivos, um por linha]
+
+Para cada um, diga:
+- Vale anexar como conhecimento permanente, ou é melhor usar só na conversa quando precisar? (e por quê)
+- Há algum que contém dado sensível e deveria ficar de fora por ora?
+
+Ao final, liste o que falta — algum arquivo de referência que um Project assim deveria ter e eu não listei.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Conhecimento é curadoria. O arquivo que você usa uma vez vai na conversa; o que consulta sempre vai no Project.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Manutenção · S3</span>
+    <h3>28 — Auditar e melhorar um Project</h3>
+    <p class="when"><strong>Quando usar:</strong> Um Project não está rendendo o esperado e você quer saber por quê.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q28', this)">Copiar</button><pre id="q28">Vou colar as instruções atuais de um Project meu. Audite-as.
+
+[cole as instruções do Project]
+
+O QUE EU ESPERAVA DELE: [descreva]
+ONDE ELE FALHA HOJE: [descreva, se souber]
+
+Diga:
+1. O que nas instruções está vago, conflitante ou faltando
+2. O que está sobrando (instrução que não muda nada na prática)
+3. Uma versão reescrita, mais enxuta e clara
+4. Se o problema parece ser de instrução ou de arquivo de conhecimento</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode esta auditoria de tempos em tempos. Projects acumulam instruções zumbis com o uso.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Manutenção · S3</span>
+    <h3>29 — Manutenção mensal do Project</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma revisão rápida e periódica para o Project não envelhecer.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q29', this)">Copiar</button><pre id="q29">Vou colar as instruções e a lista de arquivos de conhecimento de um Project meu. Faça uma revisão de manutenção.
+
+INSTRUÇÕES ATUAIS:
+[cole]
+
+ARQUIVOS DE CONHECIMENTO:
+[liste, com a data aproximada de cada]
+
+Me ajude a decidir:
+1. Alguma instrução ficou desatualizada e precisa mudar?
+2. Algum arquivo virou versão antiga e deveria ser substituído?
+3. Há algo que eu venho colando nas conversas e que deveria virar instrução fixa?</pre></div>
+    <p class="tip"><strong>Dica:</strong> Marque um lembrete mensal. Cinco minutos de manutenção evitam um Project que responde com base em informação velha.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">Decisão · S3</span>
+    <h3>30 — Vale criar um Project para isto?</h3>
+    <p class="when"><strong>Quando usar:</strong> Você está na dúvida entre abrir um Project ou só uma conversa avulsa.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q30', this)">Copiar</button><pre id="q30">Estou decidindo se crio um Project para a seguinte situação:
+
+SITUAÇÃO: [descreva o que você precisa fazer com o Claude]
+FREQUÊNCIA: [é uma vez só, ou volta? com que regularidade?]
+CONTEXTO ENVOLVIDO: [tom, arquivos, briefing que se repetiria]
+
+Me diga, de forma direta:
+- Isto justifica um Project, ou uma conversa avulsa resolve melhor? Por quê.
+- Se justifica, como eu nomearia e estruturaria (por cliente, tema ou cadeira)?
+- Se não justifica agora, o que precisaria mudar para passar a justificar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Na dúvida, comece com uma conversa avulsa. Quando perceber que está repetindo o contexto, promova para Project.</p>
+  </article>
+
+  <h2 id="s4" style="scroll-margin-top:80px;margin-top:3rem">Sessão 4 · Casos C-level</h2>
+  <hr class="accent-bar">
+  <p class="lead">Fluxos avançados por cadeira. Use dentro do Project indicado; preencha os campos entre colchetes.</p>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">CEO · S4</span>
+    <h3>31 — Memo de decisão para o conselho</h3>
+    <p class="when"><strong>Quando usar:</strong> Levar uma decisão densa ao board em uma página clara e defensável.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q31', this)">Copiar</button><pre id="q31">Atue como meu chefe de gabinete. Vou te dar o contexto de uma decisão; quero um memo de uma página para o conselho.
+
+DECISÃO EM JOGO: [descreva]
+CONTEXTO E DADOS: [anexe ou cole; inclua os números]
+PRAZO DA DECISÃO: [quando]
+
+Estruture o memo em:
+1. O que está em jogo (3 linhas)
+2. As opções, com o argumento mais forte de cada
+3. Riscos materiais de cada opção
+4. Sua recomendação, em uma frase
+5. A pergunta que o conselho fará primeiro — e a resposta curta
+
+Tom executivo. Não invente número: use só o que eu forneci.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode no Project “Board &amp; Reuniões”. Os números entram de fonte sua; o Claude estrutura, não inventa.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">CEO · S4</span>
+    <h3>32 — Pré-mortem de uma decisão</h3>
+    <p class="when"><strong>Quando usar:</strong> Antes de bater o martelo, para enxergar o fracasso antes que ele aconteça.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q32', this)">Copiar</button><pre id="q32">Vamos fazer um pré-mortem da seguinte decisão:
+[descreva a decisão e o que se espera dela]
+
+Imagine que estamos 18 meses no futuro e esta decisão fracassou de forma clara.
+
+Devolva:
+1. Os 5 motivos mais prováveis do fracasso, do mais ao menos provável
+2. Para cada um: o primeiro sinal de alerta que apareceria
+3. Uma ação preventiva concreta para os 3 riscos mais sérios
+4. A pergunta que, se eu responder honestamente agora, mais reduz a chance de erro
+
+Seja duro. Se a decisão tem um furo estrutural, aponte sem suavizar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Combine com o prompt 31: pré-mortem primeiro, depois o memo já incorporando as ações preventivas.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">COO · S4</span>
+    <h3>33 — Proposta contra a régua da casa</h3>
+    <p class="when"><strong>Quando usar:</strong> Avaliar uma proposta de fornecedor com o mesmo critério, sempre.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q33', this)">Copiar</button><pre id="q33">Anexei uma proposta de fornecedor e o nosso contrato-modelo de referência.
+
+Atue como analista sênior de contratos da PRIMETOUR. Devolva:
+1. Resumo da proposta em 5 linhas
+2. As 3 cláusulas ou condições de maior risco para nós
+3. Onde a proposta foge do nosso padrão de referência (item a item)
+4. As 3 perguntas que eu devo devolver ao fornecedor antes de fechar
+
+Tom direto. Aponte o risco mesmo quando a proposta parecer boa. Não assuma nada que não esteja escrito.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode no Project “Propostas &amp; Fornecedores”, com o contrato-modelo no conhecimento.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">COO · S4</span>
+    <h3>34 — Plano de 8 semanas a partir de um problema</h3>
+    <p class="when"><strong>Quando usar:</strong> Um gargalo operacional precisa virar plano com responsáveis e indicadores.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q34', this)">Copiar</button><pre id="q34">Tenho o seguinte problema operacional para resolver:
+[descreva o gargalo, o impacto e as restrições]
+
+RECURSOS DISPONÍVEIS: [time, orçamento, prazos]
+
+Monte um plano de 8 semanas:
+- Para cada semana: o marco a entregar e o responsável-tipo (papel, não nome)
+- O indicador único a observar em cada marco
+- Os 2 riscos que mais ameaçam o plano, com mitigação
+- Um sinal claro de que devemos mudar de rota
+
+Seja concreto e realista. Nada de marco vago como "alinhar com o time".</pre></div>
+    <p class="tip"><strong>Dica:</strong> Peça depois “transforme em tabela de uma página” para levar à reunião de operação.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">CMO · S4</span>
+    <h3>35 — Brief de campanha na voz da casa</h3>
+    <p class="when"><strong>Quando usar:</strong> Fechar um briefing para agência que a equipe criativa não precise devolver com dúvidas.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q35', this)">Copiar</button><pre id="q35">Vamos construir um brief de campanha para a agência.
+
+CAMPANHA: [tema, período, objetivo de negócio]
+PÚBLICO: [quem queremos atingir]
+O QUE NÃO PODE FALTAR: [mensagens, restrições, datas]
+
+Estruture o brief em:
+1. Contexto e objetivo (por que esta campanha, agora)
+2. Público e o que ele valoriza
+3. Mensagem central (uma frase)
+4. Tom e referências (na voz da PRIMETOUR)
+5. Entregáveis e prazos
+6. O que evitar
+
+Ao final, revise o brief contra o Manual de Redação: algum termo proibido ou algo fora da voz?</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode no Project “Comunicação PRIMETOUR”, com o Manual no conhecimento — o tom sai certo de primeira.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">CMO · S4</span>
+    <h3>36 — Resposta a ruído de reputação</h3>
+    <p class="when"><strong>Quando usar:</strong> Surgiu um comentário público ou pedido de imprensa que precisa de resposta ponderada e rápida.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q36', this)">Copiar</button><pre id="q36">Surgiu a seguinte situação de reputação que precisa de resposta:
+[descreva o que aconteceu, onde, e o que já se sabe]
+
+NOSSA POSIÇÃO REAL: [fatos do nosso lado, sem fabricar]
+RESULTADO QUE QUERO: [acalmar / esclarecer / reposicionar]
+
+Me dê 3 rascunhos de resposta em tons diferentes:
+A — Sóbrio e factual
+B — Caloroso e humano
+C — Firme, marcando posição
+
+Para cada um: em uma linha, quando é a escolha certa. Nada de promessa que não possamos cumprir, nada de tom defensivo.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Resposta de reputação é sensível: o rascunho é do Claude, a aprovação final é humana — e, em crise séria, jurídica.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">CCO · S4</span>
+    <h3>37 — Recuperação de cliente VIP</h3>
+    <p class="when"><strong>Quando usar:</strong> Um cliente de alto valor ficou insatisfeito e a relação precisa ser reconquistada.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q37', this)">Copiar</button><pre id="q37">Um cliente VIP teve um problema e preciso responder de forma a recuperar a relação.
+
+O QUE ACONTECEU: [descreva; de quem foi a falha]
+A RELAÇÃO: [há quanto tempo, peso, histórico]
+O QUE POSSO OFERECER: [solução agora, cortesia futura, limites]
+
+Escreva a resposta:
+- Assuma o problema sem terceirizar a culpa para o cliente
+- Ofereça uma solução concreta agora e um gesto na próxima viagem
+- Tom caloroso e seguro, à altura de um cliente exigente
+- Máximo 150 palavras, terminando com uma pergunta que reabre o diálogo
+
+Depois, me dê uma segunda versão um grau mais formal.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode no Project do cliente, com a ficha no conhecimento. Use codinome até a política de dados (Sessão 6) estar fechada.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">CCO · S4</span>
+    <h3>38 — Comunicação proativa de incidente</h3>
+    <p class="when"><strong>Quando usar:</strong> Algo vai dar problema (atraso, mudança, falha de parceiro) e é melhor avisar antes do cliente perceber.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q38', this)">Copiar</button><pre id="q38">Vamos preparar a comunicação proativa de um incidente.
+
+O INCIDENTE: [o que vai acontecer e quando o cliente sentiria]
+CLIENTES AFETADOS: [quantos, que perfil, em que ordem de prioridade]
+O QUE JÁ TEMOS DE SOLUÇÃO: [o plano B]
+
+Me entregue:
+1. A ordem de quem avisar primeiro e por quê
+2. A mensagem-base, adaptável, que assume o controle da situação
+3. As 3 perguntas que os clientes mais farão — e a resposta para cada
+4. O que NÃO dizer
+
+Tom: transparente, no controle, sem alarmar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Avisar antes transforma um problema em prova de cuidado. O roteiro é do Claude; o timing é seu.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Transversal · S4</span>
+    <h3>39 — Reunião de duas horas em uma página</h3>
+    <p class="when"><strong>Quando usar:</strong> Qualquer cadeira, depois de uma reunião longa que o resto do board precisa entender rápido.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q39', this)">Copiar</button><pre id="q39">Vou colar (ou anexar) as notas de uma reunião longa. Transforme em uma página executiva.
+
+[cole as notas]
+
+PARA QUEM É: [board, diretoria, cliente]
+
+Estruture em:
+1. Decisões tomadas (lista curta e inequívoca)
+2. Pendências, com responsável-tipo e prazo
+3. Pontos de atenção ou risco que surgiram
+4. Próximos passos, em ordem
+
+Corte o que foi conversa de bastidor. Fique no que muda a ação de alguém. Tom direto.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Combine com a gravação transcrita da reunião. O Claude separa o sinal do ruído em segundos.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Transversal · S4</span>
+    <h3>40 — Preparação de negociação difícil</h3>
+    <p class="when"><strong>Quando usar:</strong> Qualquer cadeira, antes de uma negociação em que você precisa chegar com vantagem de preparo.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q40', this)">Copiar</button><pre id="q40">Vou ter uma negociação difícil. Me ajude a chegar preparado.
+
+A NEGOCIAÇÃO: [com quem, sobre o quê, o que está em jogo]
+MEU OBJETIVO: [o resultado ideal e o mínimo aceitável]
+O QUE EU SEI DO OUTRO LADO: [interesses, pressões, histórico]
+
+Me dê:
+1. Os prováveis interesses reais do outro lado (além do declarado)
+2. Três cenários de como a conversa pode ir — e minha melhor jogada em cada
+3. As 3 objeções mais duras que vou ouvir, com resposta curta
+4. Minha melhor alternativa caso não haja acordo, e quando levantar da mesa
+
+Seja realista. Aponte onde minha posição é mais fraca do que eu gostaria.</pre></div>
+    <p class="tip"><strong>Dica:</strong> O valor está na pergunta 4: saber sua alternativa de saída muda a confiança com que você negocia.</p>
+  </article>
+
+  <h2 id="s5" style="scroll-margin-top:80px;margin-top:3rem">Sessão 5 · Microsoft</h2>
+  <hr class="accent-bar">
+  <p class="lead">Para Outlook, OneDrive e Excel. Funcionam por conector (sem baixar) ou por upload (arrastando).</p>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Outlook · S5</span>
+    <h3>41 — Triagem da caixa de entrada</h3>
+    <p class="when"><strong>Quando usar:</strong> No início do dia, para saber o que pede ação sua sem ler tudo.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q41', this)">Copiar</button><pre id="q41">Atue como meu assistente. Olhe os e-mails não lidos de hoje (ou os que eu colar abaixo).
+
+Devolva:
+1. Cada e-mail em uma linha: remetente + o que ele quer
+2. Os que pedem ação minha, marcados, em ordem de urgência
+3. Os que posso só arquivar ou delegar
+4. Um rascunho de resposta de uma linha para os 3 mais urgentes
+
+Não invente conteúdo de e-mail que eu não te dei. Se algo estiver ambíguo, sinalize.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Com conector de Outlook, ele lê direto. Sem conector, cole o texto — o resultado é o mesmo.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Outlook · S5</span>
+    <h3>42 — Resposta a thread longa do Outlook</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma troca de muitas mensagens em que você precisa entrar e responder bem.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q42', this)">Copiar</button><pre id="q42">Vou te dar uma thread de e-mail longa.
+
+[anexe, conecte ou cole a thread]
+
+Faça duas coisas:
+1. Resuma a troca em 5 linhas: o que se decidiu, o que está em aberto, quem espera o quê de mim.
+2. Rascunhe minha resposta, no tom da casa, resolvendo o ponto em aberto.
+
+RESULTADO QUE QUERO COM A RESPOSTA: [o que deve acontecer depois]
+Máximo [N] palavras. Se faltar informação para responder bem, pergunte antes.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode dentro do Project da sua cadeira para a resposta já sair com o tom certo.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Outlook · S5</span>
+    <h3>43 — Ações e prazos de uma thread</h3>
+    <p class="when"><strong>Quando usar:</strong> Para não deixar cair nenhuma promessa enterrada numa troca longa.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q43', this)">Copiar</button><pre id="q43">Vou te dar uma thread de e-mail.
+
+[anexe, conecte ou cole]
+
+Extraia uma tabela de compromissos:
+- O QUÊ (a ação concreta)
+- QUEM (quem ficou responsável)
+- ATÉ QUANDO (o prazo, se houver)
+- STATUS (combinado / em aberto / depende de algo)
+
+Liste por último os pontos que ficaram no ar, sem dono claro. Não invente prazo que não foi dito.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Ótimo depois de uma negociação por e-mail. O combinado vira lista clara em segundos.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Outlook · S5</span>
+    <h3>44 — Preparar reunião a partir do convite</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma reunião marcada com anexos e contexto que você ainda não digeriu.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q44', this)">Copiar</button><pre id="q44">Tenho uma reunião marcada. Vou te dar o convite e os anexos.
+
+[anexe, conecte ou cole o convite e os materiais]
+
+Me prepare:
+1. O objetivo provável da reunião, em uma frase
+2. Os 3 pontos que eu preciso dominar antes de entrar
+3. Duas perguntas inteligentes para eu fazer
+4. Um possível ponto de atrito e como eu me posiciono
+5. O que eu quero ter conseguido ao sair
+
+Tom executivo. Se algum material for essencial e estiver faltando, me diga.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Combine com o prompt 06 (preparação de reunião) quando o interlocutor for novo.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">OneDrive · S5</span>
+    <h3>45 — Síntese de documento do OneDrive</h3>
+    <p class="when"><strong>Quando usar:</strong> Um relatório ou proposta guardado na nuvem que você precisa entender rápido.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q45', this)">Copiar</button><pre id="q45">Vou te indicar (ou anexar) um documento.
+
+[conecte ao arquivo no OneDrive, ou faça upload]
+
+Atue como analista sênior. Devolva:
+1. Síntese executiva em 5 linhas
+2. Três pontos de atenção que merecem aprofundamento
+3. Duas oportunidades que o documento não nomeia
+4. Uma pergunta que eu deveria fazer a quem o escreveu
+
+Tom direto, sem repetir o óbvio do documento.</pre></div>
+    <p class="tip"><strong>Dica:</strong> É o prompt 01 da Sessão 1, agora lendo direto da fonte — sem baixar e subir.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">OneDrive · S5</span>
+    <h3>46 — Comparar duas versões de um documento</h3>
+    <p class="when"><strong>Quando usar:</strong> Um contrato ou proposta que mudou e você precisa saber exatamente o que mudou.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q46', this)">Copiar</button><pre id="q46">Vou te dar duas versões do mesmo documento.
+
+VERSÃO A: [anexe/conecte — a mais antiga]
+VERSÃO B: [anexe/conecte — a mais recente]
+
+Compare e devolva:
+1. As mudanças materiais (o que altera obrigação, valor, prazo ou risco)
+2. As mudanças cosméticas (redação, ordem) — em bloco, sem detalhar
+3. Qualquer cláusula nova que mereça atenção
+4. O que ficou pior para nós, se for o caso
+
+Foque no que muda a decisão. Não liste vírgula por vírgula.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Peça “mostre o trecho exato de cada mudança material” quando precisar levar ao jurídico.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Excel · S5</span>
+    <h3>47 — Planilha Excel em narrativa executiva</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma planilha cheia de números que o board precisa entender em palavras.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q47', this)">Copiar</button><pre id="q47">Vou te dar uma planilha.
+
+[anexe, conecte ou cole os dados]
+
+CONTEXTO: [o que esta planilha representa]
+PARA QUEM É A LEITURA: [board, diretoria]
+
+Transforme os números em uma narrativa executiva:
+1. A história principal que os dados contam, em 3 linhas
+2. Os 3 movimentos mais relevantes (alta, queda, exceção)
+3. Um ponto de atenção que o número sugere
+4. Uma pergunta que esses dados deveriam levar o board a fazer
+
+Cite os números em que você se baseou. Não arredonde a ponto de distorcer.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Confira os números que ele citar. A conta que vai ao board é sua responsabilidade.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Excel · S5</span>
+    <h3>48 — Achar padrões e exceções numa base</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma base de dados em que você suspeita haver algo, mas não sabe onde olhar.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q48', this)">Copiar</button><pre id="q48">Vou te dar uma base de dados em planilha.
+
+[anexe ou conecte]
+
+O QUE EU QUERO ENTENDER: [a pergunta de negócio]
+
+Investigue e devolva:
+1. Os padrões mais claros que você encontra
+2. As exceções ou anomalias que fogem do padrão
+3. Uma hipótese para cada anomalia (marcada como hipótese, não como fato)
+4. Que corte ou coluna adicional ajudaria a confirmar
+
+Seja transparente sobre o que é leitura dos dados e o que é suposição sua.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Anomalia interessante vira pergunta para a equipe, não conclusão fechada.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Outlook · S5</span>
+    <h3>49 — Rascunhar e-mail no tom da casa</h3>
+    <p class="when"><strong>Quando usar:</strong> Você tem os pontos na cabeça e quer um e-mail pronto, na voz da PRIMETOUR.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q49', this)">Copiar</button><pre id="q49">Rascunhe um e-mail a partir destes pontos soltos:
+
+[liste seus pontos, mesmo desorganizados]
+
+PARA: [quem recebe e a relação]
+RESULTADO QUE QUERO: [o que deve acontecer depois]
+TOM: na voz da PRIMETOUR — caloroso, direto, sem floreio.
+
+Máximo [N] palavras. Estruture com uma abertura que vá ao ponto, o corpo e um fechamento que peça a ação. Se faltar algum dado, pergunte antes de inventar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode no Project “Comunicação PRIMETOUR” para o tom sair certo sem reexplicar.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">Decisão · S5</span>
+    <h3>50 — Checklist antes de conectar</h3>
+    <p class="when"><strong>Quando usar:</strong> Antes de ligar um conector, para decidir com a cabeça fria o que autorizar.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q50', this)">Copiar</button><pre id="q50">Estou pensando em conectar o Claude a [Outlook / OneDrive / SharePoint] para o seguinte uso:
+
+USO PRETENDIDO: [o que eu quero que ele faça]
+O QUE ESSA FONTE CONTÉM: [tipo de informação, incluindo o sensível]
+
+Me ajude a decidir, em perguntas e respostas curtas:
+1. Que escopo mínimo atende esse uso (pasta, caixa, site específico)?
+2. O que esse conector passaria a enxergar que eu talvez não queira expor?
+3. O que eu deveria confirmar com a TI antes de ligar?
+4. Vale conectar, ou neste caso o upload pontual é mais seguro?
+
+Seja conservador: na dúvida, recomende o caminho de menor exposição.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Prompt-ponte para a Sessão 6 — a resposta vira insumo da política de uso de IA da PRIMETOUR.</p>
+  </article>
+
+  <h2 id="s6" style="scroll-margin-top:80px;margin-top:3rem">Sessão 6 · Governança</h2>
+  <hr class="accent-bar">
+  <p class="lead">Da política ao incidente. Critério de decisão, não parecer jurídico — o jurídico fecha.</p>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Política · S6</span>
+    <h3>51 — Template de política de uso de IA</h3>
+    <p class="when"><strong>Quando usar:</strong> Para redigir a versão 1 da política da PRIMETOUR — a base que o jurídico depois fecha.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q51', this)">Copiar</button><pre id="q51">Atue como redator de uma política interna, na voz da PRIMETOUR — clara, direta, sem juridiquês.
+
+Escreva a versão 1 da Política de Uso de Inteligência Artificial, em no máximo uma página, com estes blocos:
+1. Por que esta política existe (uma frase: usar IA com confiança, protegendo cliente e empresa)
+2. O semáforo do dado: VERDE (pode), AMARELO (só tratado), VERMELHO (não entra), com 2 exemplos da PRIMETOUR em cada
+3. A regra de ouro: "eu mandaria isto por e-mail para fora?"
+4. Ferramentas aprovadas: [liste as que a casa autoriza]
+5. Em caso de dúvida: procurar [nome/canal] antes de agir
+6. Se algo der errado: avisar [nome/canal], sem caça às bruxas
+
+Tom de quem habilita, não de quem proíbe. É um rascunho para revisão jurídica.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Depois, peça “gere também uma versão de meia página para afixar perto da mesa”.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Decisão · S6</span>
+    <h3>52 — Classificador de dado (semáforo)</h3>
+    <p class="when"><strong>Quando usar:</strong> Na dúvida sobre em qual faixa um dado cai antes de usá-lo.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q52', this)">Copiar</button><pre id="q52">Vou descrever uma informação que penso em usar com a IA. Classifique-a no semáforo do dado.
+
+A INFORMAÇÃO: [descreva o que é, sem colar o dado real sensível]
+O USO PRETENDIDO: [o que eu quero fazer com ela]
+
+Devolva:
+1. A faixa: VERDE (pode), AMARELO (só tratado) ou VERMELHO (não entra) — e por quê
+2. Se AMARELO: como tratá-la (codinome, trocar números, levar só o trecho)
+3. Se VERMELHO: o que precisaria mudar para usá-la com segurança
+4. Uma pergunta que, se eu responder, confirma a classificação
+
+Na dúvida, seja conservador: classifique na faixa mais restritiva.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Em 30 segundos você sai da dúvida. Vermelho recorrente? Leve ao DPO.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Proteção · S6</span>
+    <h3>53 — Desidentificar um texto</h3>
+    <p class="when"><strong>Quando usar:</strong> Você precisa usar um texto com dado pessoal, mas quer remover a identificação antes.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q53', this)">Copiar</button><pre id="q53">Vou colar um texto que contém dados que identificam pessoas. Quero uma versão desidentificada que sirva para a mesma tarefa.
+
+[cole o texto]
+
+TAREFA QUE FAREI DEPOIS: [o que preciso fazer com o texto]
+
+Devolva:
+1. O texto reescrito: nomes viram codinomes (Cliente A), valores e datas identificáveis ficam aproximados, documentos somem
+2. Uma lista do que você removeu ou alterou
+3. Um aviso se sobrou algo que ainda pode identificar alguém
+
+Preserve todo o contexto necessário para a tarefa. Tire a pessoa, mantenha a situação.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Faça numa conversa avulsa e confira a saída antes de levar o texto tratado para a tarefa real.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Decisão · S6</span>
+    <h3>54 — Checklist: posso colocar isto na IA?</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma checagem rápida de cinco perguntas antes de um uso que te deixou em dúvida.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q54', this)">Copiar</button><pre id="q54">Quero checar se posso usar a IA para a seguinte tarefa:
+
+A TAREFA: [descreva]
+OS DADOS ENVOLVIDOS: [que tipo de informação entra]
+
+Me faça, uma a uma, estas perguntas e ajude a responder:
+1. Eu mandaria este material por e-mail para fora da empresa?
+2. Há dado que identifica uma pessoa? É sensível?
+3. Existe uma finalidade clara e legítima para este uso?
+4. A ferramenta que vou usar está aprovada pela casa?
+5. Se eu errar aqui, qual o pior cenário para o cliente e para a PRIMETOUR?
+
+Ao final: pode seguir, seguir com tratamento, ou não seguir — e por quê.</pre></div>
+    <p class="tip"><strong>Dica:</strong> A pergunta 5 é a que mais clareia. Se o pior cenário é grave, trate como vermelho até confirmar.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Decisão · S6</span>
+    <h3>55 — Avaliar um caso de uso pela LGPD</h3>
+    <p class="when"><strong>Quando usar:</strong> Um novo uso recorrente que você quer entender sob a ótica da LGPD, sem juridiquês.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q55', this)">Copiar</button><pre id="q55">Quero avaliar um caso de uso de IA sob a ótica da LGPD, em linguagem de quem decide, não de advogado.
+
+O CASO DE USO: [descreva o que seria feito, com que dado, com que frequência]
+
+Me ajude a pensar:
+1. Que dados pessoais estão envolvidos? Algum é sensível?
+2. Qual seria a finalidade legítima deste uso?
+3. Que cuidados reduziriam o risco (anonimização, escopo, retenção)?
+4. Que pontos eu deveria levar ao jurídico ou ao DPO antes de adotar?
+
+Deixe claro o que é orientação prática e o que exige confirmação jurídica. Não dê isto como parecer legal.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Use a saída como pauta da conversa com o DPO — chega com as perguntas certas.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Política · S6</span>
+    <h3>56 — Aviso de uso de IA para cliente</h3>
+    <p class="when"><strong>Quando usar:</strong> Para comunicar com transparência, quando fizer sentido, que a casa usa IA em parte do atendimento.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q56', this)">Copiar</button><pre id="q56">Quero um texto curto e elegante que comunique, na voz da PRIMETOUR, que usamos ferramentas de inteligência artificial para apoiar nosso atendimento — com transparência e cuidado com o dado do cliente.
+
+ONDE VAI APARECER: [site, contrato, e-mail de boas-vindas]
+O QUE QUERO TRANSMITIR: que a IA agiliza e qualifica, mas a curadoria e a decisão seguem humanas, e o dado é protegido.
+
+Tom: confiante, caloroso, sem tecniquês e sem soar defensivo. Máximo [N] palavras.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Transparência bem feita vira diferencial de confiança. Valide com o jurídico antes de publicar.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Proteção · S6</span>
+    <h3>57 — Auditar um Project quanto a dado</h3>
+    <p class="when"><strong>Quando usar:</strong> Revisar um Project existente para confirmar que nada sensível ficou guardado onde não devia.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q57', this)">Copiar</button><pre id="q57">Vou descrever um Project que mantenho no Claude. Faça uma auditoria de dado.
+
+INSTRUÇÕES DO PROJECT: [cole]
+ARQUIVOS NO CONHECIMENTO: [liste o tipo de cada um]
+QUEM TEM ACESSO: [só eu / o time / a casa]
+
+Me aponte:
+1. Algum dado pessoal ou sensível que esteja nas instruções ou nos arquivos sem necessidade
+2. Algo que deveria estar com codinome e está com nome real
+3. Arquivos que poderiam sair do conhecimento permanente e virar upload pontual
+4. Um ajuste de acesso, se o conteúdo pede mais restrição
+
+Seja conservador: na dúvida, recomende remover ou tratar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Combine com a manutenção mensal do Project (Sessão 3). Auditoria de dado entra na mesma rotina.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Resposta · S6</span>
+    <h3>58 — Perguntas para o fornecedor de IA</h3>
+    <p class="when"><strong>Quando usar:</strong> Antes de adotar (ou renovar) uma ferramenta de IA, para a conversa de TI e jurídico com o fornecedor.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q58', this)">Copiar</button><pre id="q58">Vamos avaliar uma ferramenta de IA para uso corporativo. Monte a lista de perguntas que devo fazer ao fornecedor, do ponto de vista de governança e LGPD.
+
+A FERRAMENTA: [nome e uso pretendido]
+NOSSO CONTEXTO: operadora de luxo no Brasil, sujeita à LGPD, ambiente Microsoft.
+
+Organize as perguntas em blocos:
+1. Treinamento (meu dado é usado para treinar o modelo? como desligar?)
+2. Retenção e exclusão (por quanto tempo guardam? posso exigir exclusão?)
+3. Localização e transferência internacional do dado
+4. Contrato e DPA (há acordo de tratamento de dados? cláusulas de LGPD?)
+5. Segurança e acesso (criptografia, controle de acesso, certificações)
+
+Para cada pergunta, em uma linha: por que ela importa para nós.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Leve a lista para a TI e o jurídico. As respostas do fornecedor viram anexo da decisão de adoção.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Resposta · S6</span>
+    <h3>59 — Plano de resposta a incidente</h3>
+    <p class="when"><strong>Quando usar:</strong> Para ter, com a cabeça fria, um roteiro caso um dado seja exposto por engano.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q59', this)">Copiar</button><pre id="q59">Quero um plano simples de resposta para o caso de alguém expor um dado sensível à IA por engano.
+
+NOSSO CONTEXTO: operadora de luxo, sujeita à LGPD, board pequeno.
+
+Monte um roteiro de uma página:
+1. Os primeiros 3 passos imediatos de quem percebeu o erro
+2. A quem avisar, em que ordem (responsável, TI, DPO, jurídico)
+3. O que documentar sobre o ocorrido
+4. Como avaliar se há obrigação de comunicar a ANPD ou o titular
+5. O tom da comunicação interna: aprender, não punir
+
+Deixe claro o que é ação prática e o que precisa de validação jurídica. Não substitui o procedimento oficial da empresa.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Tê-lo pronto antes vale ouro. Em incidente, decidir na hora é o pior momento para improvisar.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Política · S6</span>
+    <h3>60 — Explicar a política em linguagem simples</h3>
+    <p class="when"><strong>Quando usar:</strong> Para apresentar a política ao time de forma que pegue, sem ninguém dormir na reunião.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q60', this)">Copiar</button><pre id="q60">Vou colar nossa política de uso de IA. Quero explicá-la ao time de um jeito que pegue.
+
+[cole a política]
+
+PÚBLICO: [equipe, perfil, familiaridade com IA]
+
+Me dê:
+1. A política resumida em 5 frases que qualquer um entende
+2. Três exemplos do dia a dia da PRIMETOUR — um verde, um amarelo, um vermelho
+3. A regra de ouro em uma frase memorável
+4. Uma pergunta para abrir a conversa com o time e engajar
+
+Tom: prático e humano, sem tom de manual de compliance. As pessoas precisam querer seguir, não só ter que seguir.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Regra que o time entende e aceita protege mais que regra que ninguém leu. A comunicação é parte da governança.</p>
+  </article>
+
+  <h2 id="s7" style="scroll-margin-top:80px;margin-top:3rem">Sessão 7 · Adoção</h2>
+  <hr class="accent-bar">
+  <p class="lead">Para fazer a adoção pegar e durar. Preencha os campos entre colchetes.</p>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">Plano · S7</span>
+    <h3>61 — Template de plano de 90 dias</h3>
+    <p class="when"><strong>Quando usar:</strong> Para escrever o seu plano de adoção — e revisá-lo a cada trimestre.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q61', this)">Copiar</button><pre id="q61">Atue como meu coach de adoção. Vou te dar meu contexto; quero um plano de 90 dias para incorporar o Claude à minha rotina.
+
+MINHA CADEIRA: [CEO / COO / CMO / CCO]
+MEUS 3 CASOS DE MAIOR GANHO: [da Sessão 4]
+MEU AMBIENTE: ferramentas Microsoft, planos [free/Pro], conectores [liberados ou não]
+
+Monte um plano em três fases:
+- Dias 1–30 (Fundação): o que firmar primeiro
+- Dias 31–60 (Rotina): o que vira hábito
+- Dias 61–90 (Escala): como levo ao time
+
+Para cada fase: 3 ações concretas e mensuráveis. Termine com a MINHA PRIMEIRA AÇÃO, com dia e hora marcados para a próxima semana. Nada de ação vaga.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Peça ao final “resuma o plano em um quadro de uma página para eu deixar à vista”.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Plano · S7</span>
+    <h3>62 — Diagnóstico: onde estou na curva</h3>
+    <p class="when"><strong>Quando usar:</strong> Para se localizar na curva de adoção e saber o próximo passo certo.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q62', this)">Copiar</button><pre id="q62">Quero entender em que ponto da adoção do Claude eu estou e o que fazer a seguir.
+
+COMO TENHO USADO: [frequência, para o quê, há quanto tempo]
+O QUE TEM FUNCIONADO: [descreva]
+O QUE TEM TRAVADO: [descreva]
+
+Me diga:
+1. Em que fase eu estou: entusiasmo, vale ou hábito — e por quê
+2. O risco mais provável de eu regredir agora
+3. As 2 ações mais úteis para o meu momento específico
+4. Um sinal concreto de que avancei para a próxima fase
+
+Seja honesto. Se eu estiver no vale, diga e me ajude a atravessar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Rode no fim de cada mês. A curva muda; o diagnóstico recalibra o plano.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Plano · S7</span>
+    <h3>63 — Meus 3 casos de maior alavancagem</h3>
+    <p class="when"><strong>Quando usar:</strong> Para escolher onde começar, em vez de usar a IA em tudo de uma vez.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q63', this)">Copiar</button><pre id="q63">Quero descobrir os 3 usos do Claude que mais me dariam retorno agora.
+
+MINHA ROTINA: [descreva as tarefas que mais consomem meu tempo ou energia]
+ONDE SINTO MAIS ATRITO: [o que me cansa ou me trava]
+
+Para cada candidato a caso de uso, avalie:
+- Frequência (com que regularidade aparece)
+- Peso (quanto tempo ou esforço consome)
+- Adequação ao Claude (é tarefa em que ele brilha?)
+
+Devolva os 3 com maior alavancagem (frequência x peso x adequação), e por que estes, e não outros. Comece o plano por eles.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Alavancagem é frequência vezes peso. A tarefa chata que volta todo dia vence a difícil que aparece uma vez por mês.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Ritmo · S7</span>
+    <h3>64 — Desenhar meu ritual semanal</h3>
+    <p class="when"><strong>Quando usar:</strong> Para criar o hábito de retrospectiva que atravessa o vale.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q64', this)">Copiar</button><pre id="q64">Quero criar um ritual semanal de 15 minutos para firmar meu uso do Claude.
+
+MINHA AGENDA: [quando eu teria 15 minutos protegidos por semana]
+MEU ESTILO: [gosto de checklist? de escrever? de conversar comigo mesmo?]
+
+Me proponha:
+1. O melhor momento da semana para esse ritual, dado meu contexto
+2. Três perguntas curtas para eu responder toda semana
+3. Como registrar (onde, em que formato) sem virar trabalho
+4. Um gatilho que me lembre de fazê-lo (vínculo a um hábito que já tenho)
+
+Mantenha leve. Ritual que pesa é ritual que morre.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Ancore o ritual a algo que você já faz (o café de sexta, a revisão de agenda). Hábito novo pega carona em hábito velho.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Time · S7</span>
+    <h3>65 — Plano de capacitação do time</h3>
+    <p class="when"><strong>Quando usar:</strong> Na fase de escala, para levar o que você aprendeu à sua área.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q65', this)">Copiar</button><pre id="q65">Quero capacitar meu time a usar o Claude, aproveitando o portal de treinamento que já temos.
+
+MEU TIME: [tamanho, perfis, familiaridade com IA]
+O QUE JÁ TEMOS: portal com 7 sessões, 60 prompts, glossário e política de uso.
+
+Monte um plano de capacitação leve:
+1. Como apresentar — uma sessão ao vivo, ou autoaprendizado guiado pelo portal?
+2. Os 3 primeiros prompts que eu daria a eles para um ganho rápido
+3. Um primeiro desafio prático, simples, para eles sentirem o valor
+4. Como acompanhar sem virar fiscalização
+
+Foco em ganho rápido e visível. Engajamento vem de resultado, não de obrigação.</pre></div>
+    <p class="tip"><strong>Dica:</strong> O portal foi feito para isto: aponte o time para a Sessão 1 e o caderno. Você não precisa recriar o material.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">Ritmo · S7</span>
+    <h3>66 — Medir adoção sem burocracia</h3>
+    <p class="when"><strong>Quando usar:</strong> Para definir os poucos sinais que mostram que a adoção pegou, sem criar relatório.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q66', this)">Copiar</button><pre id="q66">Quero medir se a adoção do Claude está pegando, na minha rotina e no meu time, sem criar burocracia.
+
+CONTEXTO: [board pequeno, área de tamanho X]
+
+Me proponha:
+1. Três sinais simples e observáveis de que a adoção firmou (não métricas de vaidade)
+2. Para cada um, como percebê-lo sem montar dashboard
+3. Uma pergunta única que, respondida no ritual mensal, já indica a saúde da adoção
+4. Um sinal de alerta de que estamos regredindo
+
+Prefira o qualitativo observável ao quantitativo que dá trabalho coletar.</pre></div>
+    <p class="tip"><strong>Dica:</strong> O melhor indicador costuma ser “que tarefa que eu temia ficou leve?”. Qualitativo, mas inequívoco.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">Revisão · S7</span>
+    <h3>67 — Retrospectiva mensal de uso</h3>
+    <p class="when"><strong>Quando usar:</strong> Uma vez por mês, para consolidar o aprendizado e ajustar o plano.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q67', this)">Copiar</button><pre id="q67">Vamos fazer minha retrospectiva mensal de uso do Claude.
+
+ESTE MÊS: [o que usei, o que funcionou, o que travou]
+MEU PLANO ERA: [as ações que eu tinha previsto]
+
+Me ajude a fechar o mês:
+1. O que avançou em relação ao plano, e o que ficou para trás
+2. O caso que mais me deu retorno — e por quê funcionou
+3. Um ajuste no plano para o próximo mês
+4. Um Project ou prompt que vale criar ou aposentar
+
+Tom de balanço honesto, sem autocomplacência nem autocrítica exagerada.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Guarde as retrospectivas. Em três meses, elas mostram a sua curva de adoção em palavras.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Time · S7</span>
+    <h3>68 — Convencer um cético do time</h3>
+    <p class="when"><strong>Quando usar:</strong> Quando alguém da equipe resiste, e você quer trazê-lo sem empurrar.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q68', this)">Copiar</button><pre id="q68">Tenho alguém no time que resiste a usar o Claude. Quero trazê-lo, não forçá-lo.
+
+A PESSOA: [perfil, função, o que ela valoriza]
+A RESISTÊNCIA DELA: [o que ela diz, ou o que eu imagino que sente]
+
+Me ajude:
+1. Qual pode ser o medo ou a objeção real por trás da resistência
+2. O que dela pode ter um ponto válido que eu deveria reconhecer
+3. Uma demonstração de ganho que falaria diretamente com o que ela valoriza
+4. Uma primeira tarefa de baixo risco para ela experimentar sem se expor
+
+Nada de vender com hype. Cético convencido por resultado vira o melhor defensor.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Quase sempre o ceticismo esconde um receio legítimo (de errar, de ser substituído). Trate o receio, não o sintoma.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-comunicacao">Time · S7</span>
+    <h3>69 — Onboarding de IA para quem chega</h3>
+    <p class="when"><strong>Quando usar:</strong> Para que um novo membro do time entre já sabendo usar o Claude como a casa usa.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q69', this)">Copiar</button><pre id="q69">Quero criar um onboarding curto de uso de IA para quem entra no meu time.
+
+CONTEXTO: temos portal de treinamento, 60 prompts, Projects da casa e política de uso.
+O CARGO QUE COSTUMA ENTRAR: [perfil típico]
+
+Monte um roteiro de primeira semana:
+1. O que ler ou ver no portal, em que ordem
+2. Os 3 prompts e o Project que essa pessoa deve usar já nos primeiros dias
+3. A regra de governança essencial que ela precisa entender de cara
+4. Um primeiro entregável real para ela praticar com acompanhamento
+
+Curto e prático. Que a pessoa produza algo útil na primeira semana.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Onboarding bom transforma a adoção em padrão da casa: quem chega já entra fluente.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-decisao">Revisão · S7</span>
+    <h3>70 — Revisão dos 90 dias, próximos 90</h3>
+    <p class="when"><strong>Quando usar:</strong> Ao fim do primeiro ciclo, para fechar o balanço e desenhar o próximo.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q70', this)">Copiar</button><pre id="q70">Cheguei ao fim dos meus primeiros 90 dias com o Claude. Vamos fazer o balanço e planejar o próximo ciclo.
+
+O QUE EU PLANEJEI: [o plano original]
+O QUE ACONTECEU: [o que de fato firmou, o que não]
+ONDE ESTOU NA CURVA: [entusiasmo / vale / hábito]
+
+Me ajude:
+1. O balanço honesto: o que virou hábito, o que ainda não
+2. As 2 maiores lições destes 90 dias
+3. O foco do próximo ciclo — mais profundidade ou mais escala?
+4. Três ações para os próximos 90 dias, mais ambiciosas que as primeiras
+
+A adoção não termina. Mostre como o segundo ciclo sobe um degrau em relação ao primeiro.</pre></div>
+    <p class="tip"><strong>Dica:</strong> O segundo ciclo costuma ser sobre escala e profundidade: menos “aprender a usar”, mais “fazer a casa usar”.</p>
+  </article>
+
+</section>
+
+<footer class="session-footer">
+  <p class="muted" style="font-size:.82rem">Renê Junio · Marketing PRIMETOUR · Biblioteca cresce a cada sessão entregue</p>
+</footer>
+
+<script src="../assets/claude.js"></script>
+</body>
+</html>

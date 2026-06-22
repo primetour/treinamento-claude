@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sessão 2 · Comunicação eficaz — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Sessão 2 do treinamento executivo de Claude para a liderança da PRIMETOUR: anatomia do bom prompt, técnicas de iteração, exemplos e templates universais.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<!-- ============ CONTROLES FIXOS DO MODO APRESENTAÇÃO ============ -->
+<div class="present-zone prev" data-action="present-prev" title="Slide anterior"></div>
+<div class="present-zone next" data-action="present-next" title="Próximo slide"></div>
+<div class="present-ctrl left">
+  <button data-action="present-prev" aria-label="Anterior">‹</button>
+</div>
+<div class="present-ctrl right">
+  <button data-action="present-next" aria-label="Próximo">›</button>
+  <button data-action="present-exit" aria-label="Sair (ESC)">✕</button>
+</div>
+<div class="present-progress" aria-hidden="true">
+  <span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar non-slide">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Sessão 2</div>
+  <button class="btn btn-orange" data-action="present">▶ Apresentar</button>
+</header>
+
+<div class="session-layout">
+
+  <!-- ============ SUMÁRIO LATERAL ============ -->
+  <nav class="session-nav non-slide" aria-label="Sumário da sessão">
+    <div class="nav-brand"><span class="brand-square"></span> Sessão 2</div>
+    <div class="nav-sub">Comunicação eficaz</div>
+
+    <div class="nav-section">Blocos</div>
+    <a href="#capa">Capa &amp; recap</a>
+    <a href="#bloco1">Bloco 1 · Anatomia do prompt</a>
+    <a href="#bloco2">Bloco 2 · Lab guiado</a>
+    <a href="#bloco3">Bloco 3 · Discussão</a>
+
+    <div class="nav-section">Consulta</div>
+    <a href="#caderno-completo">Caderno de templates</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#tarefa">Tarefa da semana</a>
+  </nav>
+
+  <!-- ============ CONTEÚDO PRINCIPAL ============ -->
+  <main class="session-main">
+  <div class="slides-wrap">
+
+  <!-- ====== SLIDE 1 — CAPA ====== -->
+  <section class="slide slide-dark" id="capa">
+    <span class="slide-num">01 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Claude para a liderança</div>
+      <h1 class="cover-title">Comunicação eficaz</h1>
+      <p class="cover-sub">Sessão 2 de 7 · Treinamento executivo PRIMETOUR Viagens &amp; Experiências</p>
+      <hr class="accent-bar">
+      <p class="muted" style="font-family:var(--font-head)">Marketing · 2h30 de duração</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 2 — RECAP DA SESSÃO 1 ====== -->
+  <section class="slide" id="bloco1">
+    <span class="slide-num">02 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">De onde viemos</div>
+      <h2>O que a Sessão 1 deixou</h2>
+      <hr class="accent-bar">
+      <p class="lead">Quatro ideias que vamos colocar para trabalhar hoje.</p>
+      <div class="grid grid-4">
+        <div class="card side-blue"><div style="font-family:var(--font-head);font-weight:600">Modelo &amp; Agente</div><p class="muted" style="margin:.3rem 0 0">O cérebro que recebe texto e devolve texto — e o agente, que ainda usa ferramentas.</p></div>
+        <div class="card side-orange"><div style="font-family:var(--font-head);font-weight:600">Janela de contexto</div><p class="muted" style="margin:.3rem 0 0">Tudo o que está “sobre a mesa” ele lê de uma vez — 200 mil tokens.</p></div>
+        <div class="card side-green"><div style="font-family:var(--font-head);font-weight:600">Token</div><p class="muted" style="margin:.3rem 0 0">A unidade de medida. Pedidos enxutos rendem respostas melhores.</p></div>
+        <div class="card side-orange"><div style="font-family:var(--font-head);font-weight:600">Alucinação</div><p class="muted" style="margin:.3rem 0 0">Ele pode inventar com confiança. Anexar fonte e pedir verificação resolve.</p></div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p style="margin:0;color:var(--claude-light)">A Sessão 1 respondeu <strong>“o que é”</strong>. Hoje respondemos <strong>“como pedir”</strong> — porque a diferença entre uma resposta mediana e um entregável quase sempre está no prompt, não no modelo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 3 — ESTRUTURA DE HOJE ====== -->
+  <section class="slide">
+    <span class="slide-num">03 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Estrutura de hoje</div>
+      <h2>Como vão funcionar as próximas 2h30</h2>
+      <hr class="accent-bar">
+      <p class="lead">Menos teoria que a Sessão 1, mais mão na massa — o prompt se aprende construindo.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue">
+          <div class="num-big t-blue">01</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Anatomia do prompt <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Os 4 elementos de todo prompt que funciona, por que iterar vence prompt gigante, e quando vale dar exemplos.</p>
+        </div>
+        <div class="card top-orange">
+          <div class="num-big t-orange">02</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Lab guiado <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Construímos um prompt do zero, juntos, aplicando os 4 elementos a um caso real seu de comunicação.</p>
+        </div>
+        <div class="card top-green">
+          <div class="num-big t-green">03</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Discussão <span class="muted" style="font-weight:400">· 30 min</span></div>
+          <p class="muted" style="margin:0">O que cada um descobriu sobre seu jeito de pedir — e quais templates entram na rotina do time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 4 — OBJETIVOS ====== -->
+  <section class="slide">
+    <span class="slide-num">04 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Objetivos</div>
+      <h2>O que você leva ao final desta sessão</h2>
+      <hr class="accent-bar">
+      <div class="mt-2">
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          <div><div class="ft-title">A anatomia do bom prompt</div><div class="ft-desc">Saber os 4 elementos — papel, contexto, tarefa, formato — e reconhecer o que falta quando a resposta vem fraca.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-blue)" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-8-5M3 12a9 9 0 0 1 9-9 9 9 0 0 1 8 5"/><path d="M21 4v4h-4M3 20v-4h4"/></svg>
+          <div><div class="ft-title">Iterar com intenção</div><div class="ft-desc">Entender por que duas frases de ajuste valem mais que um prompt de meia página — e quais frases funcionam.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-green)" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 1 5 3 3 0 0 0 6 1V4a3 3 0 0 0-2-1Z"/><path d="M15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-1 5 3 3 0 0 1-6 1"/></svg>
+          <div><div class="ft-title">Um kit de templates</div><div class="ft-desc">10 modelos reutilizáveis de comunicação e construção de prompt — prontos para colar e adaptar.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="10 8 16 12 10 16" fill="currentColor" stroke="none"/></svg>
+          <div><div class="ft-title">Um prompt construído do zero</div><div class="ft-desc">Sair com pelo menos um prompt seu, testado e iterado, resolvendo um problema real do seu dia.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 5 — O PROBLEMA ====== -->
+  <section class="slide">
+    <span class="slide-num">05 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">O problema</div>
+      <h2>Mesmo Claude, dois resultados</h2>
+      <hr class="accent-bar">
+      <p class="lead">A maior parte da frustração com IA não é o modelo — é o pedido. Veja o mesmo objetivo, pedido de dois jeitos.</p>
+      <div class="grid grid-2">
+        <div class="card side-gray">
+          <div class="section-tag" style="margin-bottom:.6rem">Pedido preguiçoso</div>
+          <div class="prompt-block" style="margin-top:0"><pre style="padding:1rem 1.2rem">Escreve um e-mail pro fornecedor sobre o atraso.</pre></div>
+          <p class="muted mt-1" style="margin-bottom:0">Resultado: genérico, tom errado, sem os pontos que importam. Você reescreve do zero — e conclui que “IA não serve para isso”.</p>
+        </div>
+        <div class="card side-orange">
+          <div class="section-tag" style="margin-bottom:.6rem">Pedido com método</div>
+          <div class="prompt-block" style="margin-top:0"><pre style="padding:1rem 1.2rem">Você é gerente de contas sênior. Nosso fornecedor de traslados atrasou a confirmação de 3 grupos VIP. Escreva um e-mail firme, mas que preserve a relação de 6 anos. Resultado esperado: confirmação em 24h, sem soar como ameaça. Máximo 150 palavras.</pre></div>
+          <p class="muted mt-1" style="margin-bottom:0">Resultado: publicável na primeira ou segunda tentativa. A diferença tem nome — e são quatro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 6 — OS 4 ELEMENTOS ====== -->
+  <section class="slide">
+    <span class="slide-num">06 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conceito central</div>
+      <h2>A anatomia: os 4 elementos</h2>
+      <hr class="accent-bar">
+      <p class="lead">Todo prompt que funciona tem estes quatro. Faltou um, a resposta avisa.</p>
+      <div class="grid grid-2">
+        <div class="card top-orange"><div class="flex gap-s items-center"><span class="num-circle">1</span><h3 style="margin:0">Papel</h3></div><p class="muted mt-1" style="margin-bottom:0">Quem o Claude deve “ser” ao responder. <em>Analista sênior, editor exigente, advogado do diabo.</em> Ativa o repertório certo.</p></div>
+        <div class="card top-blue"><div class="flex gap-s items-center"><span class="num-circle">2</span><h3 style="margin:0">Contexto</h3></div><p class="muted mt-1" style="margin-bottom:0">A situação, o histórico, o material. <em>Quem é o público, o que já aconteceu, o que está anexado.</em></p></div>
+        <div class="card top-green"><div class="flex gap-s items-center"><span class="num-circle">3</span><h3 style="margin:0">Tarefa</h3></div><p class="muted mt-1" style="margin-bottom:0">O que exatamente você quer. Um verbo claro: <em>resuma, compare, critique, reescreva, liste.</em></p></div>
+        <div class="card top-orange"><div class="flex gap-s items-center"><span class="num-circle">4</span><h3 style="margin:0">Formato</h3></div><p class="muted mt-1" style="margin-bottom:0">A forma da resposta. <em>5 bullets, tabela, 150 palavras, 3 versões, tom executivo.</em></p></div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p style="margin:0;color:var(--claude-light)"><strong class="t-orange">Dois reforços opcionais:</strong> <strong>Restrições</strong> (o que NÃO fazer) e <strong>Exemplos</strong> (mostrar em vez de descrever). Entram quando a tarefa é exigente — veremos os dois adiante.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 7 — ELEMENTO 1: PAPEL ====== -->
+  <section class="slide">
+    <span class="slide-num">07 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Elemento 1</div>
+      <h2>Papel: diga quem ele deve ser</h2>
+      <hr class="accent-bar">
+      <p class="lead">Uma frase de papel muda o repertório, o vocabulário e o padrão de qualidade da resposta.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <h3 class="mt-0">Por que funciona</h3>
+          <p class="muted">O Claude leu milhões de textos de cada tipo de profissional. Pedir que ele “seja” um analista sênior aproxima a resposta do que um analista sênior de fato escreveria — não do texto médio da internet.</p>
+          <ul class="sq-list">
+            <li>“Atue como editor da <em>Monocle</em>.”</li>
+            <li>“Você é um diretor de operações cético.”</li>
+            <li>“Responda como consultor de luxo que conhece o cliente de alta renda brasileiro.”</li>
+          </ul>
+        </div>
+        <div class="card card-soft side-orange">
+          <div class="section-tag">Atalho</div>
+          <p style="margin:0">Se você não sabe qual papel pedir, peça o papel ao próprio Claude: <em>“Que especialista seria ideal para responder isto? Assuma esse papel e responda.”</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 8 — ELEMENTO 2: CONTEXTO ====== -->
+  <section class="slide">
+    <span class="slide-num">08 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Elemento 2</div>
+      <h2>Contexto: ele só sabe o que você conta</h2>
+      <hr class="accent-bar">
+      <p class="lead">O Claude começa cada conversa do zero. Contexto é a diferença entre um palpite e um entregável.</p>
+      <div class="grid grid-3">
+        <div class="card side-blue"><div class="ft-title">Quem é o público</div><div class="ft-desc">Board, cliente VIP, equipe operacional, parceiro novo. Muda tudo no tom e na profundidade.</div></div>
+        <div class="card side-blue"><div class="ft-title">O que já aconteceu</div><div class="ft-desc">Histórico da relação, decisão anterior, o que foi prometido. Sem isso, ele preenche lacunas — às vezes errado.</div></div>
+        <div class="card side-blue"><div class="ft-title">O material em si</div><div class="ft-desc">Anexe o PDF, cole o e-mail, mande a planilha. Mostrar é sempre melhor que parafrasear.</div></div>
+      </div>
+      <p class="muted mt-2"><strong>Regra de ouro:</strong> se um colega novo precisaria dessa informação para fazer a tarefa bem, o Claude também precisa.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 9 — ELEMENTO 3: TAREFA ====== -->
+  <section class="slide">
+    <span class="slide-num">09 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Elemento 3</div>
+      <h2>Tarefa: um verbo, sem ambiguidade</h2>
+      <hr class="accent-bar">
+      <p class="lead">“Me ajuda com isso” não é tarefa. Tarefa é um comando que só admite uma interpretação.</p>
+      <div class="grid grid-2">
+        <div class="card side-gray">
+          <div class="section-tag" style="margin-bottom:.4rem">Vago</div>
+          <ul class="sq-list" style="margin-top:0">
+            <li>“O que você acha desse contrato?”</li>
+            <li>“Dá uma olhada nessa proposta.”</li>
+            <li>“Me ajuda com esse e-mail.”</li>
+          </ul>
+        </div>
+        <div class="card side-green">
+          <div class="section-tag" style="margin-bottom:.4rem">Acionável</div>
+          <ul class="sq-list" style="margin-top:0">
+            <li>“Liste as 3 cláusulas de maior risco para nós.”</li>
+            <li>“Compare esta proposta com a anterior em preço, prazo e escopo.”</li>
+            <li>“Reescreva este e-mail em tom mais firme, em 120 palavras.”</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted mt-2">Verbos que funcionam: <strong>resuma, liste, compare, critique, reescreva, classifique, antecipe, traduza, estruture.</strong></p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 10 — ELEMENTO 4: FORMATO ====== -->
+  <section class="slide">
+    <span class="slide-num">10 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Elemento 4</div>
+      <h2>Formato: descreva a resposta que você quer</h2>
+      <hr class="accent-bar">
+      <p class="lead">O formato economiza a iteração mais comum — aquela em que você pede “mais curto” ou “em tópicos”.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <h3 class="mt-0">Dimensões que vale especificar</h3>
+          <div class="task-row" style="padding-top:.6rem"><span class="brand-square" style="margin-top:.3rem"></span><div><div class="ft-title">Tamanho</div><div class="ft-desc">“5 linhas”, “máximo 150 palavras”, “uma página”.</div></div></div>
+          <div class="task-row"><span class="brand-square" style="margin-top:.3rem"></span><div><div class="ft-title">Estrutura</div><div class="ft-desc">“tabela”, “3 bullets”, “título + 2 parágrafos”.</div></div></div>
+          <div class="task-row"><span class="brand-square" style="margin-top:.3rem"></span><div><div class="ft-title">Tom</div><div class="ft-desc">“executivo e direto”, “caloroso”, “técnico”.</div></div></div>
+          <div class="task-row"><span class="brand-square" style="margin-top:.3rem"></span><div><div class="ft-title">Quantidade</div><div class="ft-desc">“3 versões”, “10 opções”, “2 alternativas de abertura”.</div></div></div>
+        </div>
+        <div class="card-dark side-orange">
+          <div class="section-tag">Em uma frase</div>
+          <p style="font-family:var(--font-head);font-weight:600;font-size:1.3rem;line-height:1.35;margin:.2rem 0 0;color:var(--claude-light)">Se você consegue descrever como a resposta ideal se parece, descreva — não faça ele adivinhar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 11 — ANTES E DEPOIS ====== -->
+  <section class="slide">
+    <span class="slide-num">11 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Os 4 juntos</div>
+      <h2>Antes e depois, elemento por elemento</h2>
+      <hr class="accent-bar">
+      <p class="lead">O mesmo pedido, montado peça por peça. Repare como cada elemento fecha uma porta para o erro.</p>
+      <div class="prompt-block">
+        <pre>[PAPEL]     Você é um gerente de relacionamento de uma operadora de luxo.
+[CONTEXTO]  Um cliente VIP reclamou que o hotel não tinha o quarto com vista
+            prometido. Ele viaja conosco há 4 anos e gasta alto. A culpa foi
+            do hotel, não nossa — mas a cara para o cliente é a nossa.
+[TAREFA]    Escreva a resposta dele, assumindo o problema e oferecendo uma
+            solução concreta (upgrade na próxima ou cortesia agora).
+[FORMATO]   Máximo 140 palavras, tom caloroso e seguro, sem juridiquês.
+            Termine com uma pergunta que reabra o diálogo.</pre>
+      </div>
+      <p class="muted mt-2">Quatro linhas de estrutura transformam um pedido de 30 segundos em um briefing que um assistente humano levaria minutos para entender. O Claude entende na hora.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 12 — RESTRIÇÕES ====== -->
+  <section class="slide">
+    <span class="slide-num">12 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Reforço · Restrições</div>
+      <h2>Diga também o que NÃO fazer</h2>
+      <hr class="accent-bar">
+      <p class="lead">O Claude tem vícios previsíveis. Nomear o que você não quer corta metade das reescritas.</p>
+      <div class="grid grid-3">
+        <div class="card side-orange"><div class="ft-title">Contra o exagero</div><div class="ft-desc">“Sem floreio, sem adjetivos de marketing, sem ‘é um prazer’.”</div></div>
+        <div class="card side-orange"><div class="ft-title">Contra a bajulação</div><div class="ft-desc">“Não me elogie. Aponte o que está fraco antes do que está bom.”</div></div>
+        <div class="card side-orange"><div class="ft-title">Contra o genérico</div><div class="ft-desc">“Não repita o óbvio do documento. Vá direto ao que não é evidente.”</div></div>
+      </div>
+      <p class="muted mt-2">Restrição é uma instrução tão forte quanto a tarefa. Use com a mesma clareza.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 13 — FEW-SHOT ====== -->
+  <section class="slide">
+    <span class="slide-num">13 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Reforço · Exemplos</div>
+      <h2>Quando dar exemplos (few-shot)</h2>
+      <hr class="accent-bar">
+      <p class="lead">Mostrar um exemplo do que você quer vale mais que três parágrafos descrevendo.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card side-green">
+          <div class="section-tag">Use exemplos quando…</div>
+          <ul class="sq-list" style="margin-top:0">
+            <li>O tom é específico e difícil de descrever (“o jeito que eu escrevo”).</li>
+            <li>Há um formato fixo a repetir (assinatura, ficha de cliente, post).</li>
+            <li>Você já tem um “modelo bom” de antes — cole e diga “neste estilo”.</li>
+          </ul>
+        </div>
+        <div class="card side-gray">
+          <div class="section-tag">Dispensa exemplos quando…</div>
+          <ul class="sq-list" style="margin-top:0">
+            <li>A tarefa é comum e o formato, padrão (resumo, tabela).</li>
+            <li>Você ainda está explorando — peça primeiro, refine depois.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted mt-2"><strong>Zero-shot</strong> é pedir sem exemplo. <strong>Few-shot</strong> é dar um ou dois. Para tom de voz da marca, few-shot é quase sempre o caminho.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 14 — ITERAR > PROMPT GIGANTE ====== -->
+  <section class="slide">
+    <span class="slide-num">14 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">A virada de chave</div>
+      <h2>Iterar vence o prompt perfeito</h2>
+      <hr class="accent-bar">
+      <p class="lead">Você não precisa acertar o prompt de primeira. Precisa de um prompt bom o bastante para a primeira resposta — e saber ajustar.</p>
+      <div class="grid grid-2">
+        <div class="card side-gray">
+          <div class="section-tag">A armadilha do prompt gigante</div>
+          <p class="muted" style="margin:0">Tentar antecipar tudo em um único prompt de meia página: cansa, trava você, e ainda assim erra o que não dava para prever. Você gasta 10 minutos escrevendo o pedido perfeito.</p>
+        </div>
+        <div class="card side-orange">
+          <div class="section-tag">O caminho da iteração</div>
+          <p class="muted" style="margin:0">Comece simples, leia a resposta, aponte 1–2 ajustes, repita. Em 3 trocas rápidas você chega mais longe do que o prompt gigante chegaria — e aprende o que o Claude precisava.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p style="margin:0;color:var(--claude-light)">A conversa é a ferramenta. Cada resposta é um rascunho que você dirige — não uma entrega final que você aceita ou rejeita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 15 — O LOOP DE ITERAÇÃO ====== -->
+  <section class="slide">
+    <span class="slide-num">15 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como funciona</div>
+      <h2>O loop de iteração</h2>
+      <hr class="accent-bar">
+      <p class="lead">Quatro movimentos que se repetem até o resultado ficar publicável.</p>
+      <div class="grid grid-4">
+        <div class="card top-blue"><div class="num-big t-blue">01</div><div class="ft-title">Leia</div><div class="ft-desc">Não aceite nem rejeite. Identifique o que está perto e o que está longe.</div></div>
+        <div class="card top-orange"><div class="num-big t-orange">02</div><div class="ft-title">Aponte</div><div class="ft-desc">Diga em uma frase o que mudar. Específico: “o segundo parágrafo está frio”.</div></div>
+        <div class="card top-green"><div class="num-big t-green">03</div><div class="ft-title">Peça</div><div class="ft-desc">Dê a direção do ajuste, não a solução. “Deixe mais caloroso, mantenha o resto.”</div></div>
+        <div class="card top-orange"><div class="num-big t-orange">04</div><div class="ft-title">Repita</div><div class="ft-desc">Duas a três voltas costumam bastar. Se travar, recomece o prompt do zero.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 16 — FRASES DE ITERAÇÃO ====== -->
+  <section class="slide">
+    <span class="slide-num">16 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Repertório</div>
+      <h2>Frases de ajuste que funcionam</h2>
+      <hr class="accent-bar">
+      <p class="lead">Guarde estas. São os ajustes que mais resolvem, na prática.</p>
+      <div class="grid grid-2">
+        <div>
+          <div class="card card-soft mb-1"><strong>Tamanho:</strong> “Metade do tamanho, sem perder o essencial.”</div>
+          <div class="card card-soft mb-1"><strong>Tom:</strong> “Mais formal / mais humano / menos vendedor.”</div>
+          <div class="card card-soft"><strong>Foco:</strong> “Corte a introdução, vá direto ao ponto 2.”</div>
+        </div>
+        <div>
+          <div class="card card-soft mb-1"><strong>Profundidade:</strong> “Aprofunde só o terceiro item, resuma os outros.”</div>
+          <div class="card card-soft mb-1"><strong>Alternativa:</strong> “Me dê outra versão, partindo de um ângulo diferente.”</div>
+          <div class="card card-soft"><strong>Verificação:</strong> “O que nesta resposta é suposição sua e não veio do material?”</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 17 — ANTI-PADRÕES ====== -->
+  <section class="slide">
+    <span class="slide-num">17 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>Os quatro erros que mais sabotam</h2>
+      <hr class="accent-bar">
+      <p class="lead">Reconhecer o anti-padrão é meio caminho para não cair nele.</p>
+      <div class="card side-orange mb-1"><div class="ft-title">Pedir tudo de uma vez</div><div class="ft-desc">Cinco tarefas num prompt só rende cinco respostas medianas. Faça uma, refine, siga para a próxima.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Aceitar a primeira resposta</div><div class="ft-desc">A primeira quase nunca é a melhor. Quem não itera está usando 30% da ferramenta.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Descrever em vez de mostrar</div><div class="ft-desc">Você gasta um parágrafo explicando o documento que poderia ter anexado em um clique.</div></div>
+      <div class="card side-orange"><div class="ft-title">Esquecer o formato</div><div class="ft-desc">Sem dizer o tamanho e a forma, você recebe o padrão dele — e reescreve o que poderia ter pedido pronto.</div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 18 — TEMPLATES UNIVERSAIS ====== -->
+  <section class="slide">
+    <span class="slide-num">18 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Trabalhe uma vez, use sempre</div>
+      <h2>Templates universais</h2>
+      <hr class="accent-bar">
+      <p class="lead">Um bom prompt não é descartável. O melhor prompt que você escreve esta semana é o que você reusa nas próximas 50 vezes.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <p class="muted">Um template é um prompt com lacunas. Você monta a estrutura uma vez — papel, contexto, tarefa, formato — e troca só o miolo a cada uso.</p>
+          <div class="prompt-block">
+            <pre>Você é [PAPEL].
+Contexto: [SITUAÇÃO + PÚBLICO].
+Tarefa: [VERBO + OBJETO].
+Formato: [TAMANHO, ESTRUTURA, TOM].
+Restrições: [O QUE EVITAR].</pre>
+          </div>
+        </div>
+        <div class="card card-soft side-green">
+          <div class="section-tag">Onde guardar</div>
+          <p style="margin:0 0 .6rem">Por ora: um documento seu, ou esta biblioteca de prompts do portal.</p>
+          <p style="margin:0">Na <strong>Sessão 3</strong> veremos os <strong>Projects</strong> — onde seus templates, arquivos e instruções ficam disponíveis em toda conversa, sem colar de novo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 19 — QUANDO NÃO É O PROMPT ====== -->
+  <section class="slide">
+    <span class="slide-num">19 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>Quando o problema não é o prompt</h2>
+      <hr class="accent-bar">
+      <p class="lead">Nem toda resposta ruim se conserta com prompt melhor. Saber distinguir evita iterar no vazio.</p>
+      <div class="grid grid-3">
+        <div class="card side-blue"><div class="ft-title">Faltou material</div><div class="ft-desc">Ele não tem o dado porque você não anexou. Nenhum prompt inventa o que não está na mesa — anexe a fonte.</div></div>
+        <div class="card side-orange"><div class="ft-title">É tarefa de outra ferramenta</div><div class="ft-desc">Cálculo financeiro fechado, dado de mercado de hoje. Aí o problema é de ferramenta, não de pedido.</div></div>
+        <div class="card side-green"><div class="ft-title">Você ainda não sabe o que quer</div><div class="ft-desc">Às vezes o prompt está vago porque o pensamento está. Use o Claude para clarear a pergunta antes de pedir a resposta.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 20 — TRANSIÇÃO BLOCO 2 ====== -->
+  <section class="slide slide-dark" id="bloco2">
+    <span class="slide-num">20 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 2 · 60 min</div>
+      <h1 class="cover-title">Vamos construir<br>um, juntos.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Sem template pronto desta vez. Você vai montar um prompt do zero, com os quatro elementos, para um problema real do seu dia — e iterar até ele ficar bom.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 21 — O LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">21 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">O lab</div>
+      <h2>Do problema ao prompt que resolve</h2>
+      <hr class="accent-bar">
+      <p class="lead">Escolha um problema de comunicação real desta semana. Construa o prompt. Itere. Em 45 minutos.</p>
+      <div class="card-dark side-orange mb-2">
+        <div class="section-tag">Enunciado</div>
+        <p style="font-size:1.2rem;line-height:1.5;color:var(--claude-light);margin:0">Pense em <strong>uma mensagem que você precisa escrever</strong> — um e-mail difícil, um comunicado, uma resposta a cliente, um texto para o board. Construa o prompt usando os 4 elementos, gere a primeira versão, e itere até que você assinaria embaixo.</p>
+      </div>
+      <div class="card card-soft side-orange">
+        <div class="section-tag">Critério de sucesso</div>
+        <p class="italic" style="margin:0">Ao final, você tem dois ganhos: a mensagem pronta <em>e</em> o template que você vai reusar nas próximas vezes. Guarde os dois.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 22 — PASSO A PASSO ====== -->
+  <section class="slide">
+    <span class="slide-num">22 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Guia do lab</div>
+      <h2>Monte na ordem dos quatro</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não precisa decorar — siga a sequência e o prompt se monta sozinho.</p>
+      <div class="task-row"><span class="num-circle">1</span><div><div class="ft-title">Defina o papel</div><div class="ft-desc">Quem escreveria isto melhor? Um diretor de relacionamento? Um redator sênior? Comece por aí.</div></div></div>
+      <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Despeje o contexto</div><div class="ft-desc">Público, histórico, o que está em jogo. Anexe o que tiver. Não economize aqui.</div></div></div>
+      <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Nomeie a tarefa</div><div class="ft-desc">Um verbo. “Escreva”, “reescreva”, “responda”. Diga exatamente o entregável.</div></div></div>
+      <div class="task-row"><span class="num-circle">4</span><div><div class="ft-title">Trave o formato</div><div class="ft-desc">Tamanho, tom, estrutura. E uma restrição: o que você não quer ver.</div></div></div>
+      <div class="task-row"><span class="num-circle">5</span><div><div class="ft-title">Gere e itere</div><div class="ft-desc">Leia, aponte 1–2 ajustes, peça. Repita até assinar embaixo.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 23 — SUA CADEIRA ====== -->
+  <section class="slide">
+    <span class="slide-num">23 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Foco por cadeira</div>
+      <h2>Um caso natural da sua função</h2>
+      <hr class="accent-bar">
+      <p class="lead">Se não pensou num problema ainda, comece pelo caso típico da sua cadeira.</p>
+      <div class="grid grid-2">
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CEO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Mensagem ao conselho</span></div><p class="italic muted mt-1" style="margin-bottom:0">Um comunicado ao board sobre uma decisão sensível — que informe sem alarmar e convide ao alinhamento.</p></div>
+        <div class="card side-blue"><div class="flex justify-between items-center"><h3 style="margin:0">COO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Comunicado de processo</span></div><p class="italic muted mt-1" style="margin-bottom:0">Um aviso de mudança operacional para a equipe — claro no que muda e no que se espera de cada um.</p></div>
+        <div class="card side-green"><div class="flex justify-between items-center"><h3 style="margin:0">CMO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Brief para agência</span></div><p class="italic muted mt-1" style="margin-bottom:0">Um briefing de campanha enxuto e inequívoco — que a agência não precise voltar para perguntar.</p></div>
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CCO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Resposta a cliente VIP</span></div><p class="italic muted mt-1" style="margin-bottom:0">Uma resposta a uma reclamação de alto valor — que assuma o problema e reconquiste a confiança.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 24 — REGRAS DO LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">24 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como funciona</div>
+      <h2>Três regras do lab</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-3">
+        <div class="card"><div class="flex gap-m"><div class="num-big">1</div><div><div class="ft-title">Comece pequeno, cresça iterando</div><div class="ft-desc">Não escreva o prompt perfeito. Escreva um prompt com os 4 elementos e melhore na conversa.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">2</div><div><div class="ft-title">Sem dado real sensível</div><div class="ft-desc">Troque nomes e números. Treinamos o método, não expomos informação. (Política completa na Sessão 6.)</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">3</div><div><div class="ft-title">Salve o template no fim</div><div class="ft-desc">Quando o prompt funcionar, generalize-o com lacunas e guarde. Esse é o ativo que sobra do lab.</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 25 — CRONÔMETRO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">25 / 33</span>
+    <div class="slide-inner center">
+      <div class="section-tag" style="justify-content:center">Cronômetro ativo</div>
+      <div class="timer-display" id="challenge-timer" data-minutes="45">45:00</div>
+      <p style="color:var(--claude-light);font-family:var(--font-head);margin:.2rem 0 1.4rem">minutos a partir de agora</p>
+      <div class="flex gap-s" style="justify-content:center;margin-bottom:1.8rem">
+        <button class="btn btn-orange" id="timer-start" onclick="toggleTimer(this)">Iniciar contador</button>
+        <button class="btn btn-ghost" style="color:var(--claude-light);border-color:var(--claude-mid-gray)" onclick="resetTimer(this)">Reiniciar</button>
+      </div>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Monte na ordem: papel → contexto → tarefa → formato</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Gere a primeira versão sem caprichar demais</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Itere até assinar embaixo — e salve o template</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 26 — TRANSIÇÃO BLOCO 3 ====== -->
+  <section class="slide slide-dark" id="bloco3">
+    <span class="slide-num">26 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 3 · 30 min</div>
+      <h1 class="cover-title">O que você<br>descobriu pedindo.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">A parte mais valiosa não é o texto que saiu — é o que cada um aprendeu sobre o próprio jeito de pedir. Vamos comparar métodos e montar o repertório do time.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 27 — CINCO PERGUNTAS ====== -->
+  <section class="slide">
+    <span class="slide-num">27 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Roteiro da discussão</div>
+      <h2>Cinco perguntas para destravar</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não precisa todo mundo responder todas — mas alguém responde cada.</p>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">1</span><div><div class="ft-title">Qual dos 4 elementos faltava no seu primeiro prompt?</div><div class="ft-desc italic">Papel, contexto, tarefa ou formato — qual você esqueceu?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">2</span><div><div class="ft-title">Quantas iterações até ficar publicável?</div><div class="ft-desc italic">O que mudou entre a primeira e a última versão?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">3</span><div><div class="ft-title">Onde um exemplo teria economizado tempo?</div><div class="ft-desc italic">Algum momento em que mostrar valeria mais que descrever?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">4</span><div><div class="ft-title">Que frase de ajuste funcionou melhor?</div><div class="ft-desc italic">Aquela que virou a resposta de vez.</div></div></div></div>
+      <div class="card card-soft"><div class="flex gap-m items-center"><span class="num-circle">5</span><div><div class="ft-title">Que template você vai salvar?</div><div class="ft-desc italic">O que sai daqui direto para a sua rotina.</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 28 — O QUE VAMOS LEVAR ====== -->
+  <section class="slide">
+    <span class="slide-num">28 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Síntese coletiva</div>
+      <h2>O que vamos levar daqui</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três áreas para fechar a sessão e ancorar o aprendizado coletivo.</p>
+      <div class="grid grid-3">
+        <div class="card top-green"><svg class="ico t-green" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><h3 class="mt-1">Templates que funcionaram</h3><p class="muted" style="margin:0">Os prompts que renderam viram repertório compartilhado — vão para a biblioteca do portal.</p></div>
+        <div class="card top-orange"><svg class="ico t-orange" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-8-5M3 12a9 9 0 0 1 9-9 9 9 0 0 1 8 5"/><path d="M21 4v4h-4M3 20v-4h4"/></svg><h3 class="mt-1">O que ainda trava</h3><p class="muted" style="margin:0">Onde a iteração não chegou lá. Discutimos qual elemento estava faltando.</p></div>
+        <div class="card top-blue"><svg class="ico t-blue" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3 2.5c-.7.3-1 .8-1 1.5M12 17h.01"/></svg><h3 class="mt-1">Dúvidas em aberto</h3><p class="muted" style="margin:0">O que ficou nebuloso vira gancho para a Sessão 3, sobre Projects.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 29 — CADERNO: INTRO ====== -->
+  <section class="slide slide-dark" id="caderno">
+    <span class="slide-num">29 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">O caderno de templates</div>
+      <h1 class="cover-title" style="font-size:clamp(2.2rem,5vw,3.4rem)">Seu manual da semana</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Desta vez, templates de construção e comunicação — prontos para preencher e reusar.</p>
+      <div class="grid grid-3 mt-3">
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Manual</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">A anatomia</div><p class="muted" style="margin:.4rem 0 0">Os 4 elementos, os 2 reforços e o loop de iteração — resumidos para consulta rápida.</p></div>
+        <div class="card-darker side-orange"><div class="num-big t-orange">10</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Templates prontos</div><p class="muted" style="margin:.4rem 0 0">De construir prompt a fixar tom de voz. Cada um com “quando usar” e dica de iteração.</p></div>
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Portal</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Biblioteca cumulativa</div><p class="muted" style="margin:.4rem 0 0">Somados à Sessão 1, já são 20 prompts. A cada sessão, o kit da PRIMETOUR cresce.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 30 — OS 10 TEMPLATES (PREVIEW) ====== -->
+  <section class="slide">
+    <span class="slide-num">30 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Preview do caderno</div>
+      <h2>Os 10 templates desta semana</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cada um vem no caderno completo, abaixo, com botão de copiar.</p>
+      <div class="grid grid-2">
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">01</span> Template universal dos 4 elementos</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">02</span> Construtor: o Claude escreve seu prompt</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">03</span> Diagnóstico de um prompt fraco</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">04</span> Ensinar pelo exemplo (few-shot)</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">05</span> Fixar tom de voz da marca</div></div>
+        </div>
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">06</span> Três versões em graus diferentes</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">07</span> Responder e-mail no meu tom</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">08</span> Resumo em três níveis</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">09</span> Bullets &harr; texto corrido</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">10</span> Checklist de revisão antes de enviar</div></div>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p class="italic" style="margin:0;color:var(--claude-light)">O caderno completo, com cada template explicado e o botão de copiar, está logo abaixo — seção <a href="#caderno-completo" style="color:var(--claude-orange)">“Caderno de templates”</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 31 — TAREFA ====== -->
+  <section class="slide" id="tarefa">
+    <span class="slide-num">31 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Para a próxima semana</div>
+      <h2>Sua tarefa até a Sessão 3</h2>
+      <hr class="accent-bar">
+      <p class="lead">Curta, prática, e que deixa você pronto para os Projects.</p>
+      <div class="task-row"><div class="num-big">1</div><div><div class="ft-title">Reescreva um prompt antigo</div><div class="ft-desc">Pegue um pedido que rendeu pouco e remonte com os 4 elementos. Compare os dois resultados.</div></div></div>
+      <div class="task-row"><div class="num-big">2</div><div><div class="ft-title">Salve 3 templates seus</div><div class="ft-desc">Os que você mais vai reusar. Guarde com lacunas. Na Sessão 3 eles entram nos seus Projects.</div></div></div>
+      <div class="task-row"><div class="num-big">3</div><div><div class="ft-title">Itere um texto até a 3ª versão</div><div class="ft-desc">Qualquer mensagem real. Anote o que mudou em cada volta — é onde a técnica vira hábito.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 32 — PRÓXIMA SESSÃO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">32 / 33</span>
+    <div class="slide-inner">
+      <div class="section-tag">Próxima semana</div>
+      <p class="cover-sub" style="font-size:1.2rem;margin:0">Sessão 3</p>
+      <h1 class="cover-title" style="font-size:clamp(2.4rem,5.5vw,3.6rem)">Projects</h1>
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Organização, contexto que viaja entre conversas e entregáveis prontos.</p>
+      <div class="section-tag mt-2">O que veremos</div>
+      <ul class="sq-list">
+        <li style="color:var(--claude-light)">O que é um Project e quando vale criar um</li>
+        <li style="color:var(--claude-light)">Instruções e arquivos que ficam disponíveis em toda conversa</li>
+        <li style="color:var(--claude-light)">Organizar contexto recorrente por cliente, tema ou cadeira</li>
+        <li style="color:var(--claude-light)">Lab: montar seu primeiro Project com os templates de hoje</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 33 — ENCERRAMENTO ====== -->
+  <section class="slide slide-light">
+    <span class="slide-num">33 / 33</span>
+    <div class="slide-inner">
+      <span class="brand-square lg" style="margin-bottom:1.5rem"></span>
+      <h1 style="font-size:clamp(3rem,9vw,5.5rem)">Obrigado.</h1>
+      <hr class="accent-bar">
+      <p class="italic muted" style="font-size:1.2rem">Bons prompts são hábito, não talento. Pratique a semana toda — nos vemos na Sessão 3.</p>
+      <p class="muted" style="font-family:var(--font-head)">Renê Junio · Marketing PRIMETOUR · Sessão 2 de 7</p>
+    </div>
+  </section>
+
+  </div><!-- /.slides-wrap -->
+
+  <!-- ============================================================
+       SEÇÕES DE CONSULTA (não aparecem no modo apresentação)
+       ============================================================ -->
+
+  <!-- ====== CADERNO COMPLETO DE TEMPLATES ====== -->
+  <section class="non-slide" id="caderno-completo" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem">
+    <div class="section-tag">Caderno de templates</div>
+    <h2>Os 10 templates da Sessão 2</h2>
+    <hr class="accent-bar">
+    <p class="lead">Templates de construção de prompt e comunicação. Clique em <strong>Copiar</strong>, cole no Claude e preencha os campos entre colchetes.</p>
+
+    <!-- Categorias -->
+    <div class="grid grid-4 mb-2" style="gap:.7rem">
+      <div class="card card-soft side-blue" style="padding:.8rem 1rem"><strong class="t-blue" style="font-family:var(--font-head)">Análise</strong><div class="ft-desc">Ler, comparar ou extrair sentido.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Comunicação</strong><div class="ft-desc">O entregável é uma mensagem.</div></div>
+      <div class="card card-soft side-green" style="padding:.8rem 1rem"><strong class="t-green" style="font-family:var(--font-head)">Preparação</strong><div class="ft-desc">Preparar reunião, decisão ou texto.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Decisão</strong><div class="ft-desc">Testar uma escolha.</div></div>
+    </div>
+
+    <!-- TEMPLATE 01 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Construção</span>
+      <h3>01 — Template universal dos 4 elementos</h3>
+      <p class="when"><strong>Quando usar:</strong> Como esqueleto de qualquer pedido sério. Preencha as quatro lacunas e você tem um prompt completo.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s201', this)">Copiar</button><pre id="s201">Você é [PAPEL: o especialista ideal para esta tarefa].
+
+Contexto: [SITUAÇÃO, PÚBLICO, HISTÓRICO E O QUE ESTÁ EM JOGO].
+(Anexe os arquivos relevantes em vez de descrevê-los.)
+
+Tarefa: [UM VERBO CLARO + O OBJETO. Ex.: "reescreva este e-mail", "compare estas duas propostas"].
+
+Formato: [TAMANHO, ESTRUTURA E TOM. Ex.: "máximo 150 palavras, tom executivo, em 3 parágrafos"].
+
+Restrições: [O QUE EVITAR. Ex.: "sem jargão, sem floreio, não repita o óbvio"].</pre></div>
+      <p class="tip"><strong>Dica:</strong> Salve este como seu template-mãe. Com o tempo, você preenche as lacunas quase sem pensar — e é aí que o prompt vira hábito.</p>
+    </article>
+
+    <!-- TEMPLATE 02 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Construção</span>
+      <h3>02 — Construtor: o Claude escreve seu prompt</h3>
+      <p class="when"><strong>Quando usar:</strong> Você sabe o resultado que quer, mas não sabe como pedir. Deixe o Claude montar o prompt para você.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s202', this)">Copiar</button><pre id="s202">Quero obter o seguinte resultado de você, mas não tenho certeza de como pedir da melhor forma:
+
+RESULTADO QUE QUERO: [descreva em 2 a 3 frases]
+CONTEXTO QUE TENHO: [o que sei, o que posso anexar]
+
+Antes de responder, escreva o prompt ideal que EU deveria ter te enviado — com papel, contexto, tarefa e formato bem definidos. Depois me pergunte se quero ajustar algo antes de você executar.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Ótimo para aprender. Compare o prompt que ele sugeriu com o que você teria escrito — a diferença ensina mais que qualquer manual.</p>
+    </article>
+
+    <!-- TEMPLATE 03 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Construção</span>
+      <h3>03 — Diagnóstico de um prompt fraco</h3>
+      <p class="when"><strong>Quando usar:</strong> Um prompt seu vem rendendo respostas medianas e você não sabe por quê.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s203', this)">Copiar</button><pre id="s203">Vou colar um prompt que tenho usado e que não rende o que eu queria. Diagnostique-o pela anatomia dos 4 elementos:
+
+[cole seu prompt]
+
+Para cada elemento — Papel, Contexto, Tarefa, Formato — diga: está presente? Está claro? O que falta?
+Ao final, reescreva o prompt corrigido e explique em uma linha o que mudou de mais impactante.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Use nos templates que você salvou. Um prompt revisado uma vez economiza dezenas de iterações depois.</p>
+    </article>
+
+    <!-- TEMPLATE 04 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Few-shot</span>
+      <h3>04 — Ensinar pelo exemplo (few-shot)</h3>
+      <p class="when"><strong>Quando usar:</strong> Há um formato ou estilo específico que é mais fácil mostrar do que descrever.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s204', this)">Copiar</button><pre id="s204">Quero que você produza [TIPO DE TEXTO] seguindo exatamente o estilo e a estrutura dos exemplos abaixo.
+
+EXEMPLO 1:
+[cole um exemplo bom]
+
+EXEMPLO 2:
+[cole outro, se tiver]
+
+Agora produza um novo, para o seguinte caso:
+[descreva o caso novo]
+
+Mantenha o mesmo tom, ritmo e formato dos exemplos. Não explique o que fez — apenas entregue.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Dois exemplos já fazem milagre. É o jeito mais confiável de capturar “o jeito da casa” de escrever.</p>
+    </article>
+
+    <!-- TEMPLATE 05 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Comunicação</span>
+      <h3>05 — Fixar tom de voz da marca</h3>
+      <p class="when"><strong>Quando usar:</strong> Você quer que todo texto saia na voz editorial da PRIMETOUR, sem reexplicar o estilo toda vez. Encoda as regras do Manual de Redação.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s205', this)">Copiar</button><pre id="s205">A partir de agora, escreva tudo nesta conversa na voz editorial da PRIMETOUR. Aplique estas regras sem que eu precise repetir.
+
+NOME DA MARCA: sempre PRIMETOUR, em caixa alta. Nunca "Primetour" nem "PrimeTour".
+
+MOOD: luxo que não grita — elegância contida, quiet luxury, low profile. Exclusividade é discrição e refinamento, jamais ostentação.
+
+TOM: curadoria que conversa com um viajante exigente. Direto, íntimo e convidativo. Autoridade leve — seguro, mas caloroso. Venda o "como" (a experiência, o ritual, o acesso), não só o "onde".
+
+ESCRITA:
+- Traduza abstrações em cenas sensoriais (luz, som, textura, silêncio) e em microdetalhes de serviço.
+- Adjetivação controlada e precisa, sem exagero.
+- Alterne frases curtas de impacto com períodos longos de imersão.
+- Luxo é tempo, silêncio, cuidado e acesso — não preço.
+
+REGRAS DURAS:
+- "para", nunca "pra". "traslado", nunca "transfer".
+- Sem diminutivos.
+- Termos proibidos: luxuoso, refúgio, escapada, paraíso, idílico, de tirar o fôlego, explorar, desbravar, instagramável, de alto nível, águas cristalinas.
+
+Confirme em uma frase que entendeu a voz. Depois, aplique a tudo que eu pedir.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Baseado no Manual de Redação PRIMETOUR (jan/2026). Na Sessão 3, este bloco vira instrução fixa de um Project — e passa a valer em todas as conversas, não só nesta.</p>
+    </article>
+
+    <!-- TEMPLATE 06 -->
+    <article class="prompt-card">
+      <span class="cat cat-decisao">Comunicação</span>
+      <h3>06 — Três versões em graus diferentes</h3>
+      <p class="when"><strong>Quando usar:</strong> Uma mensagem delicada em que você quer escolher o grau certo de firmeza ou formalidade.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s206', this)">Copiar</button><pre id="s206">Preciso de [TIPO DE MENSAGEM] sobre [ASSUNTO], para [PÚBLICO].
+
+Contexto: [o que está em jogo, histórico]
+
+Me dê 3 versões variando em [DIMENSÃO: ex. firmeza / formalidade / calor]:
+A — [extremo 1, ex. mais suave]
+B — [meio-termo]
+C — [extremo 2, ex. mais firme]
+
+Para cada versão, uma linha dizendo em que situação ela é a escolha certa. Mesmo tamanho nas três.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Quase sempre a melhor mensagem é uma combinação: abertura de uma, corpo de outra. Peça ao Claude para fundir depois de escolher.</p>
+    </article>
+
+    <!-- TEMPLATE 07 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Comunicação</span>
+      <h3>07 — Responder e-mail no meu tom</h3>
+      <p class="when"><strong>Quando usar:</strong> Chegou um e-mail e você quer uma resposta pronta que soe como você — não como um robô educado.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s207', this)">Copiar</button><pre id="s207">Vou colar um e-mail que recebi. Escreva minha resposta.
+
+E-MAIL RECEBIDO:
+[cole o e-mail]
+
+O QUE QUERO RESPONDER (em tópicos soltos): [seus pontos, mesmo desorganizados]
+RELAÇÃO COM A PESSOA: [formal / próxima / nova]
+RESULTADO QUE QUERO: [o que essa pessoa deve fazer ao terminar de ler]
+
+Escreva em tom [seu tom]. Máximo [N] palavras. Se faltar alguma informação para responder bem, pergunte antes de escrever.</pre></div>
+      <p class="tip"><strong>Dica:</strong> O “pergunte antes de escrever” evita que ele invente um detalhe que você não deu. Vale para qualquer tarefa com lacunas.</p>
+    </article>
+
+    <!-- TEMPLATE 08 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Análise</span>
+      <h3>08 — Resumo em três níveis</h3>
+      <p class="when"><strong>Quando usar:</strong> Um mesmo conteúdo que precisa servir a públicos diferentes — manchete, parágrafo e página.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s208', this)">Copiar</button><pre id="s208">Anexei/colei um conteúdo. Resuma-o em três níveis, do mais curto ao mais completo:
+
+NÍVEL 1 — Uma frase: o essencial que cabe num título ou numa mensagem de WhatsApp.
+NÍVEL 2 — Um parágrafo: para quem decide se vai ou não ler o todo.
+NÍVEL 3 — Uma página: síntese executiva com pontos de atenção e próximos passos.
+
+Tom executivo, sem repetir as mesmas palavras entre os níveis.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Você escolhe o nível certo na hora de comunicar — manchete para o grupo, parágrafo para o par, página para o board.</p>
+    </article>
+
+    <!-- TEMPLATE 09 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Comunicação</span>
+      <h3>09 — Bullets ↔ texto corrido</h3>
+      <p class="when"><strong>Quando usar:</strong> Você tem tópicos soltos e precisa de um texto fluido — ou o contrário, um texto longo que precisa virar tópicos.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s209', this)">Copiar</button><pre id="s209">Vou colar um conteúdo. Quero a conversão abaixo:
+
+[escolha uma direção]
+→ DE bullets PARA texto corrido: transforme estes tópicos em [N] parágrafos fluidos, com transições naturais, tom [tom], mantendo todas as informações.
+→ DE texto PARA bullets: extraia os pontos-chave em no máximo [N] bullets, cada um com até 12 palavras, ordenados por importância.
+
+[cole o conteúdo]
+
+Não invente informação que não esteja no original.</pre></div>
+      <p class="tip"><strong>Dica:</strong> A restrição final (“não invente”) é o que mantém a conversão fiel. Sem ela, ele às vezes “melhora” com dados que você não deu.</p>
+    </article>
+
+    <!-- TEMPLATE 10 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Preparação</span>
+      <h3>10 — Checklist de revisão antes de enviar</h3>
+      <p class="when"><strong>Quando usar:</strong> Antes de mandar algo importante, para um par de olhos exigente que pega o que você não vê mais.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s210', this)">Copiar</button><pre id="s210">Vou colar uma mensagem que estou prestes a enviar. Antes de eu mandar, revise como um editor exigente e cético.
+
+[cole a mensagem]
+
+DESTINATÁRIO: [quem é]
+OBJETIVO: [o que preciso que aconteça]
+
+Devolva:
+1. Algo que pode ser mal interpretado — e como
+2. Uma frase que enfraquece a mensagem (e pode sair)
+3. O que falta para o destinatário agir sem precisar perguntar nada
+4. Veredicto em uma linha: enviar como está, ou ajustar antes?
+
+Não reescreva tudo. Aponte o que importa.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Combine com o template 06 quando o veredicto for “ajustar”: peça as 3 versões e escolha o grau certo.</p>
+    </article>
+  </section>
+
+  <!-- ====== GLOSSÁRIO ====== -->
+  <section class="non-slide" id="glossario" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem;border-top:1px solid var(--claude-light-gray)">
+    <div class="section-tag">Glossário</div>
+    <h2>Termos que apareceram nesta sessão</h2>
+    <hr class="accent-bar">
+    <dl class="gloss grid grid-2" style="gap:0 3rem">
+      <div><dt>Prompt</dt><dd>A mensagem que você envia ao modelo. Bons prompts têm papel, contexto, tarefa e formato.</dd></div>
+      <div><dt>Papel (role)</dt><dd>A instrução que diz quem o Claude deve “ser” ao responder (analista, editor, advogado do diabo). Ativa o repertório certo.</dd></div>
+      <div><dt>Contexto</dt><dd>A situação, o público, o histórico e o material que o Claude precisa para a tarefa. Ele só sabe o que você conta ou anexa.</dd></div>
+      <div><dt>Formato de saída</dt><dd>A forma esperada da resposta: tamanho, estrutura, tom e quantidade. Especificar economiza a iteração mais comum.</dd></div>
+      <div><dt>Restrição</dt><dd>Instrução do que NÃO fazer (“sem jargão”, “não me elogie”). Tão forte quanto a tarefa.</dd></div>
+      <div><dt>Zero-shot</dt><dd>Pedir algo sem dar exemplos — só a instrução. Funciona bem para tarefas comuns e formatos padrão.</dd></div>
+      <div><dt>Few-shot</dt><dd>Dar um ou dois exemplos do resultado desejado dentro do prompt. Ideal para capturar tom de voz ou formato fixo.</dd></div>
+      <div><dt>Iteração</dt><dd>O ciclo de ler a resposta, apontar ajustes e pedir uma nova versão. Costuma render mais que um único prompt longo.</dd></div>
+      <div><dt>Template de prompt</dt><dd>Um prompt com lacunas, montado uma vez e reusado muitas. Troca-se só o miolo a cada uso.</dd></div>
+      <div><dt>Project (Claude)</dt><dd>Funcionalidade do claude.ai que preserva instruções, arquivos e estilo entre conversas. Tema da Sessão 3.</dd></div>
+    </dl>
+  </section>
+
+  <!-- ====== FOOTER GLOBAL ====== -->
+  <footer class="session-footer non-slide">
+    <div class="flex justify-between wrap gap-l items-center">
+      <div>
+        <div class="section-tag" style="margin-bottom:.6rem">Progresso do treinamento</div>
+        <div class="progress-7"><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="muted" style="margin:.3rem 0 0;font-family:var(--font-head);font-size:.85rem">Sessão 2 de 7 concluída</p>
+      </div>
+      <div class="flex gap-s wrap">
+        <a class="btn btn-ghost" href="../sessao-01/index.html">← Sessão 1</a>
+        <a class="next-link btn btn-orange" href="../sessao-03/index.html">Próxima: Sessão 3 · Projects →</a>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:2rem;font-size:.82rem">Renê Junio · Marketing PRIMETOUR · Treinamento Claude para a liderança</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="../assets/claude.js"></script>
+</body>
+</html>

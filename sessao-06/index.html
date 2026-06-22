@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sessão 6 · Governança — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Sessão 6 do treinamento executivo de Claude para a liderança da PRIMETOUR: LGPD, segurança e política interna — o que pode, o que não pode, e como decidir.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<!-- ============ CONTROLES FIXOS DO MODO APRESENTAÇÃO ============ -->
+<div class="present-zone prev" data-action="present-prev" title="Slide anterior"></div>
+<div class="present-zone next" data-action="present-next" title="Próximo slide"></div>
+<div class="present-ctrl left">
+  <button data-action="present-prev" aria-label="Anterior">‹</button>
+</div>
+<div class="present-ctrl right">
+  <button data-action="present-next" aria-label="Próximo">›</button>
+  <button data-action="present-exit" aria-label="Sair (ESC)">✕</button>
+</div>
+<div class="present-progress" aria-hidden="true">
+  <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span>
+</div>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar non-slide">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Sessão 6</div>
+  <button class="btn btn-orange" data-action="present">▶ Apresentar</button>
+</header>
+
+<div class="session-layout">
+
+  <!-- ============ SUMÁRIO LATERAL ============ -->
+  <nav class="session-nav non-slide" aria-label="Sumário da sessão">
+    <div class="nav-brand"><span class="brand-square"></span> Sessão 6</div>
+    <div class="nav-sub">Governança</div>
+
+    <div class="nav-section">Blocos</div>
+    <a href="#capa">Capa &amp; recap</a>
+    <a href="#bloco1">Bloco 1 · O que pode, o que não pode</a>
+    <a href="#bloco2">Bloco 2 · Lab: a política</a>
+    <a href="#bloco3">Bloco 3 · Discussão</a>
+
+    <div class="nav-section">Consulta</div>
+    <a href="#caderno-completo">Caderno de governança</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#tarefa">Tarefa da semana</a>
+  </nav>
+
+  <!-- ============ CONTEÚDO PRINCIPAL ============ -->
+  <main class="session-main">
+  <div class="slides-wrap">
+
+  <!-- ====== SLIDE 1 — CAPA ====== -->
+  <section class="slide slide-dark" id="capa">
+    <span class="slide-num">01 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Claude para a liderança</div>
+      <h1 class="cover-title">Governança</h1>
+      <p class="cover-sub">Sessão 6 de 7 · Treinamento executivo PRIMETOUR Viagens &amp; Experiências</p>
+      <hr class="accent-bar">
+      <p class="muted" style="font-family:var(--font-head)">Marketing · 2h30 de duração</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 2 — RECAP ====== -->
+  <section class="slide" id="bloco1">
+    <span class="slide-num">02 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">De onde viemos</div>
+      <h2>Você ligou o Claude ao seu ambiente. E agora?</h2>
+      <hr class="accent-bar">
+      <p class="lead">A Sessão 5 abriu as portas — Outlook, OneDrive, Excel. Hoje decidimos o que pode passar por elas.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card side-gray">
+          <div class="section-tag">A pergunta que ficou</div>
+          <p class="muted" style="margin:0">“Posso conectar a caixa de e-mail? Posso colar a ficha do cliente? Onde está o limite?” Toda sessão anterior esbarrou nisso e adiou para hoje.</p>
+        </div>
+        <div class="card side-orange">
+          <div class="section-tag">O que veremos hoje</div>
+          <p class="muted" style="margin:0">Um critério claro para o que pode e o que não pode ir para a IA — e um rascunho da política de uso da PRIMETOUR, escrito por vocês.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p style="margin:0;color:var(--claude-light)"><strong>Aviso honesto:</strong> esta sessão dá critério de decisão, não parecer jurídico. As regras finais passam pelo seu jurídico e pelo DPO — aqui montamos a base para essa conversa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 3 — ESTRUTURA DE HOJE ====== -->
+  <section class="slide">
+    <span class="slide-num">03 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Estrutura de hoje</div>
+      <h2>Como vão funcionar as próximas 2h30</h2>
+      <hr class="accent-bar">
+      <p class="lead">A sessão mais importante para usar tudo o que veio antes com tranquilidade.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue">
+          <div class="num-big t-blue">01</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">O que pode, o que não pode <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">LGPD sem juridiquês, o semáforo do dado e a regra de ouro do sensível.</p>
+        </div>
+        <div class="card top-orange">
+          <div class="num-big t-orange">02</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Lab: a política <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Escrevemos juntos o rascunho da política de uso de IA da PRIMETOUR.</p>
+        </div>
+        <div class="card top-green">
+          <div class="num-big t-green">03</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Discussão <span class="muted" style="font-weight:400">· 30 min</span></div>
+          <p class="muted" style="margin:0">Onde o board concorda, onde diverge, e o que vai para o jurídico fechar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 4 — OBJETIVOS ====== -->
+  <section class="slide">
+    <span class="slide-num">04 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Objetivos</div>
+      <h2>O que você leva ao final desta sessão</h2>
+      <hr class="accent-bar">
+      <div class="mt-2">
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>
+          <div><div class="ft-title">Um critério de decisão claro</div><div class="ft-desc">Saber, em segundos, se um dado pode ou não ir para a IA — sem precisar consultar o jurídico a cada vez.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-blue)" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 9h16M8 5v4"/></svg>
+          <div><div class="ft-title">LGPD no nível de quem decide</div><div class="ft-desc">Entender o essencial da lei para tomar boas decisões, sem virar advogado nem travar por medo.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-green)" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"/><path d="M12 8v4M12 16h.01"/></svg>
+          <div><div class="ft-title">A regra de ouro do sensível</div><div class="ft-desc">Uma pergunta simples que resolve a maioria dos casos — e técnicas para usar a IA mesmo com dado delicado.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg>
+          <div><div class="ft-title">O rascunho da política da PRIMETOUR</div><div class="ft-desc">Sair com a versão 1 da política de uso de IA — pronta para o jurídico revisar e o board aprovar.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 5 — GOVERNANÇA NÃO É FREIO ====== -->
+  <section class="slide">
+    <span class="slide-num">05 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Enquadramento</div>
+      <h2>Governança não é freio. É cinto de segurança.</h2>
+      <hr class="accent-bar">
+      <p class="lead">A política certa não existe para você usar menos a IA — existe para você usar mais, sem medo.</p>
+      <div class="grid grid-2">
+        <div class="card side-gray">
+          <div class="section-tag">Sem regra clara</div>
+          <p class="muted" style="margin:0">Cada um decide na hora, no susto. Uns travam por medo e perdem o ganho; outros arriscam demais e expõem a casa. A insegurança trava a adoção.</p>
+        </div>
+        <div class="card side-orange">
+          <div class="section-tag">Com regra clara</div>
+          <p class="muted" style="margin:0">Todos sabem o que pode. Decidem rápido, usam mais, e o que é sensível fica protegido por hábito, não por sorte. A clareza acelera.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2"><p style="margin:0;color:var(--claude-light)">Um time que sabe a regra usa a ferramenta com confiança. Um time inseguro a usa pela metade — ou pior, escondido.</p></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 6 — LGPD EM 5 MINUTOS ====== -->
+  <section class="slide">
+    <span class="slide-num">06 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Sem juridiquês</div>
+      <h2>LGPD em cinco minutos para quem decide</h2>
+      <hr class="accent-bar">
+      <p class="lead">A lei é longa. O que o board precisa reter cabe em quatro ideias.</p>
+      <div class="grid grid-2">
+        <div class="card side-blue"><div class="ft-title">Dado pessoal</div><div class="ft-desc">Qualquer informação que identifique uma pessoa: nome, e-mail, CPF, telefone, até preferências que, juntas, apontem para alguém.</div></div>
+        <div class="card side-blue"><div class="ft-title">Titular</div><div class="ft-desc">A pessoa a quem o dado se refere — o cliente, o funcionário. A lei existe para protegê-la, e ela tem direitos sobre o próprio dado.</div></div>
+        <div class="card side-blue"><div class="ft-title">Finalidade</div><div class="ft-desc">Todo uso de dado precisa de um porquê legítimo e declarado. “Joguei na IA para ver o que sai” não é finalidade.</div></div>
+        <div class="card side-blue"><div class="ft-title">Responsabilidade</div><div class="ft-desc">A PRIMETOUR responde pelo dado que coleta, mesmo quando usa uma ferramenta de terceiro. Terceirizar a tarefa não terceiriza a culpa.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 7 — PESSOAL VS SENSÍVEL ====== -->
+  <section class="slide">
+    <span class="slide-num">07 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">A distinção que muda tudo</div>
+      <h2>Dado pessoal vs dado sensível</h2>
+      <hr class="accent-bar">
+      <p class="lead">Nem todo dado pessoal pesa igual. A lei dá proteção extra a uma categoria — e é nela que mora o risco.</p>
+      <div class="grid grid-2">
+        <div class="card side-blue">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.08em;background:var(--claude-blue);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">PESSOAL</div>
+          <h3 class="mt-1">Identifica a pessoa</h3>
+          <p class="muted" style="margin:0">Nome, e-mail, telefone, endereço, histórico de compra. Exige cuidado e finalidade — mas é o dado comum do negócio.</p>
+        </div>
+        <div class="card side-orange">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.08em;background:var(--claude-orange);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">SENSÍVEL</div>
+          <h3 class="mt-1">Pode gerar discriminação</h3>
+          <p class="muted" style="margin:0">Saúde, religião, origem racial, opinião política, dado biométrico, orientação. Proteção reforçada — trate com rigor máximo.</p>
+        </div>
+      </div>
+      <p class="muted mt-2">No luxo, dado sensível aparece onde menos se espera: restrição alimentar (saúde), pedido religioso, condição de mobilidade. Atenção redobrada.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 8 — A PERGUNTA-MÃE ====== -->
+  <section class="slide">
+    <span class="slide-num">08 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">A regra de ouro</div>
+      <h2>Uma pergunta resolve a maioria dos casos</h2>
+      <hr class="accent-bar">
+      <div class="card-dark side-orange" style="padding:2.2rem 2rem">
+        <div class="section-tag">Antes de colar qualquer coisa na IA, pergunte:</div>
+        <p style="font-family:var(--font-head);font-weight:700;font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.3;color:var(--claude-light);margin:.3rem 0 0">“Eu mandaria isto por e-mail para alguém de fora da empresa?”</p>
+      </div>
+      <div class="grid grid-2 mt-2">
+        <div class="card side-green"><strong class="t-green" style="font-family:var(--font-head)">Se sim</strong><p class="muted" style="margin:.3rem 0 0">Provavelmente pode ir para a IA, com a finalidade certa. É informação que já circula com algum conforto.</p></div>
+        <div class="card side-orange"><strong class="t-orange" style="font-family:var(--font-head)">Se não, ou “depende”</strong><p class="muted" style="margin:.3rem 0 0">Pare. Anonimize, use codinome, ou leve só o trecho necessário. Na dúvida, trate como sensível.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 9 — O SEMÁFORO DO DADO ====== -->
+  <section class="slide">
+    <span class="slide-num">09 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Critério de decisão</div>
+      <h2>O semáforo do dado</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três faixas. Toda informação cai em uma delas — e cada faixa tem uma conduta.</p>
+      <div class="grid grid-3">
+        <div class="card top-green">
+          <div style="font-family:var(--font-head);font-weight:700;color:var(--claude-green);font-size:1.2rem">VERDE</div>
+          <h3 class="mt-1">Pode entrar</h3>
+          <p class="muted" style="margin:0">Informação pública ou interna não identificável. Vai para a IA livremente, com a finalidade certa.</p>
+        </div>
+        <div class="card top-orange">
+          <div style="font-family:var(--font-head);font-weight:700;color:var(--claude-orange);font-size:1.2rem">AMARELO</div>
+          <h3 class="mt-1">Entra tratado</h3>
+          <p class="muted" style="margin:0">Dado pessoal comum. Entra só anonimizado, com codinome, ou em trecho mínimo. Nunca cru.</p>
+        </div>
+        <div class="card top-orange" style="border-top-color:var(--claude-dark)">
+          <div style="font-family:var(--font-head);font-weight:700;color:var(--claude-dark);font-size:1.2rem">VERMELHO</div>
+          <h3 class="mt-1">Não entra</h3>
+          <p class="muted" style="margin:0">Dado sensível, segredo de negócio, credencial. Fica fora — a menos que haja base legal e aprovação explícita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 10 — VERDE ====== -->
+  <section class="slide">
+    <span class="slide-num">10 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Faixa verde</div>
+      <h2>O que pode entrar livremente</h2>
+      <hr class="accent-bar">
+      <p class="lead">A maior parte do trabalho do board vive aqui. É onde a IA rende sem fricção.</p>
+      <div class="grid grid-2">
+        <div class="card side-green"><div class="ft-title">Material já público</div><div class="ft-desc">Relatórios setoriais, notícias, conteúdo do site, apresentações institucionais.</div></div>
+        <div class="card side-green"><div class="ft-title">Texto sem identificação</div><div class="ft-desc">Um rascunho de campanha, um comunicado em construção, um brief sem nome de cliente.</div></div>
+        <div class="card side-green"><div class="ft-title">Dados agregados</div><div class="ft-desc">Números de operação sem identificar pessoas: ocupação média, ticket médio, sazonalidade.</div></div>
+        <div class="card side-green"><div class="ft-title">Casos hipotéticos</div><div class="ft-desc">“Imagine um cliente que…” — situações montadas para testar uma abordagem, sem pessoa real.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 11 — AMARELO ====== -->
+  <section class="slide">
+    <span class="slide-num">11 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Faixa amarela</div>
+      <h2>O que entra, mas tratado</h2>
+      <hr class="accent-bar">
+      <p class="lead">Dado pessoal comum não é proibido — é condicionado. A condição é simples: tirar a identificação.</p>
+      <div class="grid grid-3">
+        <div class="card side-orange"><div class="ft-title">Use codinome</div><div class="ft-desc">“Cliente A” no lugar do nome. O contexto da tarefa funciona igual; a pessoa fica protegida.</div></div>
+        <div class="card side-orange"><div class="ft-title">Troque os números</div><div class="ft-desc">Valores, datas e quantidades que identifiquem podem ir alterados, mantendo a proporção.</div></div>
+        <div class="card side-orange"><div class="ft-title">Leve só o trecho</div><div class="ft-desc">Não cole o e-mail inteiro. Leve o parágrafo que importa para a tarefa, sem o resto.</div></div>
+      </div>
+      <p class="muted mt-2">Foi assim em todos os labs até aqui: codinome no cliente, número trocado. Não por acaso — é a faixa amarela na prática.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 12 — VERMELHO ====== -->
+  <section class="slide">
+    <span class="slide-num">12 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Faixa vermelha</div>
+      <h2>O que fica fora</h2>
+      <hr class="accent-bar">
+      <p class="lead">Uma lista curta de coisas que não vão para a IA sem base legal e aprovação explícita.</p>
+      <div class="card side-orange mb-1"><div class="ft-title">Dado sensível identificável</div><div class="ft-desc">Saúde, religião, origem, biometria de uma pessoa real e nomeada. Aqui o risco é alto e a proteção, reforçada.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Credenciais e segredos</div><div class="ft-desc">Senhas, chaves de acesso, dados de cartão, contratos sob sigilo, segredo de negócio.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Documento de identificação</div><div class="ft-desc">Passaporte, CPF, RG completos de clientes. Mesmo para “só formatar”, não cole o documento inteiro.</div></div>
+      <div class="card side-orange"><div class="ft-title">O que você não pode justificar</div><div class="ft-desc">Se não há finalidade clara e base legal, fica fora. A regra protege o cliente e a empresa ao mesmo tempo.</div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 13 — DESIDENTIFICAÇÃO ====== -->
+  <section class="slide">
+    <span class="slide-num">13 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Na prática</div>
+      <h2>Como tirar a identificação</h2>
+      <hr class="accent-bar">
+      <p class="lead">Passar do vermelho ou amarelo para o verde costuma ser questão de minutos — e o resultado da IA não perde nada.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card card-soft side-gray">
+          <div class="section-tag">Antes (identificável)</div>
+          <p class="muted" style="margin:0">“A cliente Marina Costa, CPF 123…, reclamou que a suíte do Copacabana Palace não tinha a vista prometida na diária de R$ 4.200.”</p>
+        </div>
+        <div class="card card-soft side-green">
+          <div class="section-tag">Depois (tratado)</div>
+          <p class="muted" style="margin:0">“Uma cliente VIP reclamou que a suíte de um hotel cinco estrelas não tinha a vista prometida, numa diária de valor alto.”</p>
+        </div>
+      </div>
+      <p class="muted mt-2">A tarefa — redigir a resposta — funciona igual. O Claude não precisa do nome para escrever bem; precisa do contexto.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 14 — O QUE CHECAR NA FERRAMENTA ====== -->
+  <section class="slide">
+    <span class="slide-num">14 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">A ferramenta também tem regras</div>
+      <h2>O que confirmar antes de adotar</h2>
+      <hr class="accent-bar">
+      <p class="lead">Parte da governança é saber como a própria ferramenta trata o seu dado. Quatro perguntas para a TI e o fornecedor.</p>
+      <div class="grid grid-2">
+        <div class="card side-blue"><div class="ft-title">Treinamento</div><div class="ft-desc">Suas conversas podem ser usadas para treinar o modelo? Confirme a configuração e o plano — e desligue se a política da casa pedir.</div></div>
+        <div class="card side-blue"><div class="ft-title">Retenção</div><div class="ft-desc">Por quanto tempo o dado fica guardado? Há opção de retenção reduzida ou exclusão sob demanda?</div></div>
+        <div class="card side-blue"><div class="ft-title">Plano e contrato</div><div class="ft-desc">Planos corporativos costumam ter proteções mais fortes. Existe um acordo de tratamento de dados (DPA) a assinar?</div></div>
+        <div class="card side-blue"><div class="ft-title">Localização</div><div class="ft-desc">Onde o dado é processado? A LGPD impõe cuidados para transferência internacional — pauta para o jurídico.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 15 — CONECTORES E O RISCO AMPLIADO ====== -->
+  <section class="slide">
+    <span class="slide-num">15 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Liga com a Sessão 5</div>
+      <h2>Conectar amplia o alcance — e o risco</h2>
+      <hr class="accent-bar">
+      <p class="lead">Quando você liga um conector, não escolhe mais arquivo por arquivo. Por isso o escopo vira a decisão central.</p>
+      <div class="grid grid-2">
+        <div class="card side-gray">
+          <div class="section-tag">Upload</div>
+          <p class="muted" style="margin:0">Você vê e escolhe cada arquivo que sobe. O controle é total e na hora. Risco baixo, por desenho.</p>
+        </div>
+        <div class="card side-orange">
+          <div class="section-tag">Conector</div>
+          <p class="muted" style="margin:0">A IA pode alcançar tudo dentro do escopo autorizado. Se o escopo é a caixa inteira, ela alcança o sensível que está lá dentro.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2"><p style="margin:0;color:var(--claude-light)"><strong>Regra:</strong> conecte sempre o escopo mínimo. Uma pasta, não o OneDrive todo. Uma caixa de projeto, não o Outlook inteiro.</p></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 16 — QUEM RESPONDE PELO QUÊ ====== -->
+  <section class="slide">
+    <span class="slide-num">16 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Papéis</div>
+      <h2>Quem responde pelo quê</h2>
+      <hr class="accent-bar">
+      <p class="lead">Governança funciona quando cada papel sabe a sua parte. Ninguém carrega tudo sozinho.</p>
+      <table class="tbl">
+        <thead><tr><th class="col-dark">Papel</th><th>Responsabilidade</th></tr></thead>
+        <tbody>
+          <tr><td class="col-dark">Cada usuário</td><td>Aplicar o semáforo a cada uso. A primeira linha de defesa é a pessoa que cola o texto.</td></tr>
+          <tr><td class="col-dark">TI</td><td>Habilitar conectores com escopo certo, configurar treinamento e retenção, manter o ambiente seguro.</td></tr>
+          <tr><td class="col-dark">Jurídico / DPO</td><td>Definir base legal, revisar contratos e DPA, responder à ANPD e ao titular.</td></tr>
+          <tr><td class="col-dark">Board</td><td>Aprovar a política, dar o exemplo de uso correto, tratar governança como prioridade, não burocracia.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 17 — O MAIOR RISCO ====== -->
+  <section class="slide">
+    <span class="slide-num">17 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>O maior risco não é a IA</h2>
+      <hr class="accent-bar">
+      <p class="lead">A tecnologia leva a culpa, mas o vazamento quase sempre tem origem humana. A boa notícia: isso é gerenciável.</p>
+      <div class="grid grid-3">
+        <div class="card side-orange"><div class="ft-title">O atalho com pressa</div><div class="ft-desc">Colar o documento inteiro porque “é mais rápido”. A pressa, não a ferramenta, expõe o dado.</div></div>
+        <div class="card side-orange"><div class="ft-title">A ferramenta de fora</div><div class="ft-desc">Usar um app de IA pessoal, sem aprovação, para tarefa de trabalho. A sombra é o risco, não o uso oficial.</div></div>
+        <div class="card side-orange"><div class="ft-title">O “só desta vez”</div><div class="ft-desc">A exceção que vira hábito. A regra existe justamente para o dia corrido em que a tentação aparece.</div></div>
+      </div>
+      <p class="muted mt-2">Por isso a política importa mais que a tecnologia: ela molda o hábito de quem decide na pressa.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 18 — TRANSIÇÃO BLOCO 2 ====== -->
+  <section class="slide slide-dark" id="bloco2">
+    <span class="slide-num">18 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 2 · 60 min</div>
+      <h1 class="cover-title">Vamos escrever<br>a regra da casa.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Não uma política de 40 páginas que ninguém lê. Uma página clara que todo mundo entende e segue — o rascunho que o jurídico depois fecha.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 19 — O LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">19 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O lab</div>
+      <h2>A política de uso de IA da PRIMETOUR, versão 1</h2>
+      <hr class="accent-bar">
+      <p class="lead">Em 45 minutos, o rascunho que vira documento oficial depois da revisão jurídica.</p>
+      <div class="card-dark side-orange mb-2">
+        <div class="section-tag">Enunciado</div>
+        <p style="font-size:1.2rem;line-height:1.5;color:var(--claude-light);margin:0">Use o Claude para redigir a <strong>versão 1 da política de uso de IA da PRIMETOUR</strong>: o que pode, o que não pode, o semáforo do dado, e o que fazer em caso de dúvida. Curta, clara, na voz da casa.</p>
+      </div>
+      <div class="card card-soft side-orange">
+        <div class="section-tag">Critério de sucesso</div>
+        <p class="italic" style="margin:0">Mostre o rascunho a alguém que não esteve aqui. Se essa pessoa entender o que pode e o que não pode sem precisar perguntar, a política está pronta para a revisão jurídica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 20 — ANATOMIA DA POLÍTICA ====== -->
+  <section class="slide">
+    <span class="slide-num">20 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Guia do lab</div>
+      <h2>O que uma boa política precisa ter</h2>
+      <hr class="accent-bar">
+      <p class="lead">Seis blocos curtos. Cabe em uma página — e é melhor que caiba.</p>
+      <div class="grid grid-2">
+        <div class="card"><div class="flex gap-m"><div class="num-big">1</div><div><div class="ft-title">Por que existe</div><div class="ft-desc">Uma frase: usar IA com confiança, protegendo cliente e empresa.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">2</div><div><div class="ft-title">O semáforo</div><div class="ft-desc">Verde, amarelo, vermelho, com exemplos da PRIMETOUR.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">3</div><div><div class="ft-title">A regra de ouro</div><div class="ft-desc">A pergunta do e-mail para fora, como teste rápido.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">4</div><div><div class="ft-title">Ferramentas aprovadas</div><div class="ft-desc">Quais ferramentas de IA a casa autoriza, e em que planos.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">5</div><div><div class="ft-title">Em caso de dúvida</div><div class="ft-desc">A quem perguntar antes de agir. Um nome, um canal.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">6</div><div><div class="ft-title">Se algo der errado</div><div class="ft-desc">O que fazer e a quem avisar se um dado vazar. Sem caça às bruxas.</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 21 — SUA CADEIRA ====== -->
+  <section class="slide">
+    <span class="slide-num">21 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Foco por cadeira</div>
+      <h2>O que cada cadeira traz para a política</h2>
+      <hr class="accent-bar">
+      <p class="lead">A política é de todos, mas cada cadeira enxerga um risco que as outras não veem.</p>
+      <div class="grid grid-2">
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CEO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">O princípio</span></div><p class="italic muted mt-1" style="margin-bottom:0">A frase de abertura e o tom: governança como habilitadora, com o board dando o exemplo de uso correto.</p></div>
+        <div class="card side-blue"><div class="flex justify-between items-center"><h3 style="margin:0">COO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">A operação</span></div><p class="italic muted mt-1" style="margin-bottom:0">As ferramentas aprovadas, os escopos de conector e o que a TI precisa configurar e manter.</p></div>
+        <div class="card side-green"><div class="flex justify-between items-center"><h3 style="margin:0">CMO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">A clareza</span></div><p class="italic muted mt-1" style="margin-bottom:0">A redação da política na voz da casa: simples, sem juridiquês, fácil de seguir no dia corrido.</p></div>
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CCO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">O cliente</span></div><p class="italic muted mt-1" style="margin-bottom:0">As regras de dado de cliente: codinome, dado sensível do luxo e transparência com quem viaja conosco.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 22 — REGRAS DO LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">22 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como funciona</div>
+      <h2>Três regras do lab</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-3">
+        <div class="card"><div class="flex gap-m"><div class="num-big">1</div><div><div class="ft-title">Uma página, não quarenta</div><div class="ft-desc">Política que ninguém lê não protege ninguém. Curta e clara vence completa e ignorada.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">2</div><div><div class="ft-title">Exemplos da PRIMETOUR</div><div class="ft-desc">Nada de regra abstrata. Use casos reais da casa para cada faixa do semáforo.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">3</div><div><div class="ft-title">É rascunho, e tudo bem</div><div class="ft-desc">A versão de hoje vai para o jurídico depois. Melhor um rascunho hoje que a política perfeita nunca.</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 23 — CRONÔMETRO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">23 / 31</span>
+    <div class="slide-inner center">
+      <div class="section-tag" style="justify-content:center">Cronômetro ativo</div>
+      <div class="timer-display" id="challenge-timer" data-minutes="45">45:00</div>
+      <p style="color:var(--claude-light);font-family:var(--font-head);margin:.2rem 0 1.4rem">minutos a partir de agora</p>
+      <div class="flex gap-s" style="justify-content:center;margin-bottom:1.8rem">
+        <button class="btn btn-orange" id="timer-start" onclick="toggleTimer(this)">Iniciar contador</button>
+        <button class="btn btn-ghost" style="color:var(--claude-light);border-color:var(--claude-mid-gray)" onclick="resetTimer(this)">Reiniciar</button>
+      </div>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Use o template de política do caderno como ponto de partida</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Preencha o semáforo com exemplos da casa</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Teste a clareza com quem não esteve aqui</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 24 — TRANSIÇÃO BLOCO 3 ====== -->
+  <section class="slide slide-dark" id="bloco3">
+    <span class="slide-num">24 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 3 · 30 min</div>
+      <h1 class="cover-title">Onde a casa<br>concorda.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Cada cadeira escreveu de um ângulo. Vamos juntar em um rascunho só, ver onde há consenso, e separar o que vai para o jurídico fechar.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 25 — CINCO PERGUNTAS ====== -->
+  <section class="slide">
+    <span class="slide-num">25 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Roteiro da discussão</div>
+      <h2>Cinco perguntas para destravar</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não precisa todo mundo responder todas — mas alguém responde cada.</p>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">1</span><div><div class="ft-title">Onde o semáforo ficou ambíguo?</div><div class="ft-desc italic">Que tipo de dado da PRIMETOUR não cabe claramente em uma faixa?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">2</span><div><div class="ft-title">Qual exemplo vermelho mais surpreendeu?</div><div class="ft-desc italic">Algo que você colaria sem pensar e, agora, não colaria mais?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">3</span><div><div class="ft-title">A regra de ouro resolve o seu dia?</div><div class="ft-desc italic">A pergunta do e-mail para fora cobre os seus casos, ou falta algo?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">4</span><div><div class="ft-title">O que precisa ir para o jurídico?</div><div class="ft-desc italic">Que ponto a gente não fecha sozinho aqui?</div></div></div></div>
+      <div class="card card-soft"><div class="flex gap-m items-center"><span class="num-circle">5</span><div><div class="ft-title">Como o time todo aprende a regra?</div><div class="ft-desc italic">Política guardada na gaveta não protege. Como ela vira hábito?</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 26 — O QUE VAMOS LEVAR ====== -->
+  <section class="slide">
+    <span class="slide-num">26 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Síntese coletiva</div>
+      <h2>O que vamos levar daqui</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três áreas para fechar a sessão e ancorar o aprendizado coletivo.</p>
+      <div class="grid grid-3">
+        <div class="card top-green"><svg class="ico t-green" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><h3 class="mt-1">A política, versão 1</h3><p class="muted" style="margin:0">O rascunho de uma página, com consenso do board, pronto para a revisão jurídica.</p></div>
+        <div class="card top-orange"><svg class="ico t-orange" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-8-5M3 12a9 9 0 0 1 9-9 9 9 0 0 1 8 5"/><path d="M21 4v4h-4M3 20v-4h4"/></svg><h3 class="mt-1">A lista para o jurídico</h3><p class="muted" style="margin:0">Os pontos que dependem de base legal, contrato e DPA — encaminhados, não esquecidos.</p></div>
+        <div class="card top-blue"><svg class="ico t-blue" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3 2.5c-.7.3-1 .8-1 1.5M12 17h.01"/></svg><h3 class="mt-1">O plano de adoção</h3><p class="muted" style="margin:0">Como a regra vira hábito do time — exatamente o tema da Sessão 7, que fecha o treinamento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 27 — CADERNO: INTRO ====== -->
+  <section class="slide slide-dark" id="caderno">
+    <span class="slide-num">27 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O caderno de governança</div>
+      <h1 class="cover-title" style="font-size:clamp(2.2rem,5vw,3.4rem)">Seu manual da semana</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Dez ferramentas de governança — do template de política ao classificador de dado.</p>
+      <div class="grid grid-3 mt-3">
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Manual</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">O critério</div><p class="muted" style="margin:.4rem 0 0">O semáforo, a regra de ouro e os papéis — resumidos para consulta rápida na hora da dúvida.</p></div>
+        <div class="card-darker side-orange"><div class="num-big t-orange">10</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Ferramentas prontas</div><p class="muted" style="margin:.4rem 0 0">Template de política, classificador de dado, desidentificador, checklist e resposta a incidente.</p></div>
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Portal</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Biblioteca cumulativa</div><p class="muted" style="margin:.4rem 0 0">Com as sessões anteriores, já são 60 prompts. O kit da PRIMETOUR cresce a cada encontro.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 28 — OS 10 (PREVIEW) ====== -->
+  <section class="slide">
+    <span class="slide-num">28 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Preview do caderno</div>
+      <h2>As 10 ferramentas de governança</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cada uma vem no caderno completo, abaixo, com botão de copiar.</p>
+      <div class="grid grid-2">
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">01</span> Template de política de uso de IA</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">02</span> Classificador de dado (semáforo)</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">03</span> Desidentificar um texto</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">04</span> Checklist: posso colocar isto na IA?</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">05</span> Avaliar um caso de uso pela LGPD</div></div>
+        </div>
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">06</span> Aviso de uso de IA para cliente</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">07</span> Auditar um Project quanto a dado</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">08</span> Perguntas para o fornecedor de IA</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">09</span> Plano de resposta a incidente</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">10</span> Explicar a política em linguagem simples</div></div>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p class="italic" style="margin:0;color:var(--claude-light)">O caderno completo, com cada ferramenta explicada e o botão de copiar, está logo abaixo — seção <a href="#caderno-completo" style="color:var(--claude-orange)">“Caderno de governança”</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 29 — TAREFA ====== -->
+  <section class="slide" id="tarefa">
+    <span class="slide-num">29 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Para a próxima semana</div>
+      <h2>Sua tarefa até a Sessão 7</h2>
+      <hr class="accent-bar">
+      <p class="lead">Levar a política do rascunho para a realidade — e preparar o fechamento do treinamento.</p>
+      <div class="task-row"><div class="num-big">1</div><div><div class="ft-title">Leve o rascunho ao jurídico</div><div class="ft-desc">A versão 1 da política para o jurídico e o DPO revisarem. O board aprova na sequência.</div></div></div>
+      <div class="task-row"><div class="num-big">2</div><div><div class="ft-title">Aplique o semáforo a um uso real</div><div class="ft-desc">Em algo que você ia colar na IA esta semana. Verde, amarelo ou vermelho? Anote a dúvida, se houver.</div></div></div>
+      <div class="task-row"><div class="num-big">3</div><div><div class="ft-title">Pense no plano de 90 dias da sua área</div><div class="ft-desc">Como o seu time adota tudo isto. É o que vamos construir, por cadeira, na Sessão 7.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 30 — PRÓXIMA SESSÃO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">30 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Próxima semana</div>
+      <p class="cover-sub" style="font-size:1.2rem;margin:0">Sessão 7 · a última</p>
+      <h1 class="cover-title" style="font-size:clamp(2.4rem,5.5vw,3.6rem)">Adoção</h1>
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">O plano de 90 dias para cada área — de tudo o que vimos a hábito de time.</p>
+      <div class="section-tag mt-2">O que veremos</div>
+      <ul class="sq-list">
+        <li style="color:var(--claude-light)">O plano de 90 dias, por cadeira, do board ao time</li>
+        <li style="color:var(--claude-light)">Como medir adoção sem virar burocracia</li>
+        <li style="color:var(--claude-light)">Rituais que fazem o hábito pegar e durar</li>
+        <li style="color:var(--claude-light)">Lab: o seu plano de 90 dias, pronto para começar segunda</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 31 — ENCERRAMENTO ====== -->
+  <section class="slide slide-light">
+    <span class="slide-num">31 / 31</span>
+    <div class="slide-inner">
+      <span class="brand-square lg" style="margin-bottom:1.5rem"></span>
+      <h1 style="font-size:clamp(3rem,9vw,5.5rem)">Obrigado.</h1>
+      <hr class="accent-bar">
+      <p class="italic muted" style="font-size:1.2rem">Regra clara é o que deixa o time usar a ferramenta sem medo. Leve o rascunho ao jurídico — nos vemos na última sessão.</p>
+      <p class="muted" style="font-family:var(--font-head)">Renê Junio · Marketing PRIMETOUR · Sessão 6 de 7</p>
+    </div>
+  </section>
+
+  </div><!-- /.slides-wrap -->
+
+  <!-- ============================================================
+       SEÇÕES DE CONSULTA (não aparecem no modo apresentação)
+       ============================================================ -->
+
+  <!-- ====== CADERNO COMPLETO DE GOVERNANÇA ====== -->
+  <section class="non-slide" id="caderno-completo" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem">
+    <div class="section-tag">Caderno de governança</div>
+    <h2>As 10 ferramentas da Sessão 6</h2>
+    <hr class="accent-bar">
+    <p class="lead">Da política ao incidente. Preencha os campos entre colchetes. Lembre: critério de decisão, não parecer jurídico — o jurídico fecha.</p>
+
+    <div class="grid grid-4 mb-2" style="gap:.7rem">
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Política</strong><div class="ft-desc">Redigir e explicar a regra.</div></div>
+      <div class="card card-soft side-blue" style="padding:.8rem 1rem"><strong class="t-blue" style="font-family:var(--font-head)">Decisão</strong><div class="ft-desc">Classificar e checar dado.</div></div>
+      <div class="card card-soft side-green" style="padding:.8rem 1rem"><strong class="t-green" style="font-family:var(--font-head)">Proteção</strong><div class="ft-desc">Desidentificar e auditar.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Resposta</strong><div class="ft-desc">Fornecedor e incidente.</div></div>
+    </div>
+
+    <!-- 01 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Política · S6</span>
+      <h3>01 — Template de política de uso de IA</h3>
+      <p class="when"><strong>Quando usar:</strong> Para redigir a versão 1 da política da PRIMETOUR — a base que o jurídico depois fecha.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s601', this)">Copiar</button><pre id="s601">Atue como redator de uma política interna, na voz da PRIMETOUR — clara, direta, sem juridiquês.
+
+Escreva a versão 1 da Política de Uso de Inteligência Artificial, em no máximo uma página, com estes blocos:
+1. Por que esta política existe (uma frase: usar IA com confiança, protegendo cliente e empresa)
+2. O semáforo do dado: VERDE (pode), AMARELO (só tratado), VERMELHO (não entra), com 2 exemplos da PRIMETOUR em cada
+3. A regra de ouro: "eu mandaria isto por e-mail para fora?"
+4. Ferramentas aprovadas: [liste as que a casa autoriza]
+5. Em caso de dúvida: procurar [nome/canal] antes de agir
+6. Se algo der errado: avisar [nome/canal], sem caça às bruxas
+
+Tom de quem habilita, não de quem proíbe. É um rascunho para revisão jurídica.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Este é o entregável do lab. Depois, peça “gere também uma versão de meia página para afixar perto da mesa”.</p>
+    </article>
+
+    <!-- 02 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Decisão · S6</span>
+      <h3>02 — Classificador de dado (semáforo)</h3>
+      <p class="when"><strong>Quando usar:</strong> Na dúvida sobre em qual faixa um dado cai antes de usá-lo.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s602', this)">Copiar</button><pre id="s602">Vou descrever uma informação que penso em usar com a IA. Classifique-a no semáforo do dado.
+
+A INFORMAÇÃO: [descreva o que é, sem colar o dado real sensível]
+O USO PRETENDIDO: [o que eu quero fazer com ela]
+
+Devolva:
+1. A faixa: VERDE (pode), AMARELO (só tratado) ou VERMELHO (não entra) — e por quê
+2. Se AMARELO: como tratá-la (codinome, trocar números, levar só o trecho)
+3. Se VERMELHO: o que precisaria mudar para usá-la com segurança
+4. Uma pergunta que, se eu responder, confirma a classificação
+
+Na dúvida, seja conservador: classifique na faixa mais restritiva.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Em 30 segundos você sai da dúvida. Se cair em vermelho recorrente, leve o caso ao DPO.</p>
+    </article>
+
+    <!-- 03 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Proteção · S6</span>
+      <h3>03 — Desidentificar um texto</h3>
+      <p class="when"><strong>Quando usar:</strong> Você precisa usar um texto que tem dado pessoal, mas quer remover a identificação antes.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s603', this)">Copiar</button><pre id="s603">Vou colar um texto que contém dados que identificam pessoas. Quero uma versão desidentificada que sirva para a mesma tarefa.
+
+[cole o texto]
+
+TAREFA QUE FAREI DEPOIS: [o que preciso fazer com o texto]
+
+Devolva:
+1. O texto reescrito: nomes viram codinomes (Cliente A), valores e datas identificáveis ficam aproximados, documentos somem
+2. Uma lista do que você removeu ou alterou
+3. Um aviso se sobrou algo que ainda pode identificar alguém
+
+Preserve todo o contexto necessário para a tarefa. Tire a pessoa, mantenha a situação.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Faça isto numa conversa avulsa e confira a saída antes de levar o texto tratado para a tarefa real.</p>
+    </article>
+
+    <!-- 04 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Decisão · S6</span>
+      <h3>04 — Checklist: posso colocar isto na IA?</h3>
+      <p class="when"><strong>Quando usar:</strong> Uma checagem rápida de cinco perguntas antes de um uso que te deixou em dúvida.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s604', this)">Copiar</button><pre id="s604">Quero checar se posso usar a IA para a seguinte tarefa:
+
+A TAREFA: [descreva]
+OS DADOS ENVOLVIDOS: [que tipo de informação entra]
+
+Me faça, uma a uma, estas perguntas e ajude a responder:
+1. Eu mandaria este material por e-mail para fora da empresa?
+2. Há dado que identifica uma pessoa? É sensível?
+3. Existe uma finalidade clara e legítima para este uso?
+4. A ferramenta que vou usar está aprovada pela casa?
+5. Se eu errar aqui, qual o pior cenário para o cliente e para a PRIMETOUR?
+
+Ao final: pode seguir, seguir com tratamento, ou não seguir — e por quê.</pre></div>
+      <p class="tip"><strong>Dica:</strong> A pergunta 5 é a que mais clareia. Se o pior cenário é grave, trate como vermelho até confirmar.</p>
+    </article>
+
+    <!-- 05 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Decisão · S6</span>
+      <h3>05 — Avaliar um caso de uso pela LGPD</h3>
+      <p class="when"><strong>Quando usar:</strong> Um novo uso recorrente que você quer entender sob a ótica da LGPD, sem juridiquês.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s605', this)">Copiar</button><pre id="s605">Quero avaliar um caso de uso de IA sob a ótica da LGPD, em linguagem de quem decide, não de advogado.
+
+O CASO DE USO: [descreva o que seria feito, com que dado, com que frequência]
+
+Me ajude a pensar:
+1. Que dados pessoais estão envolvidos? Algum é sensível?
+2. Qual seria a finalidade legítima deste uso?
+3. Que cuidados reduziriam o risco (anonimização, escopo, retenção)?
+4. Que pontos eu deveria levar ao jurídico ou ao DPO antes de adotar?
+
+Deixe claro o que é orientação prática e o que exige confirmação jurídica. Não dê isto como parecer legal.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Use a saída como pauta da conversa com o DPO — chega com as perguntas certas, economiza a reunião.</p>
+    </article>
+
+    <!-- 06 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Política · S6</span>
+      <h3>06 — Aviso de uso de IA para cliente</h3>
+      <p class="when"><strong>Quando usar:</strong> Para comunicar com transparência, quando fizer sentido, que a casa usa IA em parte do atendimento.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s606', this)">Copiar</button><pre id="s606">Quero um texto curto e elegante que comunique, na voz da PRIMETOUR, que usamos ferramentas de inteligência artificial para apoiar nosso atendimento — com transparência e cuidado com o dado do cliente.
+
+ONDE VAI APARECER: [site, contrato, e-mail de boas-vindas]
+O QUE QUERO TRANSMITIR: que a IA agiliza e qualifica, mas a curadoria e a decisão seguem humanas, e o dado é protegido.
+
+Tom: confiante, caloroso, sem tecniquês e sem soar defensivo. Máximo [N] palavras.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Transparência bem feita vira diferencial de confiança. Valide o texto com o jurídico antes de publicar.</p>
+    </article>
+
+    <!-- 07 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Proteção · S6</span>
+      <h3>07 — Auditar um Project quanto a dado</h3>
+      <p class="when"><strong>Quando usar:</strong> Revisar um Project existente para confirmar que nada sensível ficou guardado onde não devia.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s607', this)">Copiar</button><pre id="s607">Vou descrever um Project que mantenho no Claude. Faça uma auditoria de dado.
+
+INSTRUÇÕES DO PROJECT: [cole]
+ARQUIVOS NO CONHECIMENTO: [liste o tipo de cada um]
+QUEM TEM ACESSO: [só eu / o time / a casa]
+
+Me aponte:
+1. Algum dado pessoal ou sensível que esteja nas instruções ou nos arquivos sem necessidade
+2. Algo que deveria estar com codinome e está com nome real
+3. Arquivos que poderiam sair do conhecimento permanente e virar upload pontual
+4. Um ajuste de acesso, se o conteúdo pede mais restrição
+
+Seja conservador: na dúvida, recomende remover ou tratar.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Combine com a manutenção mensal do Project (Sessão 3). Auditoria de dado entra na mesma rotina.</p>
+    </article>
+
+    <!-- 08 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Resposta · S6</span>
+      <h3>08 — Perguntas para o fornecedor de IA</h3>
+      <p class="when"><strong>Quando usar:</strong> Antes de adotar (ou renovar) uma ferramenta de IA, para a conversa de TI e jurídico com o fornecedor.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s608', this)">Copiar</button><pre id="s608">Vamos avaliar uma ferramenta de IA para uso corporativo. Monte a lista de perguntas que devo fazer ao fornecedor, do ponto de vista de governança e LGPD.
+
+A FERRAMENTA: [nome e uso pretendido]
+NOSSO CONTEXTO: operadora de luxo no Brasil, sujeita à LGPD, ambiente Microsoft.
+
+Organize as perguntas em blocos:
+1. Treinamento (meu dado é usado para treinar o modelo? como desligar?)
+2. Retenção e exclusão (por quanto tempo guardam? posso exigir exclusão?)
+3. Localização e transferência internacional do dado
+4. Contrato e DPA (há acordo de tratamento de dados? cláusulas de LGPD?)
+5. Segurança e acesso (criptografia, controle de acesso, certificações)
+
+Para cada pergunta, em uma linha: por que ela importa para nós.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Leve a lista para a TI e o jurídico. As respostas do fornecedor viram anexo da decisão de adoção.</p>
+    </article>
+
+    <!-- 09 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Resposta · S6</span>
+      <h3>09 — Plano de resposta a incidente</h3>
+      <p class="when"><strong>Quando usar:</strong> Para ter, com a cabeça fria, um roteiro caso um dado seja exposto por engano.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s609', this)">Copiar</button><pre id="s609">Quero um plano simples de resposta para o caso de alguém expor um dado sensível à IA por engano.
+
+NOSSO CONTEXTO: operadora de luxo, sujeita à LGPD, board pequeno.
+
+Monte um roteiro de uma página:
+1. Os primeiros 3 passos imediatos de quem percebeu o erro
+2. A quem avisar, em que ordem (responsável, TI, DPO, jurídico)
+3. O que documentar sobre o ocorrido
+4. Como avaliar se há obrigação de comunicar a ANPD ou o titular
+5. O tom da comunicação interna: aprender, não punir
+
+Deixe claro o que é ação prática e o que precisa de validação jurídica. Não substitui o procedimento oficial da empresa.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Tê-lo pronto antes vale ouro. Em incidente, decidir na hora é o pior momento para improvisar.</p>
+    </article>
+
+    <!-- 10 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Política · S6</span>
+      <h3>10 — Explicar a política em linguagem simples</h3>
+      <p class="when"><strong>Quando usar:</strong> Para apresentar a política ao time de forma que pegue, sem ninguém dormir na reunião.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s610', this)">Copiar</button><pre id="s610">Vou colar nossa política de uso de IA. Quero explicá-la ao time de um jeito que pegue.
+
+[cole a política]
+
+PÚBLICO: [equipe, perfil, familiaridade com IA]
+
+Me dê:
+1. A política resumida em 5 frases que qualquer um entende
+2. Três exemplos do dia a dia da PRIMETOUR — um verde, um amarelo, um vermelho
+3. A regra de ouro em uma frase memorável
+4. Uma pergunta para abrir a conversa com o time e engajar
+
+Tom: prático e humano, sem tom de manual de compliance. As pessoas precisam querer seguir, não só ter que seguir.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Regra que o time entende e aceita protege mais que regra que ninguém leu. A comunicação é parte da governança.</p>
+    </article>
+  </section>
+
+  <!-- ====== GLOSSÁRIO ====== -->
+  <section class="non-slide" id="glossario" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem;border-top:1px solid var(--claude-light-gray)">
+    <div class="section-tag">Glossário</div>
+    <h2>Termos que apareceram nesta sessão</h2>
+    <hr class="accent-bar">
+    <dl class="gloss grid grid-2" style="gap:0 3rem">
+      <div><dt>LGPD</dt><dd>Lei Geral de Proteção de Dados (Lei 13.709/2018). Regula como dados pessoais de pessoas no Brasil podem ser coletados, usados e guardados.</dd></div>
+      <div><dt>Dado pessoal</dt><dd>Qualquer informação que identifique uma pessoa: nome, e-mail, CPF, telefone — ou um conjunto que, somado, aponte para alguém.</dd></div>
+      <div><dt>Dado sensível</dt><dd>Categoria com proteção reforçada: saúde, religião, origem racial, opinião política, biometria, orientação. No luxo, aparece em restrição alimentar e pedido pessoal.</dd></div>
+      <div><dt>Titular</dt><dd>A pessoa a quem o dado se refere. Tem direitos sobre o próprio dado, como acesso, correção e exclusão.</dd></div>
+      <div><dt>Anonimização</dt><dd>Remover a identificação de um dado a ponto de não ser mais possível ligar a informação a uma pessoa. Pseudonimizar (usar codinome) é um passo nessa direção.</dd></div>
+      <div><dt>DPO</dt><dd>Encarregado de Proteção de Dados. A pessoa responsável por zelar pelo cumprimento da LGPD e ser o canal com a ANPD e os titulares.</dd></div>
+      <div><dt>DPA</dt><dd>Acordo de Tratamento de Dados. Contrato com um fornecedor que define como ele trata o dado que você confia a ele.</dd></div>
+      <div><dt>Semáforo do dado</dt><dd>O critério de decisão da PRIMETOUR: verde (pode entrar na IA), amarelo (só tratado), vermelho (não entra sem base legal e aprovação).</dd></div>
+    </dl>
+  </section>
+
+  <!-- ====== FOOTER GLOBAL ====== -->
+  <footer class="session-footer non-slide">
+    <div class="flex justify-between wrap gap-l items-center">
+      <div>
+        <div class="section-tag" style="margin-bottom:.6rem">Progresso do treinamento</div>
+        <div class="progress-7"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div>
+        <p class="muted" style="margin:.3rem 0 0;font-family:var(--font-head);font-size:.85rem">Sessão 6 de 7 concluída</p>
+      </div>
+      <div class="flex gap-s wrap">
+        <a class="btn btn-ghost" href="../sessao-05/index.html">← Sessão 5</a>
+        <a class="next-link btn btn-orange" href="../sessao-07/index.html">Próxima: Sessão 7 · Adoção →</a>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:2rem;font-size:.82rem">Renê Junio · Marketing PRIMETOUR · Treinamento Claude para a liderança</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="../assets/claude.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Artefatos locais de preview (não vão para o site publicado)
+.claude/
+
+# Documento interno da marca — NÃO publicar em repositório público
+MANUAL DE REDAÇÃO PRIMETOUR_JAN26.docx
+*.docx
+
+# Sistema
+.DS_Store

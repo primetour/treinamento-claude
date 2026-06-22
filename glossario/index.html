@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossário — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Glossário transversal do treinamento Claude para a liderança da PRIMETOUR: modelo, agente, token, janela de contexto, alucinação e mais.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Glossário</div>
+  <a class="btn btn-ghost" href="../index.html">← Início</a>
+</header>
+
+<section class="home-section">
+  <div class="section-tag">Glossário transversal</div>
+  <h1>Os termos que importam</h1>
+  <hr class="accent-bar">
+  <p class="lead">Definições curtas e diretas. Cresce conforme o treinamento avança.</p>
+
+  <dl class="gloss grid grid-2" style="gap:0 3rem">
+    <div><dt>Modelo (LLM)</dt><dd>O cérebro da IA. Recebe texto, devolve texto. Exemplos: Claude Sonnet 4.6, GPT-4o, Gemini 2.5 Pro. <span class="muted">(LLM = Large Language Model, modelo de linguagem de grande escala.)</span></dd></div>
+    <div><dt>Agente</dt><dd>Um modelo equipado com ferramentas (web search, leitura de arquivos, conectores), memória e autonomia para decidir quando usar cada uma. O Claude em claude.ai é um agente.</dd></div>
+    <div><dt>Token</dt><dd>A unidade mínima de texto que o modelo processa. Em português, aproximadamente 4 caracteres = 1 token. Uma palavra média = 1 a 2 tokens.</dd></div>
+    <div><dt>Janela de contexto</dt><dd>O total de tokens que o modelo consegue manter “sobre a mesa” numa conversa. No Claude, são 200.000 tokens — cerca de 500 páginas A4.</dd></div>
+    <div><dt>Alucinação</dt><dd>Quando o modelo gera uma informação que soa coerente mas não corresponde aos fatos. Mais comum em pedidos factuais específicos sem fonte anexada.</dd></div>
+    <div><dt>Prompt</dt><dd>A mensagem que você envia ao modelo. Bons prompts dão papel, contexto, tarefa e formato esperado.</dd></div>
+    <div><dt>Papel (role)</dt><dd>A instrução que diz quem o Claude deve “ser” ao responder (analista, editor, advogado do diabo). Ativa o repertório certo. <span class="muted">(Sessão 2)</span></dd></div>
+    <div><dt>Formato de saída</dt><dd>A forma esperada da resposta: tamanho, estrutura, tom e quantidade. Especificar economiza iteração. <span class="muted">(Sessão 2)</span></dd></div>
+    <div><dt>Restrição</dt><dd>Instrução do que NÃO fazer (“sem jargão”, “não me elogie”). Tão forte quanto a tarefa. <span class="muted">(Sessão 2)</span></dd></div>
+    <div><dt>Zero-shot / Few-shot</dt><dd>Pedir sem exemplos (zero-shot) ou dando um a dois exemplos do resultado desejado (few-shot). Few-shot é ideal para capturar tom de voz ou formato fixo. <span class="muted">(Sessão 2)</span></dd></div>
+    <div><dt>Iteração</dt><dd>O ciclo de ler a resposta, apontar ajustes e pedir nova versão. Costuma render mais que um único prompt longo. <span class="muted">(Sessão 2)</span></dd></div>
+    <div><dt>Template de prompt</dt><dd>Um prompt com lacunas, montado uma vez e reusado muitas. Troca-se só o miolo a cada uso. <span class="muted">(Sessão 2)</span></dd></div>
+    <div><dt>Project (Claude)</dt><dd>Espaço no claude.ai que guarda instruções fixas e arquivos de conhecimento, aplicados a todas as conversas criadas ali dentro. Disponível nos planos pagos. <span class="muted">(Sessão 3)</span></dd></div>
+    <div><dt>Instruções do Project</dt><dd>O texto fixo que orienta toda conversa de um Project: papel, tom de voz, regras e formato padrão. O que antes você colava a cada conversa. <span class="muted">(Sessão 3)</span></dd></div>
+    <div><dt>Conhecimento (knowledge)</dt><dd>Os arquivos de referência anexados ao Project que toda conversa pode consultar sem reanexar. Capacidade limitada — é curadoria, não depósito. <span class="muted">(Sessão 3)</span></dd></div>
+    <div><dt>Contexto recorrente</dt><dd>A informação que se repete entre conversas (cliente, tom, documentos). É o que justifica criar um Project em vez de uma conversa avulsa. <span class="muted">(Sessão 3)</span></dd></div>
+    <div><dt>Sweet spot</dt><dd>O ponto em que a ferramenta entrega valor mais alto e mais rápido. Cada cadeira tem os seus com o Claude. <span class="muted">(Sessão 4)</span></dd></div>
+    <div><dt>Pré-mortem</dt><dd>Técnica de decisão: imaginar que a escolha já fracassou e listar os porquês, para corrigir antes de agir. <span class="muted">(Sessão 4)</span></dd></div>
+    <div><dt>Memo de decisão</dt><dd>Documento executivo de uma página que reduz um tema denso a opções, riscos e recomendação para quem decide. <span class="muted">(Sessão 4)</span></dd></div>
+    <div><dt>Validação humana</dt><dd>O passo em que uma pessoa confere o factual crítico antes de agir. A IA é copiloto; a decisão e o dado sensível são humanos. <span class="muted">(Sessão 4)</span></dd></div>
+    <div><dt>Claude Haiku / Sonnet / Opus</dt><dd>Família de modelos da Anthropic. Haiku é o mais leve e rápido; Sonnet equilibrado; Opus o mais profundo.</dd></div>
+    <div><dt>API</dt><dd>Forma de acessar o modelo via código, usada por integrações e automações em larga escala.</dd></div>
+    <div><dt>Conector</dt><dd>Integração que liga o Claude a um sistema externo (Outlook, OneDrive, SharePoint, Drive) para ler de lá sem você baixar e subir. Fica nos planos pagos e costuma depender da TI. <span class="muted">(Sessão 5)</span></dd></div>
+    <div><dt>Upload (anexo)</dt><dd>Subir um arquivo direto para a conversa, arrastando-o. Funciona em qualquer plano, sem configuração — o caminho que nunca falha. <span class="muted">(Sessão 5)</span></dd></div>
+    <div><dt>Escopo de permissão</dt><dd>O limite do que um conector pode acessar — uma pasta, uma caixa, um site. Quanto mais estreito, menor a exposição. <span class="muted">(Sessão 5)</span></dd></div>
+    <div><dt>Dado vivo vs. foto</dt><dd>O conector traz a informação do momento (dado vivo); um arquivo no conhecimento de um Project é uma foto, que envelhece até você atualizar. <span class="muted">(Sessão 5)</span></dd></div>
+    <div><dt>LGPD</dt><dd>Lei Geral de Proteção de Dados (Lei 13.709/2018). Regula como dados pessoais de pessoas no Brasil podem ser coletados, usados e guardados. <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>Dado pessoal</dt><dd>Qualquer informação que identifique uma pessoa: nome, e-mail, CPF, telefone — ou um conjunto que, somado, aponte para alguém. <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>Dado sensível</dt><dd>Categoria com proteção reforçada: saúde, religião, origem racial, opinião política, biometria. No luxo, aparece em restrição alimentar e pedido pessoal. <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>Titular</dt><dd>A pessoa a quem o dado se refere. Tem direitos sobre o próprio dado, como acesso, correção e exclusão. <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>Anonimização</dt><dd>Remover a identificação de um dado a ponto de não ser mais possível ligá-lo a uma pessoa. Usar codinome (pseudonimizar) é um passo nessa direção. <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>DPO</dt><dd>Encarregado de Proteção de Dados. Zela pelo cumprimento da LGPD e é o canal com a ANPD e os titulares. <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>DPA</dt><dd>Acordo de Tratamento de Dados. Contrato com um fornecedor que define como ele trata o dado que você confia a ele. <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>Semáforo do dado</dt><dd>O critério de decisão da PRIMETOUR: verde (pode entrar na IA), amarelo (só tratado), vermelho (não entra sem base legal e aprovação). <span class="muted">(Sessão 6)</span></dd></div>
+    <div><dt>Adoção</dt><dd>O processo de uma ferramenta deixar de ser novidade e virar hábito de trabalho. Mede-se por uso real e recorrente, não por treinamento concluído. <span class="muted">(Sessão 7)</span></dd></div>
+    <div><dt>Curva de adoção</dt><dd>O caminho do entusiasmo inicial ao hábito firme, passando por um “vale” (semanas 3 a 5) em que a maioria desiste. O plano de 90 dias existe para atravessá-lo. <span class="muted">(Sessão 7)</span></dd></div>
+    <div><dt>Ritual</dt><dd>Uma prática recorrente e leve (semanal ou mensal) que mantém o hábito vivo por ritmo, não por força de vontade. <span class="muted">(Sessão 7)</span></dd></div>
+    <div><dt>Alavancagem</dt><dd>O retorno de um uso, medido por frequência vezes peso. Os casos de maior alavancagem são onde começar a adoção. <span class="muted">(Sessão 7)</span></dd></div>
+    <div><dt>Métrica de vaidade</dt><dd>Um número grande que mede atividade, não valor (ex.: total de mensagens). Engana sobre o progresso real da adoção. <span class="muted">(Sessão 7)</span></dd></div>
+  </dl>
+</section>
+
+<footer class="session-footer">
+  <p class="muted" style="font-size:.82rem">Renê Junio · Marketing PRIMETOUR · Glossário transversal do treinamento</p>
+</footer>
+
+<script src="../assets/claude.js"></script>
+</body>
+</html>

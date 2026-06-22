@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sessão 3 · Projects — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Sessão 3 do treinamento executivo de Claude para a liderança da PRIMETOUR: o que são Projects, instruções e arquivos que viajam entre conversas, e como organizar contexto recorrente.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<!-- ============ CONTROLES FIXOS DO MODO APRESENTAÇÃO ============ -->
+<div class="present-zone prev" data-action="present-prev" title="Slide anterior"></div>
+<div class="present-zone next" data-action="present-next" title="Próximo slide"></div>
+<div class="present-ctrl left">
+  <button data-action="present-prev" aria-label="Anterior">‹</button>
+</div>
+<div class="present-ctrl right">
+  <button data-action="present-next" aria-label="Próximo">›</button>
+  <button data-action="present-exit" aria-label="Sair (ESC)">✕</button>
+</div>
+<div class="present-progress" aria-hidden="true">
+  <span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar non-slide">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Sessão 3</div>
+  <button class="btn btn-orange" data-action="present">▶ Apresentar</button>
+</header>
+
+<div class="session-layout">
+
+  <!-- ============ SUMÁRIO LATERAL ============ -->
+  <nav class="session-nav non-slide" aria-label="Sumário da sessão">
+    <div class="nav-brand"><span class="brand-square"></span> Sessão 3</div>
+    <div class="nav-sub">Projects</div>
+
+    <div class="nav-section">Blocos</div>
+    <a href="#capa">Capa &amp; recap</a>
+    <a href="#bloco1">Bloco 1 · O que são Projects</a>
+    <a href="#bloco2">Bloco 2 · Lab guiado</a>
+    <a href="#bloco3">Bloco 3 · Discussão</a>
+
+    <div class="nav-section">Consulta</div>
+    <a href="#caderno-completo">Caderno de Projects</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#tarefa">Tarefa da semana</a>
+  </nav>
+
+  <!-- ============ CONTEÚDO PRINCIPAL ============ -->
+  <main class="session-main">
+  <div class="slides-wrap">
+
+  <!-- ====== SLIDE 1 — CAPA ====== -->
+  <section class="slide slide-dark" id="capa">
+    <span class="slide-num">01 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Claude para a liderança</div>
+      <h1 class="cover-title">Projects</h1>
+      <p class="cover-sub">Sessão 3 de 7 · Treinamento executivo PRIMETOUR Viagens &amp; Experiências</p>
+      <hr class="accent-bar">
+      <p class="muted" style="font-family:var(--font-head)">Marketing · 2h30 de duração</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 2 — RECAP S2 ====== -->
+  <section class="slide" id="bloco1">
+    <span class="slide-num">02 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">De onde viemos</div>
+      <h2>Você já tem os templates. E agora?</h2>
+      <hr class="accent-bar">
+      <p class="lead">Na Sessão 2 você montou prompts com os 4 elementos e salvou seus templates. Mas há um incômodo que ficou.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card side-gray">
+          <div class="section-tag">O incômodo</div>
+          <p class="muted" style="margin:0">Toda nova conversa começa do zero. Você recola o tom de voz, reanexa os mesmos arquivos, reexplica quem é o cliente. De novo. E de novo.</p>
+        </div>
+        <div class="card side-orange">
+          <div class="section-tag">A solução de hoje</div>
+          <p class="muted" style="margin:0">Um <strong>Project</strong> guarda instruções e arquivos uma única vez — e eles passam a valer em toda conversa ali dentro. Você para de se repetir.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p style="margin:0;color:var(--claude-light)">A Sessão 2 ensinou a <strong>pedir bem uma vez</strong>. A Sessão 3 ensina a <strong>nunca mais ter que repetir o contexto</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 3 — ESTRUTURA DE HOJE ====== -->
+  <section class="slide">
+    <span class="slide-num">03 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Estrutura de hoje</div>
+      <h2>Como vão funcionar as próximas 2h30</h2>
+      <hr class="accent-bar">
+      <p class="lead">Conceito enxuto, prática longa: ao final, você sai com um Project montado e funcionando.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue">
+          <div class="num-big t-blue">01</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">O que são Projects <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">O que um Project guarda, quando criar um, e como organizar contexto recorrente por cliente, tema ou cadeira.</p>
+        </div>
+        <div class="card top-orange">
+          <div class="num-big t-orange">02</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Lab guiado <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Montamos juntos o seu primeiro Project — com instruções, arquivos e os templates que você salvou na Sessão 2.</p>
+        </div>
+        <div class="card top-green">
+          <div class="num-big t-green">03</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Discussão <span class="muted" style="font-weight:400">· 30 min</span></div>
+          <p class="muted" style="margin:0">Que Projects cada cadeira vai manter, o que entra como conhecimento, e como o time compartilha contexto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 4 — OBJETIVOS ====== -->
+  <section class="slide">
+    <span class="slide-num">04 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Objetivos</div>
+      <h2>O que você leva ao final desta sessão</h2>
+      <hr class="accent-bar">
+      <div class="mt-2">
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>
+          <div><div class="ft-title">Entender o que é um Project</div><div class="ft-desc">Saber o que ele guarda — instruções, arquivos e histórico — e por que isso muda a forma como você trabalha.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-blue)" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <div><div class="ft-title">Critério para criar (ou não)</div><div class="ft-desc">Reconhecer quando vale a pena um Project e quando uma conversa avulsa resolve melhor.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-green)" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg>
+          <div><div class="ft-title">Organizar por cliente, tema ou cadeira</div><div class="ft-desc">Três formas de estruturar seus Projects — e como escolher a que cabe no seu dia.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><div class="ft-title">Seu primeiro Project montado</div><div class="ft-desc">Sair com um Project real, com a voz da PRIMETOUR e seus templates dentro, pronto para usar amanhã.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 5 — O PROBLEMA: O SILO ====== -->
+  <section class="slide">
+    <span class="slide-num">05 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O problema</div>
+      <h2>Cada conversa é uma ilha</h2>
+      <hr class="accent-bar">
+      <p class="lead">Lembra da Sessão 1: o Claude começa cada chat do zero e não vê o que houve em outra conversa. Isso tem um custo diário.</p>
+      <div class="grid grid-3">
+        <div class="card side-gray"><div class="ft-title">Você se repete</div><div class="ft-desc">O mesmo tom de voz, o mesmo briefing de cliente, os mesmos arquivos — colados de novo a cada conversa.</div></div>
+        <div class="card side-gray"><div class="ft-title">O contexto se perde</div><div class="ft-desc">Aquela conversa ótima da semana passada com o cliente VIP some no histórico. Recomeçar é a regra.</div></div>
+        <div class="card side-gray"><div class="ft-title">O time não compartilha</div><div class="ft-desc">O bom prompt que um montou fica preso na conversa dele. Ninguém mais aproveita.</div></div>
+      </div>
+      <p class="muted mt-2">Projects existem para resolver exatamente isto: dar um lar permanente ao contexto que se repete.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 6 — O QUE É UM PROJECT ====== -->
+  <section class="slide">
+    <span class="slide-num">06 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conceito</div>
+      <h2>O que é um Project</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-2" style="align-items:center">
+        <div class="serif" style="font-size:1.05rem">
+          <p>Um Project é um espaço dentro do claude.ai que guarda <strong>instruções fixas</strong> e <strong>arquivos de conhecimento</strong> — e os aplica a todas as conversas criadas ali dentro.</p>
+          <p>Pense numa pasta com memória: você configura o contexto uma vez, e cada nova conversa já nasce sabendo quem é o cliente, qual o tom, quais os documentos de referência.</p>
+          <p class="muted" style="font-size:.95rem">Disponível nos planos pagos (Pro e Team). As conversas dentro de um Project ficam agrupadas e separadas do resto.</p>
+        </div>
+        <div class="card-dark side-orange">
+          <div class="section-tag">Em uma frase</div>
+          <p style="font-family:var(--font-head);font-weight:600;font-size:1.35rem;line-height:1.35;margin:.2rem 0 1rem">“Um colaborador júnior que já leu a pasta do cliente antes de você chamar.”</p>
+          <p class="italic" style="color:var(--claude-mid-gray);margin:0">Em vez de explicar o contexto toda vez, você o entrega uma vez — e ele lembra a cada conversa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 7 — OS 3 INGREDIENTES ====== -->
+  <section class="slide">
+    <span class="slide-num">07 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Anatomia</div>
+      <h2>Os três ingredientes de um Project</h2>
+      <hr class="accent-bar">
+      <p class="lead">Todo Project é a soma de três coisas. Você controla as duas primeiras; a terceira se acumula sozinha.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue">
+          <svg class="ico t-blue" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <h3 class="mt-1">Instruções</h3>
+          <p class="muted" style="margin:0">O texto fixo que orienta toda conversa: papel, tom de voz, regras, o que sempre considerar. Suas instruções personalizadas.</p>
+        </div>
+        <div class="card top-orange">
+          <svg class="ico t-orange" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6"/></svg>
+          <h3 class="mt-1">Arquivos de conhecimento</h3>
+          <p class="muted" style="margin:0">Os documentos de referência: contratos-modelo, o manual de redação, a ficha do cliente, propostas anteriores.</p>
+        </div>
+        <div class="card top-green">
+          <svg class="ico t-green" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"/></svg>
+          <h3 class="mt-1">Histórico de conversas</h3>
+          <p class="muted" style="margin:0">Tudo o que você já conversou dentro do Project fica reunido ali — fácil de retomar, sem caçar no histórico geral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 8 — INSTRUÇÕES ====== -->
+  <section class="slide">
+    <span class="slide-num">08 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Ingrediente 1</div>
+      <h2>Instruções: o briefing permanente</h2>
+      <hr class="accent-bar">
+      <p class="lead">É aqui que entram seus templates da Sessão 2. O que você colava toda vez, agora mora no Project.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <h3 class="mt-0">O que colocar</h3>
+          <ul class="sq-list">
+            <li><strong>Papel:</strong> quem o Claude deve ser neste contexto.</li>
+            <li><strong>Tom de voz:</strong> a voz da PRIMETOUR, do Manual de Redação.</li>
+            <li><strong>Regras fixas:</strong> o que sempre fazer, o que nunca fazer.</li>
+            <li><strong>Formato padrão:</strong> como você gosta de receber as respostas.</li>
+          </ul>
+        </div>
+        <div class="card card-soft side-orange">
+          <div class="section-tag">Cuidado</div>
+          <p style="margin:0">Instrução é permanente: vale para <em>toda</em> conversa do Project. Coloque o que é estável. O que muda a cada caso vai na mensagem, não na instrução.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 9 — ARQUIVOS ====== -->
+  <section class="slide">
+    <span class="slide-num">09 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Ingrediente 2</div>
+      <h2>Conhecimento: a estante de referência</h2>
+      <hr class="accent-bar">
+      <p class="lead">Os arquivos que toda conversa do Project pode consultar, sem você reanexar.</p>
+      <div class="grid grid-3">
+        <div class="card side-blue"><div class="ft-title">Documentos de marca</div><div class="ft-desc">Manual de Redação PRIMETOUR, guia de identidade, posicionamento. A voz da casa, sempre à mão.</div></div>
+        <div class="card side-blue"><div class="ft-title">Material recorrente</div><div class="ft-desc">Contrato-modelo, tabela de fornecedores, propostas anteriores, fichas de cliente.</div></div>
+        <div class="card side-blue"><div class="ft-title">Contexto de referência</div><div class="ft-desc">Relatórios setoriais, briefings de campanha, atas que você consulta com frequência.</div></div>
+      </div>
+      <p class="muted mt-2"><strong>Limite prático:</strong> o conhecimento do Project tem uma capacidade (mostrada em %). Coloque o que é referência — não o arquivo gigante que você usa uma vez só.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 10 — CONVERSA AVULSA VS PROJECT ====== -->
+  <section class="slide">
+    <span class="slide-num">10 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Comparação direta</div>
+      <h2>Conversa avulsa vs Project</h2>
+      <hr class="accent-bar">
+      <p class="lead">A diferença não é de poder — é de repetição. Veja onde cada um se encaixa.</p>
+      <div class="grid grid-2">
+        <div class="card side-gray">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.08em;background:var(--claude-mid-gray);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">CONVERSA AVULSA</div>
+          <h3 class="mt-1">Boa para o pontual</h3>
+          <ul class="sq-list">
+            <li>Uma pergunta solta, sem continuidade</li>
+            <li>Um assunto que não volta</li>
+            <li>Nada de contexto a preservar</li>
+            <li>Começa rápido, some no histórico</li>
+          </ul>
+        </div>
+        <div class="card side-orange">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.08em;background:var(--claude-orange);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">PROJECT</div>
+          <h3 class="mt-1">Bom para o recorrente</h3>
+          <ul class="sq-list">
+            <li>Um cliente, tema ou rotina que volta sempre</li>
+            <li>Tom de voz e regras fixas a manter</li>
+            <li>Arquivos de referência reutilizados</li>
+            <li>Conversas que vale agrupar e retomar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 11 — QUANDO CRIAR ====== -->
+  <section class="slide">
+    <span class="slide-num">11 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Critério de decisão</div>
+      <h2>Vale criar um Project?</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três perguntas. Se você responde sim a alguma, provavelmente vale.</p>
+      <div class="task-row"><span class="num-circle">1</span><div><div class="ft-title">Eu me pego repetindo o mesmo contexto?</div><div class="ft-desc">Se você cola o mesmo tom, briefing ou arquivo em conversas diferentes, isso pede um Project.</div></div></div>
+      <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Esse assunto vai voltar nas próximas semanas?</div><div class="ft-desc">Cliente recorrente, rotina de board, linha de produto. Se volta, o contexto merece um lar.</div></div></div>
+      <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Há material de referência que eu sempre consulto?</div><div class="ft-desc">Manual de Redação, contrato-modelo, tabela de fornecedores — vira conhecimento do Project.</div></div></div>
+      <div class="card card-soft side-orange mt-2"><p style="margin:0"><strong>Regra simples:</strong> conversa de uma vez só, não crie Project. Contexto que se repete, crie.</p></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 12 — ANATOMIA DE UM BOM PROJECT ====== -->
+  <section class="slide">
+    <span class="slide-num">12 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Exemplo concreto</div>
+      <h2>Como se parece um bom Project</h2>
+      <hr class="accent-bar">
+      <p class="lead">Um Project de comunicação da PRIMETOUR, montado para nunca mais reexplicar a voz da marca.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card-dark side-orange">
+          <div class="section-tag">Project · Comunicação PRIMETOUR</div>
+          <p style="color:var(--claude-light);margin:.2rem 0 .5rem"><strong>Instruções:</strong> papel de redator sênior da casa + a voz editorial do Manual de Redação + regras duras (PRIMETOUR em caixa alta, “traslado” nunca “transfer”, sem termos banidos).</p>
+          <p style="color:var(--claude-light);margin:.2rem 0 .5rem"><strong>Conhecimento:</strong> Manual de Redação PRIMETOUR, exemplos de textos aprovados.</p>
+          <p style="color:var(--claude-light);margin:.2rem 0 0"><strong>Uso:</strong> toda conversa já escreve na voz certa, sem briefing.</p>
+        </div>
+        <div>
+          <h3 class="mt-0">Por que funciona</h3>
+          <ul class="sq-list">
+            <li>O tom de voz está no Project — não num prompt que você cola.</li>
+            <li>O Manual vive como conhecimento — o Claude consulta direto.</li>
+            <li>Qualquer texto (e-mail, post, comunicado) já sai alinhado.</li>
+            <li>Quando o Manual muda, você atualiza num lugar só.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 13 — TRÊS FORMAS DE ORGANIZAR ====== -->
+  <section class="slide">
+    <span class="slide-num">13 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Organização</div>
+      <h2>Três formas de organizar seus Projects</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não há uma certa — há a que cabe no seu jeito de trabalhar. Você pode misturar.</p>
+      <div class="grid grid-3">
+        <div class="card top-orange"><div class="num-big t-orange">A</div><h3 class="mt-1">Por cliente</h3><p class="muted" style="margin:0">Um Project por cliente VIP recorrente. Ficha, histórico e preferências sempre disponíveis. Ideal para o CCO.</p></div>
+        <div class="card top-blue"><div class="num-big t-blue">B</div><h3 class="mt-1">Por tema</h3><p class="muted" style="margin:0">Comunicação, propostas, board, campanhas. Cada tema com suas regras e referências. Ideal para o CMO e o COO.</p></div>
+        <div class="card top-green"><div class="num-big t-green">C</div><h3 class="mt-1">Por cadeira</h3><p class="muted" style="margin:0">Um Project que reúne o contexto da sua função inteira. Bom para começar, antes de subdividir. Ideal para o CEO.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 14 — O QUE NÃO COLOCAR ====== -->
+  <section class="slide">
+    <span class="slide-num">14 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>O que não colocar num Project</h2>
+      <hr class="accent-bar">
+      <p class="lead">Um Project bom é curado. Encher de tudo atrapalha tanto quanto deixar vazio.</p>
+      <div class="card side-orange mb-1"><div class="ft-title">Dado pessoal sensível sem necessidade</div><div class="ft-desc">CPF, passaporte, cartão, dado de saúde do cliente. A política completa vem na Sessão 6 — por ora, na dúvida, não coloque.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Material que muda toda hora</div><div class="ft-desc">Tabela de preços que vira semana, agenda do dia. Instrução é para o estável; o volátil vai na conversa.</div></div>
+      <div class="card side-orange"><div class="ft-title">Arquivos enormes usados uma vez</div><div class="ft-desc">O relatório de 300 páginas que você analisa num único dia. Anexe na conversa, não no conhecimento permanente.</div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 15 — PROJECTS + TEMPLATES S2 ====== -->
+  <section class="slide">
+    <span class="slide-num">15 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conexão com a Sessão 2</div>
+      <h2>Seus templates viram instruções</h2>
+      <hr class="accent-bar">
+      <p class="lead">O kit que você montou na semana passada não fica mais num documento solto. Ele entra no Project.</p>
+      <div class="grid grid-2" style="align-items:center">
+        <div class="card card-soft">
+          <div class="section-tag">Antes (Sessão 2)</div>
+          <p class="muted" style="margin:0">Você guardava o template de tom de voz num arquivo e colava no início de cada conversa, toda vez.</p>
+        </div>
+        <div class="card side-green">
+          <div class="section-tag">Agora (Sessão 3)</div>
+          <p class="muted" style="margin:0">O mesmo template vira a <strong>instrução do Project</strong>. Vale automaticamente em toda conversa ali — sem colar nada.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2"><p style="margin:0;color:var(--claude-light)">É a graduação natural: o que era um prompt que você repetia vira parte da infraestrutura do seu trabalho.</p></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 16 — BOAS PRÁTICAS ====== -->
+  <section class="slide">
+    <span class="slide-num">16 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Manutenção</div>
+      <h2>Quatro hábitos de quem usa bem</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-2">
+        <div class="card"><div class="flex gap-m"><div class="num-big">1</div><div><div class="ft-title">Nome claro e específico</div><div class="ft-desc">“Cliente — Família Almeida”, não “Cliente 1”. Você vai ter vários; o nome é como você acha.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">2</div><div><div class="ft-title">Instruções enxutas</div><div class="ft-desc">Meia página bem escrita vale mais que três páginas. O essencial e estável, não tudo.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">3</div><div><div class="ft-title">Revisão periódica</div><div class="ft-desc">Uma vez por mês, abra e pergunte: a instrução ainda está certa? O arquivo ainda é o atual?</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">4</div><div><div class="ft-title">Comece com um, não dez</div><div class="ft-desc">Monte um Project, use uma semana, sinta o valor. Depois multiplique. Não crie dez vazios hoje.</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 17 — ONDE NÃO AJUDA ====== -->
+  <section class="slide">
+    <span class="slide-num">17 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>Onde Projects não fazem mágica</h2>
+      <hr class="accent-bar">
+      <p class="lead">Projects organizam contexto. Não consertam o que já vimos que a IA não faz.</p>
+      <div class="grid grid-3">
+        <div class="card side-gray"><div class="ft-title">Não eliminam a alucinação</div><div class="ft-desc">Mesmo com bons arquivos, valide o factual crítico. O conhecimento ajuda, não isenta a conferência.</div></div>
+        <div class="card side-gray"><div class="ft-title">Não substituem o bom prompt</div><div class="ft-desc">O Project dá o contexto; a tarefa clara ainda é sua, conversa a conversa. A Sessão 2 continua valendo.</div></div>
+        <div class="card side-gray"><div class="ft-title">Não são um banco de dados vivo</div><div class="ft-desc">O conhecimento é uma foto do que você subiu. Mudou o arquivo? Atualize no Project — ele não busca sozinho.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 18 — TRANSIÇÃO BLOCO 2 ====== -->
+  <section class="slide slide-dark" id="bloco2">
+    <span class="slide-num">18 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 2 · 60 min</div>
+      <h1 class="cover-title">Vamos montar<br>o seu primeiro.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Sem teoria daqui em diante. Você vai criar um Project de verdade, com instruções e arquivos seus, e abrir a primeira conversa dentro dele.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 19 — O LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">19 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O lab</div>
+      <h2>Do contexto solto ao Project que trabalha por você</h2>
+      <hr class="accent-bar">
+      <p class="lead">Escolha um contexto recorrente do seu dia. Monte o Project. Teste com uma conversa real. Em 45 minutos.</p>
+      <div class="card-dark side-orange mb-2">
+        <div class="section-tag">Enunciado</div>
+        <p style="font-size:1.2rem;line-height:1.5;color:var(--claude-light);margin:0">Crie <strong>um Project</strong> para um cliente, tema ou rotina que se repete no seu trabalho. Escreva as instruções, anexe um arquivo de referência (pode ser o Manual de Redação) e abra uma conversa dentro dele para confirmar que o contexto está valendo.</p>
+      </div>
+      <div class="card card-soft side-orange">
+        <div class="section-tag">Critério de sucesso</div>
+        <p class="italic" style="margin:0">Ao final, abra uma conversa nova no Project e faça um pedido sem dar nenhum contexto. Se a resposta já vier com o tom e a referência certos, o Project está funcionando.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 20 — PASSO A PASSO ====== -->
+  <section class="slide">
+    <span class="slide-num">20 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Guia do lab</div>
+      <h2>Cinco passos para montar</h2>
+      <hr class="accent-bar">
+      <div class="task-row"><span class="num-circle">1</span><div><div class="ft-title">Crie e nomeie</div><div class="ft-desc">Na barra lateral, abra Projects e crie um novo. Dê um nome específico — cliente, tema ou cadeira.</div></div></div>
+      <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Escreva as instruções</div><div class="ft-desc">Cole seu template de tom de voz da Sessão 2. Some o papel e as regras fixas. Enxuto.</div></div></div>
+      <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Anexe o conhecimento</div><div class="ft-desc">Suba um arquivo de referência — o Manual de Redação, uma ficha, um contrato-modelo.</div></div></div>
+      <div class="task-row"><span class="num-circle">4</span><div><div class="ft-title">Abra uma conversa</div><div class="ft-desc">Dentro do Project, faça um pedido real — sem reexplicar o contexto que já está nas instruções.</div></div></div>
+      <div class="task-row"><span class="num-circle">5</span><div><div class="ft-title">Ajuste as instruções</div><div class="ft-desc">A resposta não veio redonda? Refine a instrução, não o pedido. É lá que o contexto permanente mora.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 21 — SUA CADEIRA ====== -->
+  <section class="slide">
+    <span class="slide-num">21 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Foco por cadeira</div>
+      <h2>Um Project natural da sua função</h2>
+      <hr class="accent-bar">
+      <p class="lead">Se não decidiu qual contexto usar, comece pelo Project típico da sua cadeira.</p>
+      <div class="grid grid-2">
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CEO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Board &amp; estratégia</span></div><p class="italic muted mt-1" style="margin-bottom:0">Um Project com o contexto do conselho — pauta recorrente, posicionamentos, histórico de decisões — para preparar reuniões sem recomeçar.</p></div>
+        <div class="card side-blue"><div class="flex justify-between items-center"><h3 style="margin:0">COO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Fornecedores &amp; operação</span></div><p class="italic muted mt-1" style="margin-bottom:0">Um Project com contrato-modelo e tabela de fornecedores, para analisar propostas e atas com a mesma régua sempre.</p></div>
+        <div class="card side-green"><div class="flex justify-between items-center"><h3 style="margin:0">CMO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Comunicação &amp; marca</span></div><p class="italic muted mt-1" style="margin-bottom:0">O Project “Comunicação PRIMETOUR”, com a voz do Manual de Redação, para todo texto sair alinhado de primeira.</p></div>
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CCO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Cliente VIP</span></div><p class="italic muted mt-1" style="margin-bottom:0">Um Project por cliente de alto valor, com ficha e preferências, para cada conversa já conhecer a relação.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 22 — REGRAS DO LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">22 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como funciona</div>
+      <h2>Três regras do lab</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-3">
+        <div class="card"><div class="flex gap-m"><div class="num-big">1</div><div><div class="ft-title">Um Project só, bem feito</div><div class="ft-desc">Não crie cinco. Monte um e leve até a primeira conversa funcionando. Profundidade, não quantidade.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">2</div><div><div class="ft-title">Sem dado sensível real</div><div class="ft-desc">Use um cliente fictício ou troque nomes e números. Treinamos a estrutura. (Política completa na Sessão 6.)</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">3</div><div><div class="ft-title">Teste sem dar contexto</div><div class="ft-desc">O teste de fogo: peça algo sem reexplicar nada. Se vier certo, o Project está cumprindo o papel.</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 23 — CRONÔMETRO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">23 / 31</span>
+    <div class="slide-inner center">
+      <div class="section-tag" style="justify-content:center">Cronômetro ativo</div>
+      <div class="timer-display" id="challenge-timer" data-minutes="45">45:00</div>
+      <p style="color:var(--claude-light);font-family:var(--font-head);margin:.2rem 0 1.4rem">minutos a partir de agora</p>
+      <div class="flex gap-s" style="justify-content:center;margin-bottom:1.8rem">
+        <button class="btn btn-orange" id="timer-start" onclick="toggleTimer(this)">Iniciar contador</button>
+        <button class="btn btn-ghost" style="color:var(--claude-light);border-color:var(--claude-mid-gray)" onclick="resetTimer(this)">Reiniciar</button>
+      </div>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Crie e nomeie o Project</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Cole as instruções e anexe um arquivo de referência</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Abra uma conversa e teste sem dar contexto</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 24 — TRANSIÇÃO BLOCO 3 ====== -->
+  <section class="slide slide-dark" id="bloco3">
+    <span class="slide-num">24 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 3 · 30 min</div>
+      <h1 class="cover-title">Que contexto<br>vale guardar.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Cada um montou um Project diferente. Vamos comparar o que entrou, o que ficou de fora, e como o time pode dividir o contexto que é de todos.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 25 — CINCO PERGUNTAS ====== -->
+  <section class="slide">
+    <span class="slide-num">25 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Roteiro da discussão</div>
+      <h2>Cinco perguntas para destravar</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não precisa todo mundo responder todas — mas alguém responde cada.</p>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">1</span><div><div class="ft-title">Que contexto você guardou no Project?</div><div class="ft-desc italic">Por cliente, por tema ou por cadeira?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">2</span><div><div class="ft-title">O teste sem contexto passou?</div><div class="ft-desc italic">A resposta veio com o tom e a referência certos, sem você reexplicar?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">3</span><div><div class="ft-title">O que você quase colocou e segurou?</div><div class="ft-desc italic">Algum dado que, pensando bem, não devia entrar?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">4</span><div><div class="ft-title">Que Project beneficiaria o time inteiro?</div><div class="ft-desc italic">Há contexto que é da casa, não só seu?</div></div></div></div>
+      <div class="card card-soft"><div class="flex gap-m items-center"><span class="num-circle">5</span><div><div class="ft-title">Quantos Projects você imagina manter?</div><div class="ft-desc italic">Poucos e bem cuidados, ou muitos e específicos?</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 26 — O QUE VAMOS LEVAR ====== -->
+  <section class="slide">
+    <span class="slide-num">26 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Síntese coletiva</div>
+      <h2>O que vamos levar daqui</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três áreas para fechar a sessão e ancorar o aprendizado coletivo.</p>
+      <div class="grid grid-3">
+        <div class="card top-green"><svg class="ico t-green" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><h3 class="mt-1">Projects que ficaram de pé</h3><p class="muted" style="margin:0">Os que já estão funcionando entram na rotina. Os de uso comum viram contexto do time.</p></div>
+        <div class="card top-orange"><svg class="ico t-orange" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-8-5M3 12a9 9 0 0 1 9-9 9 9 0 0 1 8 5"/><path d="M21 4v4h-4M3 20v-4h4"/></svg><h3 class="mt-1">O que ainda falta curar</h3><p class="muted" style="margin:0">Instruções longas demais, arquivos a mais. Onde podar para o Project respirar.</p></div>
+        <div class="card top-blue"><svg class="ico t-blue" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3 2.5c-.7.3-1 .8-1 1.5M12 17h.01"/></svg><h3 class="mt-1">Dúvidas em aberto</h3><p class="muted" style="margin:0">O que ficou nebuloso vira gancho para a Sessão 4, sobre casos C-level por cadeira.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 27 — CADERNO: INTRO ====== -->
+  <section class="slide slide-dark" id="caderno">
+    <span class="slide-num">27 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O caderno de Projects</div>
+      <h1 class="cover-title" style="font-size:clamp(2.2rem,5vw,3.4rem)">Seu manual da semana</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Desta vez, instruções de Project prontas para colar — receitas de contexto para os usos mais comuns da PRIMETOUR.</p>
+      <div class="grid grid-3 mt-3">
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Manual</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">A anatomia</div><p class="muted" style="margin:.4rem 0 0">Os 3 ingredientes, o critério de quando criar e os 4 hábitos de manutenção — resumidos para consulta.</p></div>
+        <div class="card-darker side-orange"><div class="num-big t-orange">10</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Receitas de Project</div><p class="muted" style="margin:.4rem 0 0">Instruções prontas para Comunicação, Cliente VIP, Fornecedores, Board — e prompts para montar e manter.</p></div>
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Portal</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Biblioteca cumulativa</div><p class="muted" style="margin:.4rem 0 0">Com as Sessões 1 e 2, já são 30 prompts. O kit da PRIMETOUR cresce a cada encontro.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 28 — OS 10 (PREVIEW) ====== -->
+  <section class="slide">
+    <span class="slide-num">28 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Preview do caderno</div>
+      <h2>As 10 receitas desta semana</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cada uma vem no caderno completo, abaixo, com botão de copiar.</p>
+      <div class="grid grid-2">
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">01</span> Instruções base de um Project</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">02</span> Project “Comunicação PRIMETOUR”</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">03</span> Project “Cliente VIP [Nome]”</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">04</span> Project “Propostas &amp; Fornecedores”</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">05</span> Project “Board &amp; Reuniões”</div></div>
+        </div>
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">06</span> O Claude escreve as instruções do seu Project</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">07</span> Checklist do que anexar como conhecimento</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">08</span> Auditar e melhorar um Project</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">09</span> Manutenção mensal do Project</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">10</span> Vale criar um Project para isto?</div></div>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p class="italic" style="margin:0;color:var(--claude-light)">O caderno completo, com cada receita explicada e o botão de copiar, está logo abaixo — seção <a href="#caderno-completo" style="color:var(--claude-orange)">“Caderno de Projects”</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 29 — TAREFA ====== -->
+  <section class="slide" id="tarefa">
+    <span class="slide-num">29 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Para a próxima semana</div>
+      <h2>Sua tarefa até a Sessão 4</h2>
+      <hr class="accent-bar">
+      <p class="lead">Curta e prática — para o Project virar parte da rotina, não experimento de uma vez só.</p>
+      <div class="task-row"><div class="num-big">1</div><div><div class="ft-title">Use o Project a semana toda</div><div class="ft-desc">Toda comunicação ou análise daquele contexto, faça dentro do Project. Sinta a diferença de não recomeçar.</div></div></div>
+      <div class="task-row"><div class="num-big">2</div><div><div class="ft-title">Refine as instruções uma vez</div><div class="ft-desc">Depois de alguns usos, ajuste o que faltou ou sobrou. Anote o que mudou.</div></div></div>
+      <div class="task-row"><div class="num-big">3</div><div><div class="ft-title">Liste 1 Project para o time</div><div class="ft-desc">Um contexto que seria da casa toda, não só seu. Levamos para a discussão da Sessão 4.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 30 — PRÓXIMA SESSÃO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">30 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Próxima semana</div>
+      <p class="cover-sub" style="font-size:1.2rem;margin:0">Sessão 4</p>
+      <h1 class="cover-title" style="font-size:clamp(2.4rem,5.5vw,3.6rem)">Casos C-level</h1>
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Aplicação real por cadeira no setor de luxo — CEO, COO, CMO e CCO.</p>
+      <div class="section-tag mt-2">O que veremos</div>
+      <ul class="sq-list">
+        <li style="color:var(--claude-light)">Casos concretos de cada cadeira, com Projects e prompts já prontos</li>
+        <li style="color:var(--claude-light)">Como cada função extrai mais valor do Claude no dia a dia</li>
+        <li style="color:var(--claude-light)">Fluxos recorrentes da operação de luxo, do briefing ao board</li>
+        <li style="color:var(--claude-light)">Lab: resolver um caso real da sua cadeira, de ponta a ponta</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 31 — ENCERRAMENTO ====== -->
+  <section class="slide slide-light">
+    <span class="slide-num">31 / 31</span>
+    <div class="slide-inner">
+      <span class="brand-square lg" style="margin-bottom:1.5rem"></span>
+      <h1 style="font-size:clamp(3rem,9vw,5.5rem)">Obrigado.</h1>
+      <hr class="accent-bar">
+      <p class="italic muted" style="font-size:1.2rem">Contexto bem guardado é tempo que volta para você. Use seu Project a semana toda — nos vemos na Sessão 4.</p>
+      <p class="muted" style="font-family:var(--font-head)">Renê Junio · Marketing PRIMETOUR · Sessão 3 de 7</p>
+    </div>
+  </section>
+
+  </div><!-- /.slides-wrap -->
+
+  <!-- ============================================================
+       SEÇÕES DE CONSULTA (não aparecem no modo apresentação)
+       ============================================================ -->
+
+  <!-- ====== CADERNO COMPLETO DE PROJECTS ====== -->
+  <section class="non-slide" id="caderno-completo" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem">
+    <div class="section-tag">Caderno de Projects</div>
+    <h2>As 10 receitas da Sessão 3</h2>
+    <hr class="accent-bar">
+    <p class="lead">Instruções de Project prontas e prompts de montagem. Cole o bloco no campo de <strong>instruções</strong> do seu Project (ou na conversa, quando indicado) e preencha os campos entre colchetes.</p>
+
+    <div class="grid grid-4 mb-2" style="gap:.7rem">
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Instruções</strong><div class="ft-desc">Vão no campo do Project.</div></div>
+      <div class="card card-soft side-blue" style="padding:.8rem 1rem"><strong class="t-blue" style="font-family:var(--font-head)">Montagem</strong><div class="ft-desc">Prompts para criar e auditar.</div></div>
+      <div class="card card-soft side-green" style="padding:.8rem 1rem"><strong class="t-green" style="font-family:var(--font-head)">Manutenção</strong><div class="ft-desc">Manter o Project saudável.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Decisão</strong><div class="ft-desc">Criar ou não criar.</div></div>
+    </div>
+
+    <!-- 01 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Instruções · S3</span>
+      <h3>01 — Instruções base de um Project</h3>
+      <p class="when"><strong>Quando usar:</strong> O esqueleto de qualquer Project. Cole no campo de instruções e preencha.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s301', this)">Copiar</button><pre id="s301">PAPEL: Você é [o especialista ideal para este contexto, ex.: redator sênior da PRIMETOUR].
+
+CONTEXTO PERMANENTE: [o que é sempre verdade aqui — cliente, tema, objetivo recorrente].
+
+COMO RESPONDER:
+- Tom: [a voz desejada].
+- Formato padrão: [como gosto de receber — ex.: direto, em tópicos, máximo 1 página].
+- Sempre considere: [regras fixas deste contexto].
+
+NUNCA: [o que evitar sempre].
+
+Quando faltar uma informação para responder bem, pergunte antes de assumir.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Mantenha enxuto. Instrução é para o que é estável; o que muda a cada caso vai na mensagem da conversa.</p>
+    </article>
+
+    <!-- 02 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Instruções · S3</span>
+      <h3>02 — Project “Comunicação PRIMETOUR”</h3>
+      <p class="when"><strong>Quando usar:</strong> Um Project para todo texto da marca sair na voz certa. Some o Manual de Redação como conhecimento.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s302', this)">Copiar</button><pre id="s302">PAPEL: Você é redator sênior da PRIMETOUR e conhece o Manual de Redação anexado.
+
+VOZ: luxo que não grita — elegância contida, quiet luxury. Curadoria que conversa com um viajante exigente. Autoridade leve. Venda a experiência (o "como"), não só o destino.
+
+REGRAS DURAS:
+- A marca é sempre PRIMETOUR, em caixa alta.
+- "para", nunca "pra". "traslado", nunca "transfer". Sem diminutivos.
+- Termos proibidos: luxuoso, refúgio, escapada, paraíso, idílico, de tirar o fôlego, explorar, desbravar, instagramável.
+
+FORMATO: traduza abstrações em cenas sensoriais; adjetivação controlada; alterne frases curtas de impacto com períodos de imersão.
+
+Antes de finalizar qualquer texto, revise-o contra estas regras.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Anexe o arquivo do Manual de Redação ao conhecimento do Project. Assim o Claude consulta a fonte, não só o resumo acima.</p>
+    </article>
+
+    <!-- 03 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Instruções · S3</span>
+      <h3>03 — Project “Cliente VIP [Nome]”</h3>
+      <p class="when"><strong>Quando usar:</strong> Um cliente de alto valor recorrente. Cada conversa já conhece a relação.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s303', this)">Copiar</button><pre id="s303">PAPEL: Você é o gerente de relacionamento dedicado ao cliente [Nome/codinome].
+
+QUEM É O CLIENTE: [perfil, há quanto tempo viaja conosco, peso, estilo de viagem].
+PREFERÊNCIAS: [destinos, ritmo, hospedagem, restrições, o que valoriza].
+HISTÓRICO RELEVANTE: [viagens recentes, elogios, atritos a evitar].
+
+COMO RESPONDER:
+- Tom: caloroso, atencioso, à altura de um cliente exigente.
+- Sempre proteja a relação de longo prazo.
+- Antecipe o próximo passo: o que oferecer, o que confirmar.
+
+NUNCA exponha dado pessoal sensível em textos que saem para fora.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Use codinome em vez do nome real enquanto a política de dados (Sessão 6) não estiver fechada. O contexto funciona igual.</p>
+    </article>
+
+    <!-- 04 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Instruções · S3</span>
+      <h3>04 — Project “Propostas &amp; Fornecedores”</h3>
+      <p class="when"><strong>Quando usar:</strong> Analisar propostas, contratos e atas com a mesma régua, sempre.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s304', this)">Copiar</button><pre id="s304">PAPEL: Você é analista sênior de contratos e propostas da PRIMETOUR.
+
+CONTEXTO: avalio propostas de fornecedores de hospedagem, traslados e experiências. Tenho um contrato-modelo e uma tabela de referência anexados.
+
+AO ANALISAR QUALQUER PROPOSTA, SEMPRE DEVOLVA:
+1. Resumo em 5 linhas
+2. As 3 cláusulas ou pontos de maior risco para nós
+3. Comparação com nosso padrão de referência (o que foge)
+4. Uma pergunta a devolver ao fornecedor antes de fechar
+
+Tom direto, sem rodeios. Aponte o risco mesmo quando a proposta parecer boa.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Anexe o contrato-modelo e a tabela ao conhecimento. Aí cada nova proposta é comparada com o padrão automaticamente.</p>
+    </article>
+
+    <!-- 05 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Instruções · S3</span>
+      <h3>05 — Project “Board &amp; Reuniões”</h3>
+      <p class="when"><strong>Quando usar:</strong> Preparar reuniões de board e encontros decisivos com contexto recorrente.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s305', this)">Copiar</button><pre id="s305">PAPEL: Você é meu chefe de gabinete, preparando reuniões decisivas.
+
+CONTEXTO: participo do board da PRIMETOUR. As pautas recorrentes envolvem [temas]. O conselho costuma pesar [critérios].
+
+AO PREPARAR QUALQUER REUNIÃO, ME ENTREGUE:
+1. Síntese do que está em jogo (5 linhas)
+2. As 3 perguntas que o conselho fará primeiro
+3. Duas objeções prováveis e resposta curta para cada
+4. Um único ponto que eu não posso esquecer de dizer
+
+Tom executivo. Antecipe o difícil, não o confortável.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Combine com o template 07 da Sessão 1 (antecipação de objeções) dentro deste Project para preparar reuniões específicas.</p>
+    </article>
+
+    <!-- 06 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Montagem · S3</span>
+      <h3>06 — O Claude escreve as instruções do seu Project</h3>
+      <p class="when"><strong>Quando usar:</strong> Você sabe o contexto, mas não sabe como redigir as instruções. Use numa conversa avulsa.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s306', this)">Copiar</button><pre id="s306">Quero criar um Project no Claude para o seguinte contexto recorrente:
+
+CONTEXTO: [descreva: cliente, tema ou rotina; o que se repete]
+O QUE EU SEMPRE PRECISO: [tipo de entregável, tom, regras]
+ARQUIVOS QUE TENHO PARA ANEXAR: [liste]
+
+Escreva as instruções ideais para esse Project — papel, contexto permanente, como responder e o que evitar. Deixe enxuto e pronto para colar. Ao final, sugira que arquivos vale anexar como conhecimento.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Compare o que ele escreveu com o template 01. Ajuste e cole no campo de instruções do Project.</p>
+    </article>
+
+    <!-- 07 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Montagem · S3</span>
+      <h3>07 — Checklist do que anexar como conhecimento</h3>
+      <p class="when"><strong>Quando usar:</strong> Na dúvida sobre quais arquivos colocar no conhecimento do Project.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s307', this)">Copiar</button><pre id="s307">Vou montar um Project sobre [contexto]. Tenho estes arquivos candidatos a conhecimento:
+
+[liste os arquivos, um por linha]
+
+Para cada um, diga:
+- Vale anexar como conhecimento permanente, ou é melhor usar só na conversa quando precisar? (e por quê)
+- Há algum que contém dado sensível e deveria ficar de fora por ora?
+
+Ao final, liste o que falta — algum arquivo de referência que um Project assim deveria ter e eu não listei.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Conhecimento é curadoria. O arquivo que você usa uma vez vai na conversa; o que consulta sempre vai no Project.</p>
+    </article>
+
+    <!-- 08 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Manutenção · S3</span>
+      <h3>08 — Auditar e melhorar um Project</h3>
+      <p class="when"><strong>Quando usar:</strong> Um Project não está rendendo o esperado e você quer saber por quê.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s308', this)">Copiar</button><pre id="s308">Vou colar as instruções atuais de um Project meu. Audite-as.
+
+[cole as instruções do Project]
+
+O QUE EU ESPERAVA DELE: [descreva]
+ONDE ELE FALHA HOJE: [descreva, se souber]
+
+Diga:
+1. O que nas instruções está vago, conflitante ou faltando
+2. O que está sobrando (instrução que não muda nada na prática)
+3. Uma versão reescrita, mais enxuta e clara
+4. Se o problema parece ser de instrução ou de arquivo de conhecimento</pre></div>
+      <p class="tip"><strong>Dica:</strong> Rode esta auditoria de tempos em tempos. Projects acumulam instruções zumbis com o uso.</p>
+    </article>
+
+    <!-- 09 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Manutenção · S3</span>
+      <h3>09 — Manutenção mensal do Project</h3>
+      <p class="when"><strong>Quando usar:</strong> Uma revisão rápida e periódica para o Project não envelhecer.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s309', this)">Copiar</button><pre id="s309">Vou colar as instruções e a lista de arquivos de conhecimento de um Project meu. Faça uma revisão de manutenção.
+
+INSTRUÇÕES ATUAIS:
+[cole]
+
+ARQUIVOS DE CONHECIMENTO:
+[liste, com a data aproximada de cada]
+
+Me ajude a decidir:
+1. Alguma instrução ficou desatualizada e precisa mudar?
+2. Algum arquivo virou versão antiga e deveria ser substituído?
+3. Há algo que eu venho colando nas conversas e que deveria virar instrução fixa?</pre></div>
+      <p class="tip"><strong>Dica:</strong> Marque um lembrete mensal. Cinco minutos de manutenção evitam um Project que responde com base em informação velha.</p>
+    </article>
+
+    <!-- 10 -->
+    <article class="prompt-card">
+      <span class="cat cat-decisao">Decisão · S3</span>
+      <h3>10 — Vale criar um Project para isto?</h3>
+      <p class="when"><strong>Quando usar:</strong> Você está na dúvida entre abrir um Project ou só uma conversa avulsa.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s310', this)">Copiar</button><pre id="s310">Estou decidindo se crio um Project para a seguinte situação:
+
+SITUAÇÃO: [descreva o que você precisa fazer com o Claude]
+FREQUÊNCIA: [é uma vez só, ou volta? com que regularidade?]
+CONTEXTO ENVOLVIDO: [tom, arquivos, briefing que se repetiria]
+
+Me diga, de forma direta:
+- Isto justifica um Project, ou uma conversa avulsa resolve melhor? Por quê.
+- Se justifica, como eu nomearia e estruturaria (por cliente, tema ou cadeira)?
+- Se não justifica agora, o que precisaria mudar para passar a justificar.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Na dúvida, comece com uma conversa avulsa. Quando perceber que está repetindo o contexto, aí promova para Project.</p>
+    </article>
+  </section>
+
+  <!-- ====== GLOSSÁRIO ====== -->
+  <section class="non-slide" id="glossario" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem;border-top:1px solid var(--claude-light-gray)">
+    <div class="section-tag">Glossário</div>
+    <h2>Termos que apareceram nesta sessão</h2>
+    <hr class="accent-bar">
+    <dl class="gloss grid grid-2" style="gap:0 3rem">
+      <div><dt>Project (Claude)</dt><dd>Espaço no claude.ai que guarda instruções fixas e arquivos de conhecimento, aplicados a todas as conversas criadas ali dentro. Disponível nos planos pagos.</dd></div>
+      <div><dt>Instruções do Project</dt><dd>O texto fixo que orienta toda conversa do Project: papel, tom de voz, regras e formato padrão. O que você antes colava a cada conversa.</dd></div>
+      <div><dt>Conhecimento (knowledge)</dt><dd>Os arquivos de referência anexados ao Project que toda conversa pode consultar sem reanexar. Tem capacidade limitada — é curadoria, não depósito.</dd></div>
+      <div><dt>Contexto recorrente</dt><dd>A informação que se repete entre conversas (cliente, tom, documentos). É o que justifica criar um Project em vez de uma conversa avulsa.</dd></div>
+      <div><dt>Conversa avulsa</dt><dd>Um chat fora de qualquer Project. Bom para o pontual; não preserva contexto entre uma conversa e outra.</dd></div>
+      <div><dt>Template de prompt</dt><dd>Um prompt com lacunas, reusável. Na Sessão 3, deixa de ser colado e passa a viver como instrução de um Project.</dd></div>
+    </dl>
+  </section>
+
+  <!-- ====== FOOTER GLOBAL ====== -->
+  <footer class="session-footer non-slide">
+    <div class="flex justify-between wrap gap-l items-center">
+      <div>
+        <div class="section-tag" style="margin-bottom:.6rem">Progresso do treinamento</div>
+        <div class="progress-7"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span></div>
+        <p class="muted" style="margin:.3rem 0 0;font-family:var(--font-head);font-size:.85rem">Sessão 3 de 7 concluída</p>
+      </div>
+      <div class="flex gap-s wrap">
+        <a class="btn btn-ghost" href="../sessao-02/index.html">← Sessão 2</a>
+        <a class="next-link btn btn-orange" href="../sessao-04/index.html">Próxima: Sessão 4 · Casos C-level →</a>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:2rem;font-size:.82rem">Renê Junio · Marketing PRIMETOUR · Treinamento Claude para a liderança</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="../assets/claude.js"></script>
+</body>
+</html>

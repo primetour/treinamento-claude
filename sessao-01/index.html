@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sessão 1 · Fundamentos e primeiro contato — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Sessão 1 do treinamento executivo de Claude para a liderança da PRIMETOUR: fundamentos, modelos, agentes, tokens e primeiro contato prático.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<!-- ============ CONTROLES FIXOS DO MODO APRESENTAÇÃO ============ -->
+<div class="present-zone prev" data-action="present-prev" title="Slide anterior"></div>
+<div class="present-zone next" data-action="present-next" title="Próximo slide"></div>
+<div class="present-ctrl left">
+  <button data-action="present-prev" aria-label="Anterior">‹</button>
+</div>
+<div class="present-ctrl right">
+  <button data-action="present-next" aria-label="Próximo">›</button>
+  <button data-action="present-exit" aria-label="Sair (ESC)">✕</button>
+</div>
+<div class="present-progress" aria-hidden="true">
+  <span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar non-slide">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Sessão 1</div>
+  <button class="btn btn-orange" data-action="present">▶ Apresentar</button>
+</header>
+
+<div class="session-layout">
+
+  <!-- ============ SUMÁRIO LATERAL ============ -->
+  <nav class="session-nav non-slide" aria-label="Sumário da sessão">
+    <div class="nav-brand"><span class="brand-square"></span> Sessão 1</div>
+    <div class="nav-sub">Fundamentos e primeiro contato</div>
+
+    <div class="nav-section">Blocos</div>
+    <a href="#capa">Capa &amp; visão geral</a>
+    <a href="#bloco1">Bloco 1 · Fundamentos</a>
+    <a href="#bloco2">Bloco 2 · Desafio prático</a>
+    <a href="#bloco3">Bloco 3 · Discussão</a>
+
+    <div class="nav-section">Consulta</div>
+    <a href="#caderno">Caderno de prompts</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#tarefa">Tarefa da semana</a>
+  </nav>
+
+  <!-- ============ CONTEÚDO PRINCIPAL ============ -->
+  <main class="session-main">
+  <div class="slides-wrap">
+
+  <!-- ====== SLIDE 1 — CAPA ====== -->
+  <section class="slide slide-dark" id="capa">
+    <span class="slide-num">01 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Claude para a liderança</div>
+      <h1 class="cover-title">Fundamentos e primeiro contato</h1>
+      <p class="cover-sub">Sessão 1 de 7 · Treinamento executivo PRIMETOUR Viagens &amp; Experiências</p>
+      <hr class="accent-bar">
+      <p class="muted" style="font-family:var(--font-head)">Marketing · 2h30 de duração</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 2 — MAPA DAS 7 SESSÕES ====== -->
+  <section class="slide" id="bloco1">
+    <span class="slide-num">02 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Visão geral</div>
+      <h2>O caminho das 7 semanas</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cada encontro entrega um conceito, uma prática guiada e um kit de prompts pronto para uso imediato.</p>
+      <div class="grid grid-7">
+        <div class="session-card current"><div class="sc-num">01</div><div class="sc-title">Fundamentos</div><div class="sc-desc">O que é Claude e como pensar com IA generativa</div></div>
+        <div class="session-card soon"><div class="sc-num">02</div><div class="sc-title">Comunicação</div><div class="sc-desc">Anatomia do bom prompt e técnicas de iteração</div></div>
+        <div class="session-card soon"><div class="sc-num">03</div><div class="sc-title">Projects</div><div class="sc-desc">Organização, contexto e entregáveis prontos</div></div>
+        <div class="session-card soon"><div class="sc-num">04</div><div class="sc-title">Casos C-level</div><div class="sc-desc">Aplicação real por cadeira no setor de luxo</div></div>
+        <div class="session-card soon"><div class="sc-num">05</div><div class="sc-title">Microsoft</div><div class="sc-desc">Outlook, OneDrive, Excel e conectores</div></div>
+        <div class="session-card soon"><div class="sc-num">06</div><div class="sc-title">Governança</div><div class="sc-desc">LGPD, segurança e política interna</div></div>
+        <div class="session-card soon"><div class="sc-num">07</div><div class="sc-title">Adoção</div><div class="sc-desc">Plano de 90 dias para cada área</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 3 — ESTRUTURA DE HOJE ====== -->
+  <section class="slide">
+    <span class="slide-num">03 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Estrutura de hoje</div>
+      <h2>Como vão funcionar as próximas 2h30</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três blocos, com ritmo diferente em cada um — e razão para isso.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue">
+          <div class="num-big t-blue">01</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Explicação <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Os conceitos que vão fazer você ganhar tempo nos próximos meses: o que é Claude, como ele pensa, tokens, agentes, e quando IA é a ferramenta certa.</p>
+        </div>
+        <div class="card top-orange">
+          <div class="num-big t-orange">02</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Desafio prático <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Você recebe um desafio real e tem uma hora para chegar ao resultado usando o Claude — sozinho, com seu próprio prompt, no seu próprio ritmo.</p>
+        </div>
+        <div class="card top-green">
+          <div class="num-big t-green">03</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Discussão <span class="muted" style="font-weight:400">· 30 min</span></div>
+          <p class="muted" style="margin:0">Compartilhamos o que funcionou, o que surpreendeu, o que não rolou. É aqui que o aprendizado coletivo acontece — e onde tiramos suas dúvidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 4 — OBJETIVOS ====== -->
+  <section class="slide">
+    <span class="slide-num">04 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Objetivos</div>
+      <h2>O que você leva ao final desta sessão</h2>
+      <hr class="accent-bar">
+      <div class="mt-2">
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="15.5 8.5 10.5 10.5 8.5 15.5 13.5 13.5" fill="currentColor" stroke="none"/></svg>
+          <div><div class="ft-title">Clareza conceitual</div><div class="ft-desc">Saber o que é Claude, o que é um modelo, o que é um agente, e por que isso muda a forma como você pede.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-blue)" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 1 5 3 3 0 0 0 6 1V4a3 3 0 0 0-2-1Z"/><path d="M15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-1 5 3 3 0 0 1-6 1"/></svg>
+          <div><div class="ft-title">Critério para escolher</div><div class="ft-desc">Reconhecer quando IA é a ferramenta certa, quando é melhor partir para automação e quando o problema é de sistema.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-green)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="10 8 16 12 10 16" fill="currentColor" stroke="none"/></svg>
+          <div><div class="ft-title">Primeira prática real</div><div class="ft-desc">Encarar um desafio cronometrado de 1h e produzir um entregável seu — não um teste, um caso real do seu trabalho.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8s-1-5-4-5-2 5 4 5Zm0 0s1-5 4-5 2 5-4 5Z"/></svg>
+          <div><div class="ft-title">Kit de partida</div><div class="ft-desc">Sair com a conta criada, o app instalado, 10 prompts prontos e o manual da sessão para consulta.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 5 — POR QUE IMPORTA AGORA ====== -->
+  <section class="slide">
+    <span class="slide-num">05 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Contexto</div>
+      <h2>Por que isto importa agora</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três movimentos que mudam o jogo para um operador de luxo como a PRIMETOUR.</p>
+      <div class="grid grid-3">
+        <div class="card card-soft">
+          <div class="num-big t-orange" style="font-size:2rem">Leitura</div>
+          <p class="italic muted" style="margin:.2rem 0 .6rem">no lugar de digestão</p>
+          <p style="margin:0">Documentos longos que tomavam horas viram síntese executiva em minutos — sem perder profundidade.</p>
+        </div>
+        <div class="card card-soft">
+          <div class="num-big t-orange" style="font-size:2rem">Briefing</div>
+          <p class="italic muted" style="margin:.2rem 0 .6rem">no lugar de busca</p>
+          <p style="margin:0">Quem trata IA como buscador colhe respostas medianas. Quem dá contexto e papel colhe entregáveis.</p>
+        </div>
+        <div class="card card-soft">
+          <div class="num-big t-orange" style="font-size:2rem">Ritmo</div>
+          <p class="italic muted" style="margin:.2rem 0 .6rem">a moeda do luxo</p>
+          <p style="margin:0">Em alta renda, velocidade de resposta e qualidade da conversa são vantagem competitiva direta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 6 — O QUE É CLAUDE ====== -->
+  <section class="slide">
+    <span class="slide-num">06 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conceito</div>
+      <h2>O que é o Claude</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-2" style="align-items:center">
+        <div class="serif" style="font-size:1.05rem">
+          <p>Claude é uma assistente de IA criada pela Anthropic — laboratório fundado em 2021 por ex-pesquisadores da OpenAI, com foco em segurança e alinhamento.</p>
+          <p>É treinada para ser útil, honesta e cuidadosa, e se diferencia por raciocínio longo, escrita densa de qualidade editorial e análise profunda de documentos.</p>
+          <p>Você acessa em <strong>claude.ai</strong>, no app ou no Claude para desktop. Hoje é considerada referência em tarefas que pedem reflexão, não apenas resposta rápida.</p>
+        </div>
+        <div class="card-dark side-orange">
+          <div class="section-tag">Em uma frase</div>
+          <p style="font-family:var(--font-head);font-weight:600;font-size:1.4rem;line-height:1.3;margin:.2rem 0 1rem">“Um colaborador júnior brilhante, com leitura ampla e raciocínio cuidadoso.”</p>
+          <p class="italic" style="color:var(--claude-mid-gray);margin:0">Como qualquer júnior bom, rende muito com briefing claro e atenção ao contexto. Sem isso, entrega o óbvio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 7 — MODELO ====== -->
+  <section class="slide">
+    <span class="slide-num">07 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conceito-chave</div>
+      <h2>Modelo: o cérebro da IA</h2>
+      <hr class="accent-bar">
+      <p class="lead">Quando se fala em Claude Sonnet 4.6, GPT-4 ou Gemini 2.5, está se falando de modelos.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <svg class="ico ico-lg t-orange" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 1 5 3 3 0 0 0 6 1V4a3 3 0 0 0-2-1Z"/><path d="M15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-1 5 3 3 0 0 1-6 1"/></svg>
+          <div class="section-tag mt-2">O que faz</div>
+          <h3>Recebe texto, devolve texto.</h3>
+          <p class="muted">Você escreve uma pergunta ou pedido — ele lê e responde. É o cérebro puro, sem acesso a nada além do que está na conversa.</p>
+        </div>
+        <div class="card card-soft">
+          <div class="section-tag">Modelos que você já ouviu falar</div>
+          <table class="tbl">
+            <thead><tr><th>Nome</th><th>Fabricante</th><th>Força principal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Claude Sonnet 4.6</strong></td><td>Anthropic</td><td>Raciocínio e escrita densa</td></tr>
+              <tr><td><strong>Claude Opus 4.7</strong></td><td>Anthropic</td><td>Tarefas mais complexas</td></tr>
+              <tr><td>GPT-4o / GPT-5</td><td>OpenAI</td><td>Versatilidade e multimodal</td></tr>
+              <tr><td>Gemini 2.5 Pro</td><td>Google</td><td>Integração com ecossistema Google</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 8 — AGENTE ====== -->
+  <section class="slide">
+    <span class="slide-num">08 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conceito-chave</div>
+      <h2>Agente: o cérebro com mãos</h2>
+      <hr class="accent-bar">
+      <p class="lead">O Claude que você usa em claude.ai não é só um modelo — é um agente. Veja a diferença.</p>
+      <div class="equation mt-2">
+        <div class="eq-box">
+          <svg class="ico t-blue" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 1 5 3 3 0 0 0 6 1V4a3 3 0 0 0-2-1Z"/><path d="M15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-1 5 3 3 0 0 1-6 1"/></svg>
+          <div class="eq-label">Modelo</div><div class="muted" style="font-size:.78rem">cérebro</div>
+        </div>
+        <div class="eq-plus">+</div>
+        <div class="eq-box">
+          <svg class="ico t-orange" viewBox="0 0 24 24"><path d="M14 7a4 4 0 0 1-5 5l-5 5 2 2 5-5a4 4 0 0 0 5-5l-2 2-2-2 2-2Z"/></svg>
+          <div class="eq-label">Ferramentas</div><div class="muted" style="font-size:.78rem">agir</div>
+        </div>
+        <div class="eq-plus">+</div>
+        <div class="eq-box">
+          <svg class="ico t-green" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+          <div class="eq-label">Memória</div><div class="muted" style="font-size:.78rem">lembrar</div>
+        </div>
+        <div class="eq-plus">+</div>
+        <div class="eq-box">
+          <svg class="ico t-orange" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+          <div class="eq-label">Autonomia</div><div class="muted" style="font-size:.78rem">decidir</div>
+        </div>
+      </div>
+      <div class="eq-result">= AGENTE</div>
+      <div class="card-dark side-orange mt-3">
+        <div class="section-tag">Agente = o modelo com mãos para agir</div>
+        <p style="margin:0;color:var(--claude-light)">Não só responde com texto: pesquisa na web, lê seus arquivos, executa código, busca no seu Drive ou Outlook, lembra de conversas passadas. O Claude no claude.ai já é um agente — quando você anexa um PDF ou pede para buscar algo recente, ele está usando ferramentas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 9 — MODELO VS AGENTE ====== -->
+  <section class="slide">
+    <span class="slide-num">09 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Comparação direta</div>
+      <h2>Modelo vs Agente</h2>
+      <hr class="accent-bar">
+      <p class="lead">Saber a diferença muda o que você pede e o que você espera receber.</p>
+      <div class="grid grid-2">
+        <div class="card side-blue">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.1em;color:var(--claude-orange);background:var(--claude-blue);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">MODELO</div>
+          <h3 class="mt-1">Cérebro fechado</h3>
+          <ul class="sq-list">
+            <li>Conversa em texto, apenas</li>
+            <li>Não acessa nada do mundo externo</li>
+            <li>Não tem memória entre conversas</li>
+            <li>Não usa ferramentas próprias</li>
+            <li>Útil para raciocinar, escrever, analisar</li>
+          </ul>
+        </div>
+        <div class="card side-orange">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.1em;background:var(--claude-orange);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">AGENTE</div>
+          <h3 class="mt-1">Cérebro que age</h3>
+          <ul class="sq-list">
+            <li>Pesquisa na web em tempo real</li>
+            <li>Lê seus PDFs, planilhas, imagens</li>
+            <li>Pode ter memória entre conversas</li>
+            <li>Conecta com Drive, Outlook, etc</li>
+            <li>Executa código e gera arquivos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 10 — COMO RACIOCINA ====== -->
+  <section class="slide">
+    <span class="slide-num">10 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como funciona</div>
+      <h2>Como o Claude raciocina</h2>
+      <hr class="accent-bar">
+      <p class="lead">Sem entrar em matemática — três ideias que mudam a forma como você vai conversar com ele.</p>
+      <div class="grid grid-3">
+        <div class="card side-blue">
+          <svg class="ico t-blue" viewBox="0 0 24 24"><path d="M4 5c2-1 5-1 8 0v14c-3-1-6-1-8 0V5Z"/><path d="M20 5c-2-1-5-1-8 0v14c3-1 6-1 8 0V5Z"/></svg>
+          <h3 class="mt-1">Foi treinado lendo muito</h3>
+          <p class="muted" style="margin:0">Bilhões de textos — livros, artigos, código, manuais. Por isso reconhece padrões de qualidade — saber pedir “no tom da Vanity Fair” funciona.</p>
+        </div>
+        <div class="card side-orange">
+          <svg class="ico t-orange" viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 1 5 3 3 0 0 0 6 1V4a3 3 0 0 0-2-1Z"/><path d="M15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-1 5 3 3 0 0 1-6 1"/></svg>
+          <h3 class="mt-1">Pensa por probabilidade</h3>
+          <p class="muted" style="margin:0">Calcula a sequência de palavras mais coerente dado o que você pediu. Não é busca em base de dados — é raciocínio condicional.</p>
+        </div>
+        <div class="card side-green">
+          <svg class="ico t-green" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c.8.8 1 1.5 1 2h6c0-.5.2-1.2 1-2a6 6 0 0 0-4-10Z"/></svg>
+          <h3 class="mt-1">Começa do zero por padrão</h3>
+          <p class="muted" style="margin:0">Cada nova conversa nasce limpa. O que ele “sabe” de você na conversa vem do que você diz, dos arquivos anexados e do Project ativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 11 — JANELA DE CONTEXTO ====== -->
+  <section class="slide">
+    <span class="slide-num">11 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conceito-chave</div>
+      <h2>Janela de contexto: a mesa de trabalho</h2>
+      <hr class="accent-bar">
+      <p class="lead">Tudo o que está sobre a mesa, ele lê de uma vez. O que não está, ele não vê.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card card-soft side-orange">
+          <div class="section-tag">Sobre a mesa agora</div>
+          <ul class="sq-list" style="margin-top:0">
+            <li>Sua mensagem desta conversa</li>
+            <li>Os arquivos que você anexou</li>
+            <li>As instruções do Project (se houver)</li>
+            <li>Tudo o que já foi dito neste chat</li>
+          </ul>
+        </div>
+        <div>
+          <div class="task-row"><span class="num-circle">1</span><div><div class="ft-title">Dê contexto suficiente</div><div class="ft-desc">Anexar um PDF é melhor que descrever. Colar o briefing é melhor que parafrasear.</div></div></div>
+          <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Conversas longas custam</div><div class="ft-desc">Após muitas trocas, ele pode esquecer detalhes do início. Em casos críticos, comece nova conversa.</div></div></div>
+          <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Cada chat é um silo</div><div class="ft-desc">Ele não vê o que aconteceu em outra conversa sua. Use Projects para preservar contexto recorrente.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 12 — TOKEN ====== -->
+  <section class="slide">
+    <span class="slide-num">12 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Conceito-chave</div>
+      <h2>Token: a unidade de medida da IA</h2>
+      <hr class="accent-bar">
+      <p class="lead">Antes de cobrar, antes de limitar, antes de processar — tudo na IA é contado em tokens.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <h3 class="mt-0">O que é um token</h3>
+          <p class="muted">Um token é o pedaço mínimo de texto que o modelo processa. Pode ser uma palavra inteira, parte de uma palavra, ou até um sinal de pontuação.</p>
+          <p class="muted">Em português, a regra prática é simples:</p>
+          <div class="card-dark side-orange">
+            <div class="num-big" style="font-size:2.4rem">≈ 4 caracteres</div>
+            <p class="italic" style="color:var(--claude-mid-gray);margin:.2rem 0 .6rem">equivalem a 1 token, em média</p>
+            <p style="margin:0;color:var(--claude-light)">Uma palavra de tamanho médio = 1 a 2 tokens.</p>
+          </div>
+        </div>
+        <div class="card card-soft center">
+          <div class="section-tag" style="justify-content:center">A janela do Claude</div>
+          <div class="num-big t-orange" style="font-size:clamp(3rem,8vw,5rem)">200.000</div>
+          <div style="font-family:var(--font-head);letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);font-size:.8rem">tokens</div>
+          <hr style="border:0;border-top:1px solid var(--claude-mid-gray);margin:1.2rem 0">
+          <p class="muted" style="margin:.3rem 0">≈ 150 mil palavras</p>
+          <p class="muted" style="margin:.3rem 0">≈ 500 páginas A4</p>
+          <p class="muted" style="margin:.3rem 0">≈ um livro inteiro de uma vez</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 13 — POR QUE TOKENS IMPORTAM ====== -->
+  <section class="slide">
+    <span class="slide-num">13 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Tokens na prática</div>
+      <h2>Por que isso importa para você</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três motivos para entender token, mesmo sem ser técnico.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue">
+          <div class="flex justify-between items-center"><div class="num-big t-blue">01</div>
+            <svg class="ico t-blue" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1"/><rect x="3" y="14" width="18" height="6" rx="1"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+          <h3>Limite</h3>
+          <p class="muted" style="margin:0">Quando uma conversa ocupa toda a janela de 200 mil tokens, o Claude começa a esquecer detalhes do início. Em análises críticas, abra uma nova conversa em vez de continuar uma muito longa.</p>
+        </div>
+        <div class="card top-orange">
+          <div class="flex justify-between items-center"><div class="num-big t-orange">02</div>
+            <svg class="ico t-orange" viewBox="0 0 24 24"><circle cx="8" cy="8" r="5"/><path d="M13 13a5 5 0 1 1-5-5"/></svg></div>
+          <h3>Custo</h3>
+          <p class="muted" style="margin:0">Cada token tem um custo. No claude.ai, isso aparece como limite de mensagens por plano. Via API (usado pela TI), cada milhão de tokens custa de centavos a dólares — viável para volume.</p>
+        </div>
+        <div class="card top-green">
+          <div class="flex justify-between items-center"><div class="num-big t-green">03</div>
+            <svg class="ico t-green" viewBox="0 0 24 24"><path d="M5 13c0-5 3-9 7-11 4 2 7 6 7 11a7 7 0 0 1-14 0Z"/><circle cx="12" cy="11" r="2"/><path d="M8 19l-2 3M16 19l2 3"/></svg></div>
+          <h3>Eficiência</h3>
+          <p class="muted" style="margin:0">Pedir respostas enxutas consome menos tokens — e em geral entrega respostas mais úteis. “Me dê uma síntese de 5 linhas” rende melhor do que pedir aberto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 14 — ALUCINAÇÃO ====== -->
+  <section class="slide">
+    <span class="slide-num">14 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Cuidado essencial</div>
+      <h2>Alucinação: quando ele inventa com confiança</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não é bug — é característica. Lidamos com isso com método, não com medo.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card-dark side-orange">
+          <div class="flex items-center gap-s">
+            <svg class="ico t-orange" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v5M12 18h.01"/></svg>
+            <div class="section-tag" style="margin:0">O que é</div>
+          </div>
+          <p style="color:var(--claude-light)">Quando o Claude gera uma informação que soa coerente mas não corresponde aos fatos. Pode ser uma data, um nome, uma citação, um número de mercado.</p>
+          <p class="italic" style="color:var(--claude-mid-gray);margin:0">Acontece mais quando se pede algo específico e factual sem dar fonte.</p>
+        </div>
+        <div>
+          <h3 class="mt-0">Como mitigar</h3>
+          <ul class="sq-list">
+            <li><strong>Anexe a fonte:</strong> PDF, link, documento. Ele lê e responde com base no material.</li>
+            <li><strong>Ative pesquisa na web</strong> quando o assunto pede dado atual ou nome próprio.</li>
+            <li><strong>Peça verificação:</strong> “cite o trecho exato” ou “liste o que é hipótese vs. fato”.</li>
+            <li><strong>Em decisão crítica, valide com humano.</strong> IA é copiloto, não auditor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 15 — CLAUDE VS GPT VS GEMINI ====== -->
+  <section class="slide">
+    <span class="slide-num">15 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Comparativo</div>
+      <h2>Claude, GPT e Gemini — onde cada um brilha</h2>
+      <hr class="accent-bar">
+      <p class="lead">Honestidade primeiro: não existe “o melhor”. Existe a ferramenta certa para a tarefa.</p>
+      <table class="tbl">
+        <thead><tr>
+          <th class="col-dark">Critério</th>
+          <th class="col-claude">Claude</th>
+          <th>ChatGPT (GPT)</th>
+          <th>Gemini (Google)</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="col-dark">Escrita longa e editorial</td><td class="col-claude"><span class="eval-exc">Excelente</span></td><td>Bom</td><td>Regular</td></tr>
+          <tr><td class="col-dark">Análise de PDFs longos</td><td class="col-claude"><span class="eval-exc">Excelente</span></td><td>Bom</td><td>Bom</td></tr>
+          <tr><td class="col-dark">Raciocínio e nuance</td><td class="col-claude"><span class="eval-exc">Excelente</span></td><td><span class="eval-exc">Excelente</span></td><td>Bom</td></tr>
+          <tr><td class="col-dark">Geração de imagens</td><td class="col-claude">Não nativo</td><td><span class="eval-exc">Excelente</span></td><td>Bom</td></tr>
+          <tr><td class="col-dark">Integração ecossistema Google</td><td class="col-claude">Bom (via conectores)</td><td>Regular</td><td><span class="eval-exc">Excelente</span></td></tr>
+          <tr><td class="col-dark">Pesquisa web profunda</td><td class="col-claude"><span class="eval-exc">Excelente</span></td><td><span class="eval-exc">Excelente</span></td><td>Bom</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 16 — IA / AUTOMAÇÃO / SISTEMA ====== -->
+  <section class="slide">
+    <span class="slide-num">16 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Critério de decisão</div>
+      <h2>Quando IA, quando automação, quando sistema</h2>
+      <hr class="accent-bar">
+      <p class="lead">Nem tudo precisa ser resolvido com IA — entender a diferença evita gastar tempo e dinheiro errados.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <div class="muted" style="font-family:var(--font-head);font-size:.75rem;margin-bottom:.4rem">▲ Variabilidade do input</div>
+          <div class="quad">
+            <div class="cell"><div class="q-title t-orange">IA CONVERSACIONAL</div><div class="q-desc">claude.ai, ChatGPT, você no comando</div></div>
+            <div class="cell"><div class="q-title t-green">IA VIA AGENTE / API</div><div class="q-desc">automatiza a IA dentro do sistema</div></div>
+            <div class="cell"><div class="q-title t-gray">HUMANO + JULGAMENTO</div><div class="q-desc">decisão única, baixa repetição</div></div>
+            <div class="cell"><div class="q-title t-blue">AUTOMAÇÃO TRADICIONAL</div><div class="q-desc">RPA, scripts, integrações simples</div></div>
+          </div>
+          <div class="muted center" style="font-family:var(--font-head);font-size:.75rem;margin-top:.4rem">Volume / repetição ▶</div>
+        </div>
+        <div>
+          <h3 class="mt-0">No dia a dia da PRIMETOUR</h3>
+          <div class="task-row"><span class="brand-square" style="margin-top:.3rem"></span><div><div class="ft-title t-orange">IA conversacional</div><div class="ft-desc">Briefing customizado, e-mail difícil, análise de proposta única.</div></div></div>
+          <div class="task-row"><span class="brand-square" style="margin-top:.3rem;background:var(--claude-green)"></span><div><div class="ft-title t-green">IA via agente</div><div class="ft-desc">Sugestão automática de roteiros baseada no perfil do cliente.</div></div></div>
+          <div class="task-row"><span class="brand-square" style="margin-top:.3rem;background:var(--claude-blue)"></span><div><div class="ft-title t-blue">Automação</div><div class="ft-desc">Confirmação automática de reserva, envio de boleto, agendamento padrão.</div></div></div>
+          <div class="task-row"><span class="brand-square" style="margin-top:.3rem;background:var(--claude-mid-gray)"></span><div><div class="ft-title t-gray">Humano</div><div class="ft-desc">Posicionamento institucional, escolha estratégica de longo prazo.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 17 — ESCOLHER O AGENTE CERTO ====== -->
+  <section class="slide">
+    <span class="slide-num">17 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Critério prático</div>
+      <h2>Como escolher o agente certo para a tarefa</h2>
+      <hr class="accent-bar">
+      <p class="lead">Quatro perguntas que destravam a escolha entre as variantes que o mercado oferece.</p>
+      <div class="grid grid-2">
+        <div class="card side-orange"><div class="flex gap-s items-center"><span class="num-circle">1</span><h3 style="margin:0">Profundidade vs velocidade</h3></div><p class="muted mt-1" style="margin-bottom:0">Tarefa rápida e direta? Use o modelo mais leve (Haiku). Análise crítica que pede raciocínio? Vá no Sonnet ou Opus.</p></div>
+        <div class="card side-orange"><div class="flex gap-s items-center"><span class="num-circle">2</span><h3 style="margin:0">O que ele precisa acessar</h3></div><p class="muted mt-1" style="margin-bottom:0">Só seu texto na conversa? Modelo puro basta. Precisa ler seu OneDrive ou enviar e-mail? Você quer um agente com conectores.</p></div>
+        <div class="card side-orange"><div class="flex gap-s items-center"><span class="num-circle">3</span><h3 style="margin:0">Quanto material ele lê de uma vez</h3></div><p class="muted mt-1" style="margin-bottom:0">Para análises de longos documentos, modelos com janela grande (200K tokens ou mais) economizam quebra de contexto.</p></div>
+        <div class="card side-orange"><div class="flex gap-s items-center"><span class="num-circle">4</span><h3 style="margin:0">Onde os dados moram</h3></div><p class="muted mt-1" style="margin-bottom:0">Trabalha com dados sensíveis ou regulados? Escolha agente com cláusulas de privacidade, residência e LGPD que sua empresa aceita.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 18 — SWEET SPOTS ====== -->
+  <section class="slide">
+    <span class="slide-num">18 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Quando usar</div>
+      <h2>Os sweet spots do Claude para um C-level</h2>
+      <hr class="accent-bar">
+      <p class="lead">Onde, no seu dia a dia, ele entrega valor mais alto e mais rápido.</p>
+      <div class="grid grid-3">
+        <div class="feature-row"><svg class="ico" style="color:var(--claude-blue)" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><div><div class="ft-title">Análise de documentos</div><div class="ft-desc">Ler relatório setorial de 80 páginas e devolver síntese executiva, riscos e oportunidades.</div></div></div>
+        <div class="feature-row"><svg class="ico" viewBox="0 0 24 24"><path d="M7 7h4v6c0 2-1.5 4-4 4M13 7h4v6c0 2-1.5 4-4 4"/></svg><div><div class="ft-title">Redação delicada</div><div class="ft-desc">Mensagem difícil para parceiro, comunicado a equipe, resposta a reclamação VIP.</div></div></div>
+        <div class="feature-row"><svg class="ico" style="color:var(--claude-green)" viewBox="0 0 24 24"><path d="m6 11 3 3 4-7 3 9 3-5"/></svg><div><div class="ft-title">Sparring de decisão</div><div class="ft-desc">Estressar premissas de uma escolha. Pedir contra-argumentos antes de uma reunião decisiva.</div></div></div>
+        <div class="feature-row"><svg class="ico" style="color:var(--claude-blue)" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-7"/></svg><div><div class="ft-title">Preparação de reunião</div><div class="ft-desc">Briefing sobre o interlocutor, antecipação de objeções, roteiro de pontos a abordar.</div></div></div>
+        <div class="feature-row"><svg class="ico" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 1.5-3.5 4-3.5"/></svg><div><div class="ft-title">Síntese e comunicação</div><div class="ft-desc">Transformar 2h de conversa em uma página executiva clara para o resto do board.</div></div></div>
+        <div class="feature-row"><svg class="ico" style="color:var(--claude-green)" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c.8.8 1 1.5 1 2h6c0-.5.2-1.2 1-2a6 6 0 0 0-4-10Z"/></svg><div><div class="ft-title">Brainstorm estruturado</div><div class="ft-desc">Gerar 20 ângulos para uma campanha, 10 nomes de produto, 5 estratégias contrastantes.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 19 — ONDE NÃO BRILHA ====== -->
+  <section class="slide">
+    <span class="slide-num">19 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>E onde ele não é a melhor escolha</h2>
+      <hr class="accent-bar">
+      <p class="lead">Esperar tudo de uma ferramenta é o caminho mais rápido para frustração e desconfiança da equipe.</p>
+      <div class="card side-orange mb-1"><div class="ft-title">Cálculo financeiro complexo</div><div class="ft-desc">Para modelagem séria, use Excel. Claude pode até ajudar a estruturar a planilha — mas a conta final é da ferramenta certa.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Decisão final em assunto crítico</div><div class="ft-desc">Diagnóstico médico, parecer jurídico vinculante, lance de M&amp;A. Ele apoia, não decide.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Dado de mercado em tempo real</div><div class="ft-desc">Câmbio de hoje, agenda do CEO, preço de passagem agora. Esses dados ele só tem se você anexar ou se a pesquisa web encontrar.</div></div>
+      <div class="card side-orange"><div class="ft-title">Substituir o time</div><div class="ft-desc">IA amplia capacidade humana. Quem trata como redução de pessoas erra duas vezes: na adoção e no resultado.</div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 20 — CRIE SUA CONTA ====== -->
+  <section class="slide">
+    <span class="slide-num">20 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Mãos na ferramenta</div>
+      <h2>Crie sua conta free agora</h2>
+      <hr class="accent-bar">
+      <p class="lead">Dois ambientes, mesma conta. Em menos de 2 minutos você está dentro.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="card-dark" style="display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;margin:-1.5rem -1.6rem 1.2rem;border-radius:var(--radius-lg) var(--radius-lg) 0 0">
+            <svg class="ico t-orange" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg>
+            <strong style="font-family:var(--font-head);color:var(--claude-light)">DESKTOP</strong>
+          </div>
+          <div class="task-row" style="padding-top:0"><span class="num-circle">1</span><div><div class="ft-title">Acesse claude.ai</div><div class="ft-desc">Digite no navegador. O domínio oficial é claude.ai — desconfie de variações.</div></div></div>
+          <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Clique em “Sign up”</div><div class="ft-desc">Pode usar e-mail, conta Google ou conta Microsoft. Recomendação: Microsoft, para alinhar com o ambiente PRIMETOUR.</div></div></div>
+          <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Confirme o e-mail</div><div class="ft-desc">Você recebe um código de verificação. Coloque, e está dentro.</div></div></div>
+          <div class="task-row"><span class="num-circle">4</span><div><div class="ft-title">Pronto para usar</div><div class="ft-desc">O plano free já dá acesso ao Claude. Pro libera modelo mais potente e mais mensagens.</div></div></div>
+        </div>
+        <div class="card">
+          <div class="card-dark" style="display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;margin:-1.5rem -1.6rem 1.2rem;border-radius:var(--radius-lg) var(--radius-lg) 0 0">
+            <svg class="ico t-orange" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            <strong style="font-family:var(--font-head);color:var(--claude-light)">MOBILE</strong>
+          </div>
+          <div class="task-row" style="padding-top:0"><span class="num-circle">1</span><div><div class="ft-title">iPhone: App Store · Android: Play Store</div><div class="ft-desc">Busque por “Claude”. O app oficial é da Anthropic — confira o nome do desenvolvedor.</div></div></div>
+          <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Instale e abra</div><div class="ft-desc">App leve, instala rápido. Não pede dados além do mínimo para login.</div></div></div>
+          <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Faça login com a mesma conta</div><div class="ft-desc">Use o mesmo e-mail ou conta que você cadastrou no desktop. Histórico sincroniza automaticamente.</div></div></div>
+          <div class="task-row"><span class="num-circle">4</span><div><div class="ft-title">Conversa por voz disponível</div><div class="ft-desc">No app móvel, pode falar com o Claude por voz. Útil no carro ou entre reuniões.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 21 — A INTERFACE ====== -->
+  <section class="slide">
+    <span class="slide-num">21 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">A interface</div>
+      <h2>Onde tudo acontece: claude.ai</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cinco elementos compõem a sua mesa de trabalho diária.</p>
+      <div class="grid grid-2" style="align-items:center">
+        <div class="wireframe">
+          <div class="wf-side">
+            <div style="font-weight:600;margin-bottom:.4rem"><span class="wf-tag">1</span> Conversas</div>
+            <div style="height:8px;background:var(--claude-mid-gray);border-radius:3px;margin:.3rem 0;opacity:.5"></div>
+            <div style="height:8px;background:var(--claude-mid-gray);border-radius:3px;margin:.3rem 0;opacity:.3"></div>
+            <div style="height:8px;background:var(--claude-mid-gray);border-radius:3px;margin:.3rem 0;opacity:.3"></div>
+            <div style="margin-top:1rem;font-weight:600">Projects</div>
+          </div>
+          <div class="wf-main">
+            <div class="wf-chat"><span class="wf-tag">2</span> Área de chat — mensagens e respostas
+              <div style="height:10px;background:var(--claude-light-gray);border-radius:4px;margin:.6rem 0;width:80%"></div>
+              <div style="height:10px;background:var(--claude-light-gray);border-radius:4px;margin:.4rem 0;width:60%"></div>
+            </div>
+            <div class="wf-input">
+              <span class="wf-tag">4</span>
+              <div class="wf-field"></div>
+              <span class="wf-tag">5</span>
+            </div>
+            <div style="text-align:center;font-size:.62rem;color:var(--text-muted);padding-bottom:.3rem"><span class="wf-tag">3</span> campo de mensagem</div>
+          </div>
+        </div>
+        <div>
+          <div class="task-row" style="padding-top:0"><span class="num-circle">1</span><div><div class="ft-title">Barra lateral</div><div class="ft-desc">Histórico de conversas e acesso aos Projects.</div></div></div>
+          <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Área de chat</div><div class="ft-desc">Suas mensagens e as respostas do Claude.</div></div></div>
+          <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Campo de mensagem</div><div class="ft-desc">Onde você escreve e anexa arquivos.</div></div></div>
+          <div class="task-row"><span class="num-circle">4</span><div><div class="ft-title">Botão de anexo</div><div class="ft-desc">PDF, Word, imagem e mais — até 20 arquivos por conversa, 30 MB cada.</div></div></div>
+          <div class="task-row"><span class="num-circle">5</span><div><div class="ft-title">Configurações</div><div class="ft-desc">Modelo, idioma, memória, integrações.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 22 — TRANSIÇÃO BLOCO 2 ====== -->
+  <section class="slide slide-dark" id="bloco2">
+    <span class="slide-num">22 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 2 · 60 min</div>
+      <h1 class="cover-title">Agora a parte<br>que importa.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Você vai usar o Claude pela primeira vez num desafio real, contra o cronômetro, com seu próprio prompt. Sem roteiro pronto. Cada um chega ao resultado do seu jeito.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 23 — O DESAFIO ====== -->
+  <section class="slide">
+    <span class="slide-num">23 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">O desafio</div>
+      <h2>Em 1 hora, do bruto ao briefing</h2>
+      <hr class="accent-bar">
+      <p class="lead">O desafio é simples no enunciado e difícil na execução. É de propósito.</p>
+      <div class="card-dark side-orange mb-2">
+        <div class="section-tag">Enunciado</div>
+        <p style="font-size:1.25rem;line-height:1.5;color:var(--claude-light);margin:0">Escolha um documento real do seu trabalho desta semana — um briefing, relatório, contrato, ata ou apresentação. Use o Claude para chegar de um documento bruto a um <strong>briefing executivo de 1 página</strong> em até 60 minutos.</p>
+      </div>
+      <div class="card card-soft side-orange">
+        <div class="section-tag">Critério de sucesso</div>
+        <p class="italic" style="margin:0">Ao final da hora, olhe para o que você produziu e responda: “Eu teria coragem de levar este briefing para o board, ou para o cliente, hoje?” Se a resposta é sim, missão cumprida. Se é não — discutiremos por quê.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 24 — SUA CADEIRA TEM UM ÂNGULO ====== -->
+  <section class="slide">
+    <span class="slide-num">24 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Foco por cadeira</div>
+      <h2>Sua cadeira tem um ângulo</h2>
+      <hr class="accent-bar">
+      <p class="lead">Mesmo desafio para todos, mas o entregável carrega o foco da sua função.</p>
+      <div class="grid grid-2">
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CEO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Estratégia e risco</span></div><p class="italic muted mt-1" style="margin-bottom:0">Reduza para o board: o que está em jogo, qual o pior cenário, qual a janela de decisão, e qual pergunta o conselho fará primeiro.</p></div>
+        <div class="card side-blue"><div class="flex justify-between items-center"><h3 style="margin:0">COO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Implicações operacionais</span></div><p class="italic muted mt-1" style="margin-bottom:0">Aterre na operação: o que muda na execução, onde aparecem gargalos, que indicadores monitorar nas próximas 8 semanas.</p></div>
+        <div class="card side-green"><div class="flex justify-between items-center"><h3 style="margin:0">CMO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Impacto no mercado e marca</span></div><p class="italic muted mt-1" style="margin-bottom:0">Traduza para o cliente: como isso é percebido externamente, que ajustes em campanha e narrativa precisamos antecipar.</p></div>
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CCO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Cliente e relação</span></div><p class="italic muted mt-1" style="margin-bottom:0">Foque no impacto direto: que clientes são afetados, em que ordem, e qual roteiro de comunicação proativa precisamos preparar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 25 — QUATRO REGRAS ====== -->
+  <section class="slide">
+    <span class="slide-num">25 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como funciona</div>
+      <h2>Quatro regras do desafio</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-2">
+        <div class="card"><div class="flex gap-m"><div class="num-big">1</div><div><div class="ft-title">Não use dado real sensível</div><div class="ft-desc">Substitua nome de cliente, número, valor financeiro. O exercício é treinar o método, não vazar informação. A política completa aparece na Sessão 6.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">2</div><div><div class="ft-title">Itere pelo menos 2 vezes</div><div class="ft-desc">A primeira resposta nunca é a melhor. Diga ao Claude o que ajustar: “mais curto”, “mais formal”, “remova X”, “adicione perspectiva financeira”.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">3</div><div><div class="ft-title">Sem espiar o vizinho</div><div class="ft-desc">Não compare prompts entre vocês durante o exercício. A graça é cada um chegar ao seu resultado pelo seu caminho — depois comparamos métodos, não respostas.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">4</div><div><div class="ft-title">Anote o que surpreendeu</div><div class="ft-desc">Bom, ruim, ou inesperado — registre. Esses pontos viram a discussão dos 30 minutos finais. Sua observação calibra a expectativa do time inteiro.</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 26 — CRONÔMETRO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">26 / 34</span>
+    <div class="slide-inner center">
+      <div class="section-tag" style="justify-content:center">Cronômetro ativo</div>
+      <div class="timer-display" id="challenge-timer">60:00</div>
+      <p style="color:var(--claude-light);font-family:var(--font-head);margin:.2rem 0 1.4rem">minutos a partir de agora</p>
+      <div class="flex gap-s" style="justify-content:center;margin-bottom:1.8rem">
+        <button class="btn btn-orange" id="timer-start" onclick="toggleTimer(this)">Iniciar contador</button>
+        <button class="btn btn-ghost" style="color:var(--claude-light);border-color:var(--claude-mid-gray)" onclick="resetTimer(this)">Reiniciar</button>
+      </div>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Anexe seu documento ao Claude</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Comece pelo prompt mais simples possível</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Itere até o briefing estar publicável</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 27 — TRANSIÇÃO BLOCO 3 ====== -->
+  <section class="slide slide-dark" id="bloco3">
+    <span class="slide-num">27 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 3 · 30 min</div>
+      <h1 class="cover-title">Agora vamos<br>conversar.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Não vamos apresentar resultados. Vamos comparar métodos — o que cada um descobriu sobre seu próprio jeito de pensar com o Claude. É aqui que o aprendizado fica.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 28 — CINCO PERGUNTAS ====== -->
+  <section class="slide">
+    <span class="slide-num">28 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Roteiro da discussão</div>
+      <h2>Cinco perguntas para destravar a conversa</h2>
+      <hr class="accent-bar">
+      <p class="lead">Vamos passar por cada uma. Não precisa todo mundo responder todas — mas alguém responde cada.</p>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">1</span><div><div class="ft-title">Qual foi seu primeiro prompt?</div><div class="ft-desc italic">Ele funcionou de primeira ou você teve que reformular?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">2</span><div><div class="ft-title">Quantas vezes você iterou?</div><div class="ft-desc italic">O que mudou entre a primeira e a última versão?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">3</span><div><div class="ft-title">Onde o Claude te surpreendeu?</div><div class="ft-desc italic">Pode ter sido para cima — ou para baixo. Os dois interessam.</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">4</span><div><div class="ft-title">Onde teve que segurar o instinto?</div><div class="ft-desc italic">Onde a primeira resposta dele estava boa demais para ser verdade — e era?</div></div></div></div>
+      <div class="card card-soft"><div class="flex gap-m items-center"><span class="num-circle">5</span><div><div class="ft-title">O que você vai fazer diferente amanhã?</div><div class="ft-desc italic">Um único ponto. O que sai daqui para dentro da rotina.</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 29 — O QUE VAMOS LEVAR ====== -->
+  <section class="slide">
+    <span class="slide-num">29 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Síntese coletiva</div>
+      <h2>O que vamos levar daqui</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três áreas para fechar a sessão e ancorar o aprendizado coletivo.</p>
+      <div class="grid grid-3">
+        <div class="card top-green"><svg class="ico t-green" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><h3 class="mt-1">O que funcionou</h3><p class="muted" style="margin:0">Quais prompts ou abordagens trouxeram resultado útil. Esses ficam como repertório do grupo.</p></div>
+        <div class="card top-orange"><svg class="ico t-orange" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-8-5M3 12a9 9 0 0 1 9-9 9 9 0 0 1 8 5"/><path d="M21 4v4h-4M3 20v-4h4"/></svg><h3 class="mt-1">O que precisa iteração</h3><p class="muted" style="margin:0">Onde quase chegou lá, mas faltou algo. Discutimos como teria sido o segundo prompt.</p></div>
+        <div class="card top-blue"><svg class="ico t-blue" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3 2.5c-.7.3-1 .8-1 1.5M12 17h.01"/></svg><h3 class="mt-1">Dúvidas em aberto</h3><p class="muted" style="margin:0">Pontos que ficaram nebulosos hoje. Viram pauta da Sessão 2 ou material complementar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 30 — CADERNO: INTRO ====== -->
+  <section class="slide slide-dark" id="caderno">
+    <span class="slide-num">30 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">O caderno de prompts</div>
+      <h1 class="cover-title" style="font-size:clamp(2.2rem,5vw,3.4rem)">Seu manual da semana</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Não é só uma lista de prompts. É o manual completo desta sessão para consulta.</p>
+      <div class="grid grid-3 mt-3">
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Manual</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Da apresentação</div><p class="muted" style="margin:.4rem 0 0">Os conceitos centrais resumidos: modelo, agente, token, alucinação. E o glossário com os termos que apareceram aqui.</p></div>
+        <div class="card-darker side-orange"><div class="num-big t-orange">10</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Prompts prontos</div><p class="muted" style="margin:.4rem 0 0">Categorizados em análise, comunicação, preparação e decisão. Cada um com “quando usar” e dica de aprofundamento.</p></div>
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Portal</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Link permanente</div><p class="muted" style="margin:.4rem 0 0">Disponível neste mesmo portal, sempre. A cada sessão, acumula. Ao final das 7, vira o manual de bolso da PRIMETOUR.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 31 — OS 10 PROMPTS (PREVIEW) ====== -->
+  <section class="slide">
+    <span class="slide-num">31 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Preview do caderno</div>
+      <h2>Os 10 prompts desta semana</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cada um vem no caderno completo com instruções de quando e como usar.</p>
+      <div class="grid grid-2">
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">01</span> Síntese executiva de documento longo</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">02</span> Leitura crítica de um briefing recebido</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">03</span> Comparativo neutro entre duas opções</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">04</span> Comunicado interno de mudança</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">05</span> E-mail difícil para parceiro</div></div>
+        </div>
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">06</span> Preparação de reunião com interlocutor novo</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">07</span> Antecipação de 5 objeções</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">08</span> Crítica afiada do meu próprio texto</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">09</span> Brainstorm com 10 ângulos contrastantes</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">10</span> Tradução de tom: técnico para humano</div></div>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p class="italic" style="margin:0;color:var(--claude-light)">O caderno completo, com cada prompt explicado e o botão de copiar, está logo abaixo nesta página — seção <a href="#caderno-completo" style="color:var(--claude-orange)">“Caderno de prompts”</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 32 — TAREFA ====== -->
+  <section class="slide" id="tarefa">
+    <span class="slide-num">32 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Para a próxima semana</div>
+      <h2>Sua tarefa até a Sessão 2</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não é lição de casa — é colocar em uso para a próxima sessão fazer sentido.</p>
+      <div class="task-row"><div class="num-big">1</div><div><div class="ft-title">Use 3 dos 10 prompts</div><div class="ft-desc">Em situações reais do seu trabalho. Pode ser qualquer um do kit. Critério único: que seja útil para você.</div></div></div>
+      <div class="task-row"><div class="num-big">2</div><div><div class="ft-title">Documente uma surpresa</div><div class="ft-desc">Em uma linha. Algo que ele fez bem, ou algo que decepcionou. Traga para a Sessão 2.</div></div></div>
+      <div class="task-row"><div class="num-big">3</div><div><div class="ft-title">Liste 1 caso de uso seu</div><div class="ft-desc">Uma situação recorrente em que você acha que Claude poderia ajudar. Vamos trabalhar juntos na próxima sessão.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 33 — PRÓXIMA SESSÃO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">33 / 34</span>
+    <div class="slide-inner">
+      <div class="section-tag">Próxima semana</div>
+      <p class="cover-sub" style="font-size:1.2rem;margin:0">Sessão 2</p>
+      <h1 class="cover-title" style="font-size:clamp(2.4rem,5.5vw,3.6rem)">Comunicação eficaz</h1>
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Anatomia do bom prompt, técnicas de iteração e quando dar exemplos.</p>
+      <div class="section-tag mt-2">O que veremos</div>
+      <ul class="sq-list">
+        <li style="color:var(--claude-light)">Os 4 elementos de todo prompt que funciona</li>
+        <li style="color:var(--claude-light)">Por que iterar é mais poderoso que prompts gigantes</li>
+        <li style="color:var(--claude-light)">Templates universais que servem para qualquer área</li>
+        <li style="color:var(--claude-light)">Lab: construir juntos um prompt do zero</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 34 — ENCERRAMENTO ====== -->
+  <section class="slide slide-light">
+    <span class="slide-num">34 / 34</span>
+    <div class="slide-inner">
+      <span class="brand-square lg" style="margin-bottom:1.5rem"></span>
+      <h1 style="font-size:clamp(3rem,9vw,5.5rem)">Obrigado.</h1>
+      <hr class="accent-bar">
+      <p class="italic muted" style="font-size:1.2rem">Dúvidas até a próxima semana? Marketing está à disposição.</p>
+      <p class="muted" style="font-family:var(--font-head)">Renê Junio · Marketing PRIMETOUR · Sessão 1 de 7</p>
+    </div>
+  </section>
+
+  </div><!-- /.slides-wrap -->
+
+  <!-- ============================================================
+       SEÇÕES DE CONSULTA (não aparecem no modo apresentação)
+       ============================================================ -->
+
+  <!-- ====== CADERNO COMPLETO DE PROMPTS ====== -->
+  <section class="non-slide" id="caderno-completo" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem">
+    <div class="section-tag">Caderno de prompts</div>
+    <h2>Os 10 prompts da Sessão 1</h2>
+    <hr class="accent-bar">
+    <p class="lead">Cada bloco escuro é um prompt pronto. Clique em <strong>Copiar</strong> e cole direto no Claude. Adapte os campos entre colchetes ao seu caso.</p>
+
+    <!-- Categorias -->
+    <div class="grid grid-4 mb-2" style="gap:.7rem">
+      <div class="card card-soft side-blue" style="padding:.8rem 1rem"><strong class="t-blue" style="font-family:var(--font-head)">Análise</strong><div class="ft-desc">Ler, comparar ou extrair sentido de algo.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Comunicação</strong><div class="ft-desc">O entregável é uma mensagem para alguém.</div></div>
+      <div class="card card-soft side-green" style="padding:.8rem 1rem"><strong class="t-green" style="font-family:var(--font-head)">Preparação</strong><div class="ft-desc">Preparar reunião, decisão ou conversa.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Decisão</strong><div class="ft-desc">Testar uma escolha antes de tomá-la.</div></div>
+    </div>
+
+    <!-- PROMPT 01 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Análise</span>
+      <h3>01 — Síntese executiva de documento longo</h3>
+      <p class="when"><strong>Quando usar:</strong> Você recebeu um relatório, white paper ou apresentação extensa e precisa entender o essencial em poucos minutos, sem perder profundidade.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p01', this)">Copiar</button>
+        <pre id="p01">Anexei um documento. Atue como analista sênior preparando um briefing para o board.
+
+Devolva:
+1. Síntese executiva em 5 linhas
+2. Três pontos de atenção que mereceriam aprofundamento
+3. Duas oportunidades implícitas que o documento não nomeia explicitamente
+4. Uma pergunta que eu deveria fazer ao autor
+
+Tom: direto, sem rodeios, sem repetir o óbvio do documento.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> Funciona melhor com PDFs de até 100 páginas. Para arquivos maiores, divida. Se quiser foco específico, troque “briefing para o board” por “briefing para discussão com [área]”.</p>
+    </article>
+
+    <!-- PROMPT 02 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Análise</span>
+      <h3>02 — Leitura crítica de um briefing recebido</h3>
+      <p class="when"><strong>Quando usar:</strong> Um parceiro, agência ou área interna te mandou um briefing e você precisa avaliar a qualidade antes de aprovar, responder ou repassar.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p02', this)">Copiar</button>
+        <pre id="p02">Anexei um briefing recebido. Faça uma leitura crítica em três camadas:
+
+1. O QUE ESTÁ CLARO: pontos bem definidos e acionáveis
+2. O QUE ESTÁ AMBÍGUO: trechos que admitem mais de uma interpretação
+3. O QUE ESTÁ AUSENTE: informações que faltam para execução segura
+
+Para cada camada, seja específico (cite trechos). Ao final, sugira 3 perguntas que eu deveria devolver para qualificar o briefing.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> Excelente também para briefings que você mesmo redigiu. Antes de enviar, peça que o Claude leia como se fosse o destinatário.</p>
+    </article>
+
+    <!-- PROMPT 03 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Análise</span>
+      <h3>03 — Comparativo neutro entre duas opções</h3>
+      <p class="when"><strong>Quando usar:</strong> Você está pendendo para um lado de uma decisão e quer um comparativo honesto, sem ser influenciado pelo seu viés inicial.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p03', this)">Copiar</button>
+        <pre id="p03">Quero comparar duas opções para uma decisão. NÃO me dê sua recomendação.
+
+OPÇÃO A: [descreva em um parágrafo]
+OPÇÃO B: [descreva em um parágrafo]
+CRITÉRIOS QUE IMPORTAM PARA MIM: [liste 3 a 5]
+
+Devolva:
+- Tabela comparativa por critério
+- O argumento mais forte de cada opção
+- O risco mais sério de cada opção
+- Uma pergunta que, se eu responder, vai destravar a decisão
+
+Mantenha estrita neutralidade. Se uma das opções for objetivamente fraca em algum critério, diga.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> A instrução explícita de não recomendar é o que faz funcionar. Sem ela, o Claude tende a inferir sua preferência pelo tom da pergunta.</p>
+    </article>
+
+    <!-- PROMPT 04 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Comunicação</span>
+      <h3>04 — Comunicado interno de mudança</h3>
+      <p class="when"><strong>Quando usar:</strong> Você precisa anunciar à equipe uma mudança organizacional, de processo ou de direção. Tom precisa ser firme, claro e humano.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p04', this)">Copiar</button>
+        <pre id="p04">Preciso redigir um comunicado interno para a equipe da PRIMETOUR.
+
+CONTEXTO: [descreva a mudança em 2 a 3 frases]
+PÚBLICO: [quem recebe — área toda, liderança, time específico]
+SENTIMENTO QUE QUERO GERAR: [confiança / urgência / acolhimento / clareza]
+O QUE NÃO QUERO: tom de release de imprensa, jargão corporativo, falsa empolgação
+
+Estruture em:
+1. Frase de abertura (que entrega a informação principal)
+2. Por quê (contexto suficiente, sem narrar demais)
+3. O que muda na prática (lista curta e concreta)
+4. O que esperamos de cada um a partir de agora
+5. Como esclarecer dúvidas
+
+Comprimento: máximo 250 palavras.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> Sempre peça versões em comprimentos diferentes. Após receber a primeira, peça também uma versão de 80 palavras para o canal mais informal (Slack/WhatsApp do time).</p>
+    </article>
+
+    <!-- PROMPT 05 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Comunicação</span>
+      <h3>05 — E-mail difícil para parceiro</h3>
+      <p class="when"><strong>Quando usar:</strong> Você precisa comunicar algo desconfortável a um parceiro estratégico (atraso, mudança de termos, recusa, reclamação) sem queimar a relação.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p05', this)">Copiar</button>
+        <pre id="p05">Preciso escrever um e-mail difícil para um parceiro estratégico.
+
+SITUAÇÃO: [descreva em 2 a 3 frases o que aconteceu e por que esta mensagem é necessária]
+RELAÇÃO ATUAL: [há quanto tempo somos parceiros, peso comercial, histórico recente]
+RESULTADO QUE QUERO: [o que essa pessoa deve sentir e fazer ao terminar de ler]
+O QUE NÃO POSSO: [restrições, palavras a evitar, posições inegociáveis]
+
+Devolva 3 versões em tons diferentes:
+A — Direta e profissional (assume responsabilidade, vai ao ponto)
+B — Diplomática (preserva relação, abre janela de negociação)
+C — Firme (estabelece limite, sem agredir)
+
+Para cada versão, em uma linha: quando faz mais sentido usar.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> As três versões te dão repertório. Geralmente a melhor resposta é uma combinação: abertura de B, corpo de A, fechamento de C. Peça ao Claude para combinar depois de escolher os trechos.</p>
+    </article>
+
+    <!-- PROMPT 06 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Preparação</span>
+      <h3>06 — Preparação de reunião com interlocutor novo</h3>
+      <p class="when"><strong>Quando usar:</strong> Você vai conversar com alguém pela primeira vez (cliente, parceiro, candidato, jornalista) e quer chegar preparado, não improvisando.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p06', this)">Copiar</button>
+        <pre id="p06">Vou ter uma reunião amanhã com uma pessoa que não conheço bem.
+
+QUEM É: [nome, cargo, empresa, contexto]
+OBJETIVO DA REUNIÃO: [o que quero sair de lá tendo conseguido]
+O QUE EU JÁ SEI: [resumo do que tenho de contexto]
+
+Me ajude a preparar:
+1. Cinco pontos de provável interesse dessa pessoa (o que importa para ela)
+2. Três perguntas inteligentes que demonstrem que eu fiz a lição de casa
+3. Duas objeções prováveis ao que eu vou propor — e resposta curta para cada
+4. Um gancho de abertura (não 'como vai', algo específico)
+5. Sinal de que a conversa foi bem (o que ouvir ou ver)</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> Combine com pesquisa na web ativada se for figura pública. Para conhecidos, complemente colando trechos de e-mails recentes (sem dados sensíveis) para dar contexto real.</p>
+    </article>
+
+    <!-- PROMPT 07 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Preparação</span>
+      <h3>07 — Antecipação de 5 objeções</h3>
+      <p class="when"><strong>Quando usar:</strong> Você vai apresentar uma proposta, ideia ou decisão a um grupo e quer chegar pronto para as resistências reais — não para as confortáveis.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p07', this)">Copiar</button>
+        <pre id="p07">Vou apresentar a seguinte proposta:
+[descreva a proposta em 1 ou 2 parágrafos. Inclua: o que é, por que faz sentido, o que muda]
+
+PÚBLICO: [quem está na sala, posições prováveis]
+
+Atue como advogado do diabo experiente. Me dê:
+- As 5 objeções mais sérias que vou ouvir (não as fáceis)
+- Para cada uma: o argumento real por trás dela (o que essa pessoa de fato está sentindo)
+- Para cada uma: resposta em até 3 frases — que reconhece o ponto e segue avançando
+
+Não amoleça. Se há um furo de verdade na proposta, aponte.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> A instrução “não amoleça” é fundamental. O Claude tende a ser educado e a oferecer objeções de baixa fricção se você não pedir o contrário.</p>
+    </article>
+
+    <!-- PROMPT 08 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Preparação</span>
+      <h3>08 — Crítica afiada do meu próprio texto</h3>
+      <p class="when"><strong>Quando usar:</strong> Você escreveu algo importante — discurso, ensaio, e-mail, comunicado — e quer feedback honesto antes de enviar, em vez de validação.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p08', this)">Copiar</button>
+        <pre id="p08">Vou colar um texto que escrevi. NÃO me elogie. Sua tarefa é ser o editor mais exigente que esse texto vai encontrar.
+
+[cole o texto]
+
+PROPÓSITO DO TEXTO: [para quem é, o que precisa fazer]
+
+Devolva:
+1. O ponto mais fraco do texto (1 linha)
+2. Três trechos específicos que pioram a leitura — cite e diga por quê
+3. Duas frases que poderiam ser cortadas sem perda
+4. Uma sugestão de reordenamento se fizer sentido
+5. Uma frase de abertura alternativa, mais forte que a atual
+
+Não reescreva o texto inteiro. Aponte cirurgicamente.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> Funciona melhor com textos entre 200 e 1.000 palavras. Para textos maiores, peça a crítica seção por seção.</p>
+    </article>
+
+    <!-- PROMPT 09 -->
+    <article class="prompt-card">
+      <span class="cat cat-decisao">Decisão</span>
+      <h3>09 — Brainstorm com 10 ângulos contrastantes</h3>
+      <p class="when"><strong>Quando usar:</strong> Você precisa de quantidade e variedade — para campanha, nome de produto, abordagem de cliente — e está sentindo que sua lista atual é repetitiva.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p09', this)">Copiar</button>
+        <pre id="p09">Preciso de 10 ângulos genuinamente diferentes para o seguinte desafio:
+
+DESAFIO: [descreva em 2 a 3 frases]
+CONTEXTO: [restrições, público, o que já foi tentado]
+
+Cada um dos 10 ângulos deve:
+- Partir de uma premissa diferente dos outros
+- Ser nomeado em até 4 palavras
+- Vir acompanhado de uma frase explicativa
+- Incluir um exemplo concreto de como ficaria na prática
+
+Importante: NÃO me dê variações do mesmo ângulo com outras palavras. Quero ângulos que possam, eles próprios, ser opções contrastantes para uma escolha estratégica.</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> Depois de receber os 10, peça: “Quais dois são os mais arriscados e mais interessantes? E quais dois são os mais seguros e menos interessantes?” Isso te dá um mapa de risco visual.</p>
+    </article>
+
+    <!-- PROMPT 10 -->
+    <article class="prompt-card">
+      <span class="cat cat-decisao">Decisão</span>
+      <h3>10 — Tradução de tom: técnico para humano</h3>
+      <p class="when"><strong>Quando usar:</strong> Você tem um texto técnico (jurídico, financeiro, operacional) que precisa ser entendido por quem não é da área — sem virar infantilizado nem perder precisão.</p>
+      <div class="prompt-block">
+        <button class="copy-btn" onclick="copyPrompt('p10', this)">Copiar</button>
+        <pre id="p10">Vou colar um texto técnico. Preciso de uma versão acessível para o seguinte público:
+
+PÚBLICO: [descreva: cargo, nível de familiaridade com o tema, contexto em que vão ler]
+ONDE VAI APARECER: [e-mail, slide, comunicado, conversa]
+
+Regras:
+- Não usar jargão sem traduzir
+- Não simplificar ao ponto de perder precisão técnica
+- Substituir abreviações por nomes completos na primeira menção
+- Trocar voz passiva por ativa onde possível
+- Quebrar frases longas (acima de 25 palavras) em duas
+
+[cole o texto]
+
+Devolva: versão acessível + uma lista de 3 termos técnicos que você manteve por serem inevitáveis (e por quê).</pre>
+      </div>
+      <p class="tip"><strong>Dica:</strong> Ótimo para comunicar decisões financeiras a áreas não-financeiras, ou explicar termos jurídicos de contrato em comunicados internos.</p>
+    </article>
+  </section>
+
+  <!-- ====== GLOSSÁRIO ====== -->
+  <section class="non-slide" id="glossario" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem;border-top:1px solid var(--claude-light-gray)">
+    <div class="section-tag">Glossário</div>
+    <h2>Termos que apareceram nesta sessão</h2>
+    <hr class="accent-bar">
+    <dl class="gloss grid grid-2" style="gap:0 3rem">
+      <div><dt>Modelo (LLM)</dt><dd>O cérebro da IA. Recebe texto, devolve texto. Exemplos: Claude Sonnet 4.6, GPT-4o, Gemini 2.5 Pro.</dd></div>
+      <div><dt>Agente</dt><dd>Um modelo equipado com ferramentas (web search, leitura de arquivos, conectores), memória e autonomia para decidir quando usar cada uma. O Claude em claude.ai é um agente.</dd></div>
+      <div><dt>Token</dt><dd>A unidade mínima de texto que o modelo processa. Em português, aproximadamente 4 caracteres = 1 token.</dd></div>
+      <div><dt>Janela de contexto</dt><dd>O total de tokens que o modelo mantém “sobre a mesa” numa conversa. No Claude, são 200.000 tokens — cerca de 500 páginas A4.</dd></div>
+      <div><dt>Alucinação</dt><dd>Quando o modelo gera uma informação que soa coerente mas não corresponde aos fatos. Mais comum em pedidos factuais específicos sem fonte anexada.</dd></div>
+      <div><dt>Prompt</dt><dd>A mensagem que você envia ao modelo. Bons prompts dão contexto, papel, formato esperado e restrições.</dd></div>
+      <div><dt>Project (Claude)</dt><dd>Funcionalidade do claude.ai que preserva contexto recorrente — arquivos, instruções e estilo — entre múltiplas conversas relacionadas.</dd></div>
+      <div><dt>Claude Haiku / Sonnet / Opus</dt><dd>Família de modelos da Anthropic. Haiku é o mais leve e rápido; Sonnet equilibrado; Opus o mais profundo.</dd></div>
+      <div><dt>API</dt><dd>Forma de acessar o modelo via código, usada por integrações e automações em larga escala.</dd></div>
+      <div><dt>Conector</dt><dd>Integração que conecta o agente a sistemas externos (Google Drive, OneDrive, Outlook, etc).</dd></div>
+    </dl>
+  </section>
+
+  <!-- ====== FOOTER GLOBAL ====== -->
+  <footer class="session-footer non-slide">
+    <div class="flex justify-between wrap gap-l items-center">
+      <div>
+        <div class="section-tag" style="margin-bottom:.6rem">Progresso do treinamento</div>
+        <div class="progress-7"><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="muted" style="margin:.3rem 0 0;font-family:var(--font-head);font-size:.85rem">Sessão 1 de 7 concluída</p>
+      </div>
+      <div>
+        <a class="next-link btn btn-orange" href="../sessao-02/index.html">Próxima: Sessão 2 · Comunicação →</a>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:2rem;font-size:.82rem">Renê Junio · Marketing PRIMETOUR · Treinamento Claude para a liderança</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="../assets/claude.js"></script>
+</body>
+</html>

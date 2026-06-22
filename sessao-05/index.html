@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sessão 5 · Microsoft — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Sessão 5 do treinamento executivo de Claude para a liderança da PRIMETOUR: Outlook, OneDrive, Excel e conectores — o Claude dentro do ambiente Microsoft.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<!-- ============ CONTROLES FIXOS DO MODO APRESENTAÇÃO ============ -->
+<div class="present-zone prev" data-action="present-prev" title="Slide anterior"></div>
+<div class="present-zone next" data-action="present-next" title="Próximo slide"></div>
+<div class="present-ctrl left">
+  <button data-action="present-prev" aria-label="Anterior">‹</button>
+</div>
+<div class="present-ctrl right">
+  <button data-action="present-next" aria-label="Próximo">›</button>
+  <button data-action="present-exit" aria-label="Sair (ESC)">✕</button>
+</div>
+<div class="present-progress" aria-hidden="true">
+  <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span>
+</div>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar non-slide">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Sessão 5</div>
+  <button class="btn btn-orange" data-action="present">▶ Apresentar</button>
+</header>
+
+<div class="session-layout">
+
+  <!-- ============ SUMÁRIO LATERAL ============ -->
+  <nav class="session-nav non-slide" aria-label="Sumário da sessão">
+    <div class="nav-brand"><span class="brand-square"></span> Sessão 5</div>
+    <div class="nav-sub">Microsoft</div>
+
+    <div class="nav-section">Blocos</div>
+    <a href="#capa">Capa &amp; recap</a>
+    <a href="#bloco1">Bloco 1 · Claude no ambiente Microsoft</a>
+    <a href="#bloco2">Bloco 2 · Lab guiado</a>
+    <a href="#bloco3">Bloco 3 · Discussão</a>
+
+    <div class="nav-section">Consulta</div>
+    <a href="#caderno-completo">Caderno Microsoft</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#tarefa">Tarefa da semana</a>
+  </nav>
+
+  <!-- ============ CONTEÚDO PRINCIPAL ============ -->
+  <main class="session-main">
+  <div class="slides-wrap">
+
+  <!-- ====== SLIDE 1 — CAPA ====== -->
+  <section class="slide slide-dark" id="capa">
+    <span class="slide-num">01 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Claude para a liderança</div>
+      <h1 class="cover-title">Microsoft</h1>
+      <p class="cover-sub">Sessão 5 de 7 · Treinamento executivo PRIMETOUR Viagens &amp; Experiências</p>
+      <hr class="accent-bar">
+      <p class="muted" style="font-family:var(--font-head)">Marketing · 2h30 de duração</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 2 — RECAP ====== -->
+  <section class="slide" id="bloco1">
+    <span class="slide-num">02 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">De onde viemos</div>
+      <h2>O método está pronto. Falta o ambiente.</h2>
+      <hr class="accent-bar">
+      <p class="lead">Até aqui, o Claude viveu numa aba do navegador. Hoje ele entra onde o seu trabalho já acontece.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card side-gray">
+          <div class="section-tag">O que ainda incomoda</div>
+          <p class="muted" style="margin:0">Você baixa o anexo do Outlook, sobe no Claude, copia a resposta, cola de volta no e-mail. Funciona — mas é atrito a cada passo.</p>
+        </div>
+        <div class="card side-orange">
+          <div class="section-tag">O que veremos hoje</div>
+          <p class="muted" style="margin:0">Como o Claude conversa com Outlook, OneDrive e Excel — e como tirar o copiar e colar do caminho, com segurança.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p style="margin:0;color:var(--claude-light)">A PRIMETOUR é 100% Microsoft. Esta sessão é sobre encaixar o Claude nesse ambiente — não sobre trocá-lo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 3 — ESTRUTURA DE HOJE ====== -->
+  <section class="slide">
+    <span class="slide-num">03 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Estrutura de hoje</div>
+      <h2>Como vão funcionar as próximas 2h30</h2>
+      <hr class="accent-bar">
+      <p class="lead">Um pouco mais técnica — mas tudo testável na sua própria conta.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue">
+          <div class="num-big t-blue">01</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Claude no ambiente Microsoft <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Os dois caminhos — upload e conectores —, o que liga com Outlook, OneDrive e Excel, e o que cuidar.</p>
+        </div>
+        <div class="card top-orange">
+          <div class="num-big t-orange">02</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Lab guiado <span class="muted" style="font-weight:400">· 60 min</span></div>
+          <p class="muted" style="margin:0">Você conecta (ou usa upload) e roda um fluxo real do seu dia dentro do ambiente Microsoft.</p>
+        </div>
+        <div class="card top-green">
+          <div class="num-big t-green">03</div>
+          <div style="font-family:var(--font-head);font-weight:600;margin:.3rem 0">Discussão <span class="muted" style="font-weight:400">· 30 min</span></div>
+          <p class="muted" style="margin:0">O que ligou, o que a TI precisa habilitar, e quais fluxos do time merecem virar padrão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 4 — OBJETIVOS ====== -->
+  <section class="slide">
+    <span class="slide-num">04 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Objetivos</div>
+      <h2>O que você leva ao final desta sessão</h2>
+      <hr class="accent-bar">
+      <div class="mt-2">
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <div><div class="ft-title">Os dois caminhos, com clareza</div><div class="ft-desc">Saber quando basta arrastar um arquivo e quando vale ligar um conector — e a diferença entre eles.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-blue)" viewBox="0 0 24 24"><path d="M14 7a4 4 0 0 1-5 5l-5 5 2 2 5-5a4 4 0 0 0 5-5l-2 2-2-2 2-2Z"/></svg>
+          <div><div class="ft-title">O que conecta na prática</div><div class="ft-desc">Outlook, OneDrive e Excel: o que o Claude faz com cada um, e o que ainda exige copiar e colar.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" style="color:var(--claude-green)" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><div class="ft-title">O que cuidar antes de ligar</div><div class="ft-desc">Permissões, o que o conector enxerga e o que confirmar com a TI — a ponte para a Sessão 6.</div></div>
+        </div>
+        <div class="feature-row">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/><circle cx="12" cy="12" r="10"/></svg>
+          <div><div class="ft-title">Um fluxo seu, sem copiar e colar</div><div class="ft-desc">Rodar um caso real do seu dia direto do e-mail ou do documento ao entregável.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 5 — O PROBLEMA ====== -->
+  <section class="slide">
+    <span class="slide-num">05 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O problema</div>
+      <h2>O imposto do copiar e colar</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cada troca entre o Claude e o seu ambiente Microsoft cobra um pequeno pedágio. Somados, eles pesam.</p>
+      <div class="grid grid-4">
+        <div class="card side-gray"><div class="num-big t-gray">1</div><div class="ft-title">Baixar</div><div class="ft-desc">O anexo do Outlook vai para a pasta de downloads.</div></div>
+        <div class="card side-gray"><div class="num-big t-gray">2</div><div class="ft-title">Subir</div><div class="ft-desc">Você arrasta o arquivo para a conversa do Claude.</div></div>
+        <div class="card side-gray"><div class="num-big t-gray">3</div><div class="ft-title">Copiar</div><div class="ft-desc">Seleciona a resposta e copia.</div></div>
+        <div class="card side-gray"><div class="num-big t-gray">4</div><div class="ft-title">Colar</div><div class="ft-desc">Volta ao Outlook e cola — torcendo para a formatação sobreviver.</div></div>
+      </div>
+      <p class="muted mt-2">São quatro passos manuais para uma tarefa de dois minutos. Os conectores existem para cortar os passos do meio.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 6 — DOIS CAMINHOS ====== -->
+  <section class="slide">
+    <span class="slide-num">06 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">A distinção que importa</div>
+      <h2>Dois caminhos para o ambiente Microsoft</h2>
+      <hr class="accent-bar">
+      <p class="lead">Antes de qualquer detalhe técnico, entenda a escolha de fundo.</p>
+      <div class="grid grid-2">
+        <div class="card side-green">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.08em;background:var(--claude-green);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">UPLOAD</div>
+          <h3 class="mt-1">Arrastar o arquivo</h3>
+          <ul class="sq-list">
+            <li>Funciona em qualquer plano, sem setup</li>
+            <li>Você controla exatamente o que ele vê</li>
+            <li>Ideal para um documento pontual</li>
+            <li>O caminho que nunca falha</li>
+          </ul>
+        </div>
+        <div class="card side-orange">
+          <div style="font-family:var(--font-head);font-weight:700;letter-spacing:.08em;background:var(--claude-orange);display:inline-block;padding:.25rem .7rem;border-radius:3px;color:#fff">CONECTOR</div>
+          <h3 class="mt-1">Ligar a fonte</h3>
+          <ul class="sq-list">
+            <li>O Claude acessa Outlook ou OneDrive direto</li>
+            <li>Sem baixar e subir a cada vez</li>
+            <li>Depende de plano e liberação da TI</li>
+            <li>Ideal para o fluxo que se repete</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 7 — CAMINHO 1: UPLOAD ====== -->
+  <section class="slide">
+    <span class="slide-num">07 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Caminho 1 · Upload</div>
+      <h2>Arrastar funciona, sempre</h2>
+      <hr class="accent-bar">
+      <p class="lead">O caminho mais simples também é o mais robusto. Comece por ele enquanto a TI prepara os conectores.</p>
+      <div class="grid grid-3">
+        <div class="card side-green"><div class="ft-title">Formatos que ele lê</div><div class="ft-desc">Excel, Word, PowerPoint, PDF, imagens. Até 20 arquivos por conversa.</div></div>
+        <div class="card side-green"><div class="ft-title">Como fazer</div><div class="ft-desc">Salve o anexo, arraste para o campo de mensagem. Ou copie e cole o conteúdo direto.</div></div>
+        <div class="card side-green"><div class="ft-title">Por que é seguro</div><div class="ft-desc">Você decide o que sobe. Nada além daquele arquivo entra na conversa.</div></div>
+      </div>
+      <p class="muted mt-2"><strong>Regra prática:</strong> se é um documento que você usa uma vez, upload resolve. Se é uma fonte que você consulta toda semana, pense em conector.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 8 — CAMINHO 2: CONECTORES ====== -->
+  <section class="slide">
+    <span class="slide-num">08 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Caminho 2 · Conectores</div>
+      <h2>O que é um conector</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-2" style="align-items:center">
+        <div class="serif" style="font-size:1.05rem">
+          <p>Um conector liga o Claude a um sistema externo — como o Outlook ou o OneDrive — para que ele leia de lá sem você baixar e subir nada.</p>
+          <p>Você autoriza uma vez, definindo o que ele pode acessar. A partir daí, pode pedir “resuma o último e-mail do fornecedor X” e ele busca direto na fonte.</p>
+          <p class="muted" style="font-size:.95rem">Conectores ficam nos planos pagos e, em contas corporativas, costumam depender de liberação da TI. O que está disponível evolui — confirme com a TI o que o ambiente da PRIMETOUR permite.</p>
+        </div>
+        <div class="card-dark side-orange">
+          <div class="section-tag">Em uma frase</div>
+          <p style="font-family:var(--font-head);font-weight:600;font-size:1.3rem;line-height:1.35;margin:.2rem 0 1rem">“Em vez de você levar o arquivo até o Claude, o Claude vai buscar onde ele mora.”</p>
+          <p class="italic" style="color:var(--claude-mid-gray);margin:0">Mesma tarefa, menos passos — e a fonte continua sendo a oficial, não uma cópia solta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 9 — O QUE CONECTA HOJE ====== -->
+  <section class="slide">
+    <span class="slide-num">09 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Panorama</div>
+      <h2>O que liga ao ambiente Microsoft</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três peças do dia a dia da PRIMETOUR, e como o Claude trabalha com cada uma.</p>
+      <div class="grid grid-3">
+        <div class="card top-blue"><div style="font-family:var(--font-head);font-weight:700;font-size:1.05rem">Outlook</div><p class="muted" style="margin:.3rem 0 0">E-mail e calendário: resumir threads, rascunhar respostas, extrair ações e prazos.</p></div>
+        <div class="card top-orange"><div style="font-family:var(--font-head);font-weight:700;font-size:1.05rem">OneDrive / SharePoint</div><p class="muted" style="margin:.3rem 0 0">Documentos: localizar e analisar um arquivo sem baixá-lo, comparar versões.</p></div>
+        <div class="card top-green"><div style="font-family:var(--font-head);font-weight:700;font-size:1.05rem">Excel</div><p class="muted" style="margin:.3rem 0 0">Planilhas: ler dados, achar padrões, virar narrativa — com a conta final no próprio Excel.</p></div>
+      </div>
+      <p class="muted mt-2">Quando o conector ainda não estiver liberado, todos esses casos funcionam por <strong>upload</strong> — só com um passo a mais.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 10 — OUTLOOK ====== -->
+  <section class="slide">
+    <span class="slide-num">10 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Outlook + Claude</div>
+      <h2>A caixa de entrada deixa de mandar em você</h2>
+      <hr class="accent-bar">
+      <p class="lead">O e-mail é onde o dia escorre. Aqui o Claude devolve mais tempo do que em qualquer lugar.</p>
+      <div class="grid grid-2">
+        <div class="card side-blue"><div class="ft-title">Triagem da manhã</div><div class="ft-desc">“Resuma os e-mails não lidos de hoje em uma linha cada e marque os 3 que pedem ação minha.”</div></div>
+        <div class="card side-blue"><div class="ft-title">Resposta a thread longa</div><div class="ft-desc">“Resuma esta troca de 14 mensagens e rascunhe minha resposta no tom da casa.”</div></div>
+        <div class="card side-blue"><div class="ft-title">Ações e prazos</div><div class="ft-desc">“Extraia desta thread quem ficou de fazer o quê, até quando.”</div></div>
+        <div class="card side-blue"><div class="ft-title">Preparação de reunião</div><div class="ft-desc">“A partir deste convite e dos anexos, me prepare para a reunião de amanhã.”</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 11 — ONEDRIVE ====== -->
+  <section class="slide">
+    <span class="slide-num">11 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">OneDrive / SharePoint + Claude</div>
+      <h2>O documento certo, sem caçar na pasta</h2>
+      <hr class="accent-bar">
+      <p class="lead">Os arquivos da casa vivem no OneDrive e no SharePoint. O Claude pode lê-los onde estão.</p>
+      <div class="grid grid-3">
+        <div class="card side-orange"><div class="ft-title">Localizar e analisar</div><div class="ft-desc">“Pegue a última proposta do fornecedor X no OneDrive e me dê a síntese de risco.”</div></div>
+        <div class="card side-orange"><div class="ft-title">Comparar versões</div><div class="ft-desc">“Compare a versão de março e a de junho deste contrato: o que mudou?”</div></div>
+        <div class="card side-orange"><div class="ft-title">Síntese de uma pasta</div><div class="ft-desc">“Resuma os três relatórios desta pasta em uma página executiva.”</div></div>
+      </div>
+      <p class="muted mt-2">O conector acessa só o que você autorizou — uma pasta, um site do SharePoint. Não é a porta aberta para tudo.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 12 — EXCEL ====== -->
+  <section class="slide">
+    <span class="slide-num">12 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Excel + Claude</div>
+      <h2>A planilha vira história — a conta fica no Excel</h2>
+      <hr class="accent-bar">
+      <p class="lead">O Claude lê dados muito bem. Mas a fronteira da Sessão 1 continua valendo: cálculo sério é do Excel.</p>
+      <div class="grid grid-2">
+        <div class="card side-green">
+          <div class="section-tag">Onde ele brilha</div>
+          <ul class="sq-list" style="margin-top:0">
+            <li>Achar padrões e exceções numa base de dados</li>
+            <li>Transformar números em narrativa executiva</li>
+            <li>Sugerir a fórmula ou a estrutura da planilha</li>
+            <li>Explicar o que uma aba complexa está fazendo</li>
+          </ul>
+        </div>
+        <div class="card side-gray">
+          <div class="section-tag">Onde segurar a mão</div>
+          <ul class="sq-list" style="margin-top:0">
+            <li>A modelagem financeira que sustenta uma decisão</li>
+            <li>A conta final que vai para o board</li>
+            <li>Confira sempre os números que ele citar de cabeça</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 13 — FLUXO SEM COPIAR E COLAR ====== -->
+  <section class="slide">
+    <span class="slide-num">13 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Antes e depois</div>
+      <h2>O mesmo fluxo, sem o pedágio</h2>
+      <hr class="accent-bar">
+      <p class="lead">Responder uma proposta que chegou por e-mail, do jeito antigo e do jeito novo.</p>
+      <div class="grid grid-2" style="align-items:start">
+        <div class="card card-soft side-gray">
+          <div class="section-tag">Antes</div>
+          <p class="muted" style="margin:0">Abrir o e-mail → baixar o anexo → subir no Claude → pedir a análise → copiar a resposta → voltar ao Outlook → colar → ajustar a formatação → enviar. <strong>Nove passos.</strong></p>
+        </div>
+        <div class="card card-soft side-orange">
+          <div class="section-tag">Depois</div>
+          <p class="muted" style="margin:0">“Resuma a proposta que o fornecedor X mandou hoje e rascunhe minha resposta no tom da casa.” → revisar → enviar. <strong>Três passos</strong>, sem sair do raciocínio.</p>
+        </div>
+      </div>
+      <p class="muted mt-2">A economia não é só de tempo: é de foco. Cada passo manual a menos é uma chance a menos de perder o fio.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 14 — O QUE LIGA, O QUE NÃO LIGA ====== -->
+  <section class="slide">
+    <span class="slide-num">14 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>O que liga, o que não liga</h2>
+      <hr class="accent-bar">
+      <p class="lead">Um mapa honesto evita a frustração de esperar o que a ferramenta ainda não faz.</p>
+      <table class="tbl">
+        <thead><tr><th class="col-dark">Tarefa</th><th>Como hoje</th><th>O que cuidar</th></tr></thead>
+        <tbody>
+          <tr><td class="col-dark">Ler anexo de e-mail</td><td><span class="eval-exc">Upload sempre · conector quando liberado</span></td><td>Confirmar liberação da TI</td></tr>
+          <tr><td class="col-dark">Resumir thread do Outlook</td><td>Conector, ou colar o texto</td><td>Dado de cliente no corpo</td></tr>
+          <tr><td class="col-dark">Analisar arquivo do OneDrive</td><td>Conector, ou baixar e subir</td><td>Escopo da pasta autorizada</td></tr>
+          <tr><td class="col-dark">Ler planilha Excel</td><td><span class="eval-exc">Upload ou conector</span></td><td>A conta final fica no Excel</td></tr>
+          <tr><td class="col-dark">Enviar e-mail por você</td><td>Você revisa e envia</td><td>Ação de envio é sua, não dele</td></tr>
+          <tr><td class="col-dark">Editar a planilha no lugar</td><td>Ele sugere; você aplica</td><td>A edição final é manual</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 15 — CUIDADOS ====== -->
+  <section class="slide">
+    <span class="slide-num">15 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Antes de ligar</div>
+      <h2>Três cuidados antes de conectar</h2>
+      <hr class="accent-bar">
+      <p class="lead">Conectar é dar uma chave. Vale saber qual porta ela abre — a Sessão 6 aprofunda isto.</p>
+      <div class="grid grid-3">
+        <div class="card side-orange"><div class="num-circle">1</div><h3 class="mt-1">Escopo</h3><p class="muted" style="margin:0">Autorize a pasta ou a caixa específica, não o acesso amplo. Quanto mais estreito, melhor.</p></div>
+        <div class="card side-orange"><div class="num-circle">2</div><h3 class="mt-1">Visibilidade</h3><p class="muted" style="margin:0">Saiba o que o conector enxerga. Se ele lê a caixa toda, lê também o que é sensível.</p></div>
+        <div class="card side-orange"><div class="num-circle">3</div><h3 class="mt-1">TI no circuito</h3><p class="muted" style="margin:0">Em conta corporativa, ligue conector com a TI ciente. Política e LGPD entram aqui — tema da Sessão 6.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 16 — CONECTOR VS PROJECT ====== -->
+  <section class="slide">
+    <span class="slide-num">16 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como combinam</div>
+      <h2>Conector e Project se completam</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não são concorrentes. Um traz o dado vivo; o outro guarda o contexto fixo.</p>
+      <div class="grid grid-2">
+        <div class="card side-blue">
+          <div class="section-tag">Conector</div>
+          <p class="muted" style="margin:0">Traz a informação <strong>do momento</strong>: o e-mail de hoje, a versão atual do documento. É a ligação com a fonte viva.</p>
+        </div>
+        <div class="card side-green">
+          <div class="section-tag">Project</div>
+          <p class="muted" style="margin:0">Guarda o contexto <strong>permanente</strong>: a voz da casa, o contrato-modelo, quem é o cliente. É a memória estável.</p>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2"><p style="margin:0;color:var(--claude-light)">O melhor fluxo junta os dois: um Project com a voz e as regras da PRIMETOUR, lendo via conector o e-mail que acabou de chegar.</p></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 17 — ONDE NÃO RESOLVE ====== -->
+  <section class="slide">
+    <span class="slide-num">17 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Honestidade</div>
+      <h2>Quando o conector não é a resposta</h2>
+      <hr class="accent-bar">
+      <p class="lead">Conectar nem sempre é o caminho. Saber a hora de não ligar também é maturidade.</p>
+      <div class="card side-orange mb-1"><div class="ft-title">Tarefa única e pontual</div><div class="ft-desc">Um documento que você usa uma vez não justifica configurar acesso. Upload é mais rápido.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Material muito sensível</div><div class="ft-desc">Às vezes o certo é manter a fonte desconectada e levar só o trecho necessário. Controle total.</div></div>
+      <div class="card side-orange"><div class="ft-title">A TI ainda não liberou</div><div class="ft-desc">Sem liberação, não force. Trabalhe por upload e leve o caso para a conversa de governança.</div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 18 — TRANSIÇÃO BLOCO 2 ====== -->
+  <section class="slide slide-dark" id="bloco2">
+    <span class="slide-num">18 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 2 · 60 min</div>
+      <h1 class="cover-title">Tire o copiar<br>e colar do caminho.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Conecte uma fonte — ou, se a TI ainda não liberou, use upload — e rode um fluxo real do seu dia, do e-mail ou do documento ao entregável.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 19 — O LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">19 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O lab</div>
+      <h2>Um fluxo Microsoft, ponta a ponta</h2>
+      <hr class="accent-bar">
+      <p class="lead">Pegue algo que hoje você faz com copiar e colar e elimine os passos do meio. Em 45 minutos.</p>
+      <div class="card-dark side-orange mb-2">
+        <div class="section-tag">Enunciado</div>
+        <p style="font-size:1.2rem;line-height:1.5;color:var(--claude-light);margin:0">Escolha <strong>um fluxo que envolva Outlook, OneDrive ou Excel</strong>. Conecte a fonte (ou use upload), faça o Claude trabalhar com o material, e chegue a um entregável — sem baixar e subir manualmente, se o conector permitir.</p>
+      </div>
+      <div class="card card-soft side-orange">
+        <div class="section-tag">Critério de sucesso</div>
+        <p class="italic" style="margin:0">Conte os passos manuais que você cortou. Se o fluxo ficou mais curto e o resultado tem a sua qualidade, o ganho é real e repetível.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 20 — PASSO A PASSO ====== -->
+  <section class="slide">
+    <span class="slide-num">20 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Guia do lab</div>
+      <h2>Cinco passos para rodar</h2>
+      <hr class="accent-bar">
+      <div class="task-row"><span class="num-circle">1</span><div><div class="ft-title">Escolha o fluxo</div><div class="ft-desc">Um caso real com e-mail, documento ou planilha. De preferência, um que se repete.</div></div></div>
+      <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">Conecte ou faça upload</div><div class="ft-desc">Em configurações, ative o conector disponível. Sem liberação? Arraste o arquivo — funciona igual.</div></div></div>
+      <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">Use o Project certo</div><div class="ft-desc">Abra dentro do Project da sua cadeira, para o tom e o contexto já valerem.</div></div></div>
+      <div class="task-row"><span class="num-circle">4</span><div><div class="ft-title">Rode e itere</div><div class="ft-desc">Peça a tarefa, leia, ajuste. Tom, foco, formato. Duas ou três voltas.</div></div></div>
+      <div class="task-row"><span class="num-circle">5</span><div><div class="ft-title">Conte os passos cortados</div><div class="ft-desc">Compare com o jeito antigo. O número de passos a menos é o seu ganho — anote para a discussão.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 21 — SUA CADEIRA ====== -->
+  <section class="slide">
+    <span class="slide-num">21 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Foco por cadeira</div>
+      <h2>Um fluxo Microsoft da sua função</h2>
+      <hr class="accent-bar">
+      <p class="lead">Se não escolheu um fluxo, comece pelo típico da sua cadeira.</p>
+      <div class="grid grid-2">
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CEO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Triagem + preparo</span></div><p class="italic muted mt-1" style="margin-bottom:0">Triagem da caixa de entrada da manhã e preparo da próxima reunião a partir do convite e dos anexos.</p></div>
+        <div class="card side-blue"><div class="flex justify-between items-center"><h3 style="margin:0">COO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Planilha + síntese</span></div><p class="italic muted mt-1" style="margin-bottom:0">Uma planilha de operação no Excel virando narrativa executiva, com os números conferidos.</p></div>
+        <div class="card side-green"><div class="flex justify-between items-center"><h3 style="margin:0">CMO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">Documento + brief</span></div><p class="italic muted mt-1" style="margin-bottom:0">Um relatório no OneDrive sintetizado e transformado em ponto de partida para um brief.</p></div>
+        <div class="card side-orange"><div class="flex justify-between items-center"><h3 style="margin:0">CCO</h3><span class="muted" style="font-family:var(--font-head);font-size:.78rem">E-mail + resposta</span></div><p class="italic muted mt-1" style="margin-bottom:0">Uma thread de cliente no Outlook resumida e respondida no tom da casa, com codinome.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 22 — REGRAS DO LAB ====== -->
+  <section class="slide">
+    <span class="slide-num">22 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Como funciona</div>
+      <h2>Três regras do lab</h2>
+      <hr class="accent-bar">
+      <div class="grid grid-3">
+        <div class="card"><div class="flex gap-m"><div class="num-big">1</div><div><div class="ft-title">Upload se travar o conector</div><div class="ft-desc">Não perca a sessão tentando liberar acesso. Conector emperrou? Arraste o arquivo e siga.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">2</div><div><div class="ft-title">Sem dado sensível real</div><div class="ft-desc">Codinome para cliente, números trocados. Conectar dado real só depois da Sessão 6.</div></div></div></div>
+        <div class="card"><div class="flex gap-m"><div class="num-big">3</div><div><div class="ft-title">Anote o que a TI precisa</div><div class="ft-desc">Toda barreira de liberação vira item para a conversa com a TI. Registre.</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 23 — CRONÔMETRO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">23 / 31</span>
+    <div class="slide-inner center">
+      <div class="section-tag" style="justify-content:center">Cronômetro ativo</div>
+      <div class="timer-display" id="challenge-timer" data-minutes="45">45:00</div>
+      <p style="color:var(--claude-light);font-family:var(--font-head);margin:.2rem 0 1.4rem">minutos a partir de agora</p>
+      <div class="flex gap-s" style="justify-content:center;margin-bottom:1.8rem">
+        <button class="btn btn-orange" id="timer-start" onclick="toggleTimer(this)">Iniciar contador</button>
+        <button class="btn btn-ghost" style="color:var(--claude-light);border-color:var(--claude-mid-gray)" onclick="resetTimer(this)">Reiniciar</button>
+      </div>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Conecte a fonte ou faça upload</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Rode o fluxo dentro do Project da sua cadeira</p>
+      <p class="italic" style="color:var(--claude-mid-gray);margin:.3rem 0">Conte os passos manuais que você cortou</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 24 — TRANSIÇÃO BLOCO 3 ====== -->
+  <section class="slide slide-dark" id="bloco3">
+    <span class="slide-num">24 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Bloco 3 · 30 min</div>
+      <h1 class="cover-title">O que ligou,<br>o que falta ligar.</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.2rem;max-width:760px">Vamos comparar quantos passos cada um cortou, o que a TI precisa habilitar, e quais fluxos Microsoft merecem virar padrão da casa.</p>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 25 — CINCO PERGUNTAS ====== -->
+  <section class="slide">
+    <span class="slide-num">25 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Roteiro da discussão</div>
+      <h2>Cinco perguntas para destravar</h2>
+      <hr class="accent-bar">
+      <p class="lead">Não precisa todo mundo responder todas — mas alguém responde cada.</p>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">1</span><div><div class="ft-title">Você conectou ou usou upload?</div><div class="ft-desc italic">O que decidiu o caminho — liberação, sensibilidade, pressa?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">2</span><div><div class="ft-title">Quantos passos você cortou?</div><div class="ft-desc italic">De quantos para quantos? Onde doeu menos?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">3</span><div><div class="ft-title">Onde o Outlook ou o Excel travou?</div><div class="ft-desc italic">Algo que você esperava e não rolou?</div></div></div></div>
+      <div class="card card-soft mb-1"><div class="flex gap-m items-center"><span class="num-circle">4</span><div><div class="ft-title">O que a TI precisa habilitar?</div><div class="ft-desc italic">A lista que sai daqui para a conversa com a tecnologia.</div></div></div></div>
+      <div class="card card-soft"><div class="flex gap-m items-center"><span class="num-circle">5</span><div><div class="ft-title">Que fluxo vira padrão da casa?</div><div class="ft-desc italic">Um que todo mundo do board deveria adotar.</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 26 — O QUE VAMOS LEVAR ====== -->
+  <section class="slide">
+    <span class="slide-num">26 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Síntese coletiva</div>
+      <h2>O que vamos levar daqui</h2>
+      <hr class="accent-bar">
+      <p class="lead">Três áreas para fechar a sessão e ancorar o aprendizado coletivo.</p>
+      <div class="grid grid-3">
+        <div class="card top-green"><svg class="ico t-green" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><h3 class="mt-1">Fluxos que encurtaram</h3><p class="muted" style="margin:0">Os caminhos que cortaram passos viram rotina — e os melhores, padrão para o time inteiro.</p></div>
+        <div class="card top-orange"><svg class="ico t-orange" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-8-5M3 12a9 9 0 0 1 9-9 9 9 0 0 1 8 5"/><path d="M21 4v4h-4M3 20v-4h4"/></svg><h3 class="mt-1">A lista para a TI</h3><p class="muted" style="margin:0">Conectores a habilitar, escopos a definir. Um pedido claro, não um desejo vago.</p></div>
+        <div class="card top-blue"><svg class="ico t-blue" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3 2.5c-.7.3-1 .8-1 1.5M12 17h.01"/></svg><h3 class="mt-1">Dúvidas de segurança</h3><p class="muted" style="margin:0">O que o conector enxerga, o que a LGPD exige — abre direto a Sessão 6, sobre governança.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 27 — CADERNO: INTRO ====== -->
+  <section class="slide slide-dark" id="caderno">
+    <span class="slide-num">27 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">O caderno Microsoft</div>
+      <h1 class="cover-title" style="font-size:clamp(2.2rem,5vw,3.4rem)">Seu manual da semana</h1>
+      <hr class="accent-bar">
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">Dez prompts para Outlook, OneDrive e Excel — funcionam por conector ou por upload.</p>
+      <div class="grid grid-3 mt-3">
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Manual</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Os dois caminhos</div><p class="muted" style="margin:.4rem 0 0">Upload e conector, o que liga em cada ferramenta e os cuidados — resumidos para consulta.</p></div>
+        <div class="card-darker side-orange"><div class="num-big t-orange">10</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Prompts Microsoft</div><p class="muted" style="margin:.4rem 0 0">Triagem de e-mail, resposta a thread, planilha em narrativa, comparar versões — prontos para usar.</p></div>
+        <div class="card-darker side-orange"><div class="section-tag" style="color:var(--claude-orange)">Portal</div><div style="font-family:var(--font-head);font-weight:600;color:var(--claude-light)">Biblioteca cumulativa</div><p class="muted" style="margin:.4rem 0 0">Com as sessões anteriores, já são 50 prompts. O kit da PRIMETOUR cresce a cada encontro.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 28 — OS 10 (PREVIEW) ====== -->
+  <section class="slide">
+    <span class="slide-num">28 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Preview do caderno</div>
+      <h2>Os 10 prompts Microsoft</h2>
+      <hr class="accent-bar">
+      <p class="lead">Cada um vem no caderno completo, abaixo, com botão de copiar.</p>
+      <div class="grid grid-2">
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">01</span> Triagem da caixa de entrada</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">02</span> Resposta a thread longa do Outlook</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">03</span> Ações e prazos de uma thread</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">04</span> Preparar reunião a partir do convite</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">05</span> Síntese de documento do OneDrive</div></div>
+        </div>
+        <div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">06</span> Comparar duas versões de um documento</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">07</span> Planilha Excel em narrativa executiva</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">08</span> Achar padrões e exceções numa base</div></div>
+          <div class="card card-soft mb-1"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">09</span> Rascunhar e-mail no tom da casa</div></div>
+          <div class="card card-soft"><div class="flex gap-s items-center"><span class="t-orange" style="font-family:var(--font-head);font-weight:700">10</span> Checklist antes de conectar</div></div>
+        </div>
+      </div>
+      <div class="card-dark side-orange mt-2">
+        <p class="italic" style="margin:0;color:var(--claude-light)">O caderno completo, com cada prompt explicado e o botão de copiar, está logo abaixo — seção <a href="#caderno-completo" style="color:var(--claude-orange)">“Caderno Microsoft”</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 29 — TAREFA ====== -->
+  <section class="slide" id="tarefa">
+    <span class="slide-num">29 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Para a próxima semana</div>
+      <h2>Sua tarefa até a Sessão 6</h2>
+      <hr class="accent-bar">
+      <p class="lead">Colocar um fluxo Microsoft em uso — e levantar as questões que a governança vai responder.</p>
+      <div class="task-row"><div class="num-big">1</div><div><div class="ft-title">Adote um fluxo sem copiar e colar</div><div class="ft-desc">O da sua cadeira. Use a semana toda, por conector ou upload. Sinta a diferença no foco.</div></div></div>
+      <div class="task-row"><div class="num-big">2</div><div><div class="ft-title">Monte a lista para a TI</div><div class="ft-desc">Que conectores você quer habilitados, com que escopo. Um pedido objetivo, pronto para enviar.</div></div></div>
+      <div class="task-row"><div class="num-big">3</div><div><div class="ft-title">Anote uma dúvida de segurança</div><div class="ft-desc">Algo que você ficou em dúvida se podia conectar. É exatamente o que a Sessão 6 vai responder.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 30 — PRÓXIMA SESSÃO ====== -->
+  <section class="slide slide-dark">
+    <span class="slide-num">30 / 31</span>
+    <div class="slide-inner">
+      <div class="section-tag">Próxima semana</div>
+      <p class="cover-sub" style="font-size:1.2rem;margin:0">Sessão 6</p>
+      <h1 class="cover-title" style="font-size:clamp(2.4rem,5.5vw,3.6rem)">Governança</h1>
+      <p class="italic" style="color:var(--claude-mid-gray);font-size:1.15rem">LGPD, segurança e política interna — o que pode, o que não pode, e como decidir.</p>
+      <div class="section-tag mt-2">O que veremos</div>
+      <ul class="sq-list">
+        <li style="color:var(--claude-light)">O que pode e o que não pode ir para a IA, na prática</li>
+        <li style="color:var(--claude-light)">LGPD para quem decide, sem juridiquês</li>
+        <li style="color:var(--claude-light)">Dado de cliente, conectores e a regra de ouro do sensível</li>
+        <li style="color:var(--claude-light)">Lab: escrever a política de uso de IA da PRIMETOUR</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE 31 — ENCERRAMENTO ====== -->
+  <section class="slide slide-light">
+    <span class="slide-num">31 / 31</span>
+    <div class="slide-inner">
+      <span class="brand-square lg" style="margin-bottom:1.5rem"></span>
+      <h1 style="font-size:clamp(3rem,9vw,5.5rem)">Obrigado.</h1>
+      <hr class="accent-bar">
+      <p class="italic muted" style="font-size:1.2rem">O Claude agora trabalha onde você já trabalha. Use o fluxo a semana toda — nos vemos na Sessão 6.</p>
+      <p class="muted" style="font-family:var(--font-head)">Renê Junio · Marketing PRIMETOUR · Sessão 5 de 7</p>
+    </div>
+  </section>
+
+  </div><!-- /.slides-wrap -->
+
+  <!-- ============================================================
+       SEÇÕES DE CONSULTA (não aparecem no modo apresentação)
+       ============================================================ -->
+
+  <!-- ====== CADERNO COMPLETO MICROSOFT ====== -->
+  <section class="non-slide" id="caderno-completo" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem">
+    <div class="section-tag">Caderno Microsoft</div>
+    <h2>Os 10 prompts da Sessão 5</h2>
+    <hr class="accent-bar">
+    <p class="lead">Funcionam por conector (sem baixar) ou por upload (arrastando o arquivo). Preencha os campos entre colchetes.</p>
+
+    <div class="grid grid-4 mb-2" style="gap:.7rem">
+      <div class="card card-soft side-blue" style="padding:.8rem 1rem"><strong class="t-blue" style="font-family:var(--font-head)">Outlook</strong><div class="ft-desc">E-mail e calendário.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">OneDrive</strong><div class="ft-desc">Documentos e versões.</div></div>
+      <div class="card card-soft side-green" style="padding:.8rem 1rem"><strong class="t-green" style="font-family:var(--font-head)">Excel</strong><div class="ft-desc">Dados e planilhas.</div></div>
+      <div class="card card-soft side-orange" style="padding:.8rem 1rem"><strong class="t-orange" style="font-family:var(--font-head)">Decisão</strong><div class="ft-desc">Antes de conectar.</div></div>
+    </div>
+
+    <!-- 01 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Outlook · S5</span>
+      <h3>01 — Triagem da caixa de entrada</h3>
+      <p class="when"><strong>Quando usar:</strong> No início do dia, para saber o que pede ação sua sem ler tudo.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s501', this)">Copiar</button><pre id="s501">Atue como meu assistente. Olhe os e-mails não lidos de hoje (ou os que eu colar abaixo).
+
+Devolva:
+1. Cada e-mail em uma linha: remetente + o que ele quer
+2. Os que pedem ação minha, marcados, em ordem de urgência
+3. Os que posso só arquivar ou delegar
+4. Um rascunho de resposta de uma linha para os 3 mais urgentes
+
+Não invente conteúdo de e-mail que eu não te dei. Se algo estiver ambíguo, sinalize.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Com conector de Outlook, ele lê direto. Sem conector, cole o texto dos e-mails — o resultado é o mesmo.</p>
+    </article>
+
+    <!-- 02 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Outlook · S5</span>
+      <h3>02 — Resposta a thread longa do Outlook</h3>
+      <p class="when"><strong>Quando usar:</strong> Uma troca de muitas mensagens em que você precisa entrar e responder bem.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s502', this)">Copiar</button><pre id="s502">Vou te dar uma thread de e-mail longa.
+
+[anexe, conecte ou cole a thread]
+
+Faça duas coisas:
+1. Resuma a troca em 5 linhas: o que se decidiu, o que está em aberto, quem espera o quê de mim.
+2. Rascunhe minha resposta, no tom da casa, resolvendo o ponto em aberto.
+
+RESULTADO QUE QUERO COM A RESPOSTA: [o que deve acontecer depois]
+Máximo [N] palavras. Se faltar informação para responder bem, pergunte antes.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Rode dentro do Project da sua cadeira para a resposta já sair com o tom certo, sem reexplicar.</p>
+    </article>
+
+    <!-- 03 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Outlook · S5</span>
+      <h3>03 — Ações e prazos de uma thread</h3>
+      <p class="when"><strong>Quando usar:</strong> Para não deixar cair nenhuma promessa ou pendência enterrada numa troca longa.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s503', this)">Copiar</button><pre id="s503">Vou te dar uma thread de e-mail.
+
+[anexe, conecte ou cole]
+
+Extraia uma tabela de compromissos:
+- O QUÊ (a ação concreta)
+- QUEM (quem ficou responsável)
+- ATÉ QUANDO (o prazo, se houver)
+- STATUS (combinado / em aberto / depende de algo)
+
+Liste por último os pontos que ficaram no ar, sem dono claro. Não invente prazo que não foi dito.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Ótimo depois de uma negociação por e-mail. O que ficou combinado vira lista clara em segundos.</p>
+    </article>
+
+    <!-- 04 -->
+    <article class="prompt-card">
+      <span class="cat cat-preparacao">Outlook · S5</span>
+      <h3>04 — Preparar reunião a partir do convite</h3>
+      <p class="when"><strong>Quando usar:</strong> Uma reunião marcada com anexos e contexto que você ainda não digeriu.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s504', this)">Copiar</button><pre id="s504">Tenho uma reunião marcada. Vou te dar o convite e os anexos.
+
+[anexe, conecte ou cole o convite e os materiais]
+
+Me prepare:
+1. O objetivo provável da reunião, em uma frase
+2. Os 3 pontos que eu preciso dominar antes de entrar
+3. Duas perguntas inteligentes para eu fazer
+4. Um possível ponto de atrito e como eu me posiciono
+5. O que eu quero ter conseguido ao sair
+
+Tom executivo. Se algum material for essencial e estiver faltando, me diga.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Combine com o prompt 06 da Sessão 1 (preparação de reunião) quando o interlocutor for novo.</p>
+    </article>
+
+    <!-- 05 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">OneDrive · S5</span>
+      <h3>05 — Síntese de documento do OneDrive</h3>
+      <p class="when"><strong>Quando usar:</strong> Um relatório ou proposta guardado na nuvem que você precisa entender rápido.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s505', this)">Copiar</button><pre id="s505">Vou te indicar (ou anexar) um documento.
+
+[conecte ao arquivo no OneDrive, ou faça upload]
+
+Atue como analista sênior. Devolva:
+1. Síntese executiva em 5 linhas
+2. Três pontos de atenção que merecem aprofundamento
+3. Duas oportunidades que o documento não nomeia
+4. Uma pergunta que eu deveria fazer a quem o escreveu
+
+Tom direto, sem repetir o óbvio do documento.</pre></div>
+      <p class="tip"><strong>Dica:</strong> É o prompt 01 da Sessão 1, agora lendo direto da fonte — sem o passo de baixar e subir.</p>
+    </article>
+
+    <!-- 06 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">OneDrive · S5</span>
+      <h3>06 — Comparar duas versões de um documento</h3>
+      <p class="when"><strong>Quando usar:</strong> Um contrato ou proposta que mudou e você precisa saber exatamente o que mudou.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s506', this)">Copiar</button><pre id="s506">Vou te dar duas versões do mesmo documento.
+
+VERSÃO A: [anexe/conecte — a mais antiga]
+VERSÃO B: [anexe/conecte — a mais recente]
+
+Compare e devolva:
+1. As mudanças materiais (o que altera obrigação, valor, prazo ou risco)
+2. As mudanças cosméticas (redação, ordem) — em bloco, sem detalhar
+3. Qualquer cláusula nova que mereça atenção
+4. O que ficou pior para nós, se for o caso
+
+Foque no que muda a decisão. Não liste vírgula por vírgula.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Peça “mostre o trecho exato de cada mudança material” quando precisar levar a alteração para o jurídico.</p>
+    </article>
+
+    <!-- 07 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Excel · S5</span>
+      <h3>07 — Planilha Excel em narrativa executiva</h3>
+      <p class="when"><strong>Quando usar:</strong> Uma planilha cheia de números que o board precisa entender em palavras.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s507', this)">Copiar</button><pre id="s507">Vou te dar uma planilha.
+
+[anexe, conecte ou cole os dados]
+
+CONTEXTO: [o que esta planilha representa]
+PARA QUEM É A LEITURA: [board, diretoria]
+
+Transforme os números em uma narrativa executiva:
+1. A história principal que os dados contam, em 3 linhas
+2. Os 3 movimentos mais relevantes (alta, queda, exceção)
+3. Um ponto de atenção que o número sugere
+4. Uma pergunta que esses dados deveriam levar o board a fazer
+
+Cite os números em que você se baseou. Não arredonde a ponto de distorcer.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Confira os números que ele citar. O Claude lê bem a tabela, mas a conta que vai ao board é sua responsabilidade.</p>
+    </article>
+
+    <!-- 08 -->
+    <article class="prompt-card">
+      <span class="cat cat-analise">Excel · S5</span>
+      <h3>08 — Achar padrões e exceções numa base</h3>
+      <p class="when"><strong>Quando usar:</strong> Uma base de dados em que você suspeita haver algo, mas não sabe onde olhar.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s508', this)">Copiar</button><pre id="s508">Vou te dar uma base de dados em planilha.
+
+[anexe ou conecte]
+
+O QUE EU QUERO ENTENDER: [a pergunta de negócio]
+
+Investigue e devolva:
+1. Os padrões mais claros que você encontra
+2. As exceções ou anomalias que fogem do padrão
+3. Uma hipótese para cada anomalia (marcada como hipótese, não como fato)
+4. Que corte ou coluna adicional ajudaria a confirmar
+
+Seja transparente sobre o que é leitura dos dados e o que é suposição sua.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Separe sempre “dado” de “hipótese” no pedido. Anomalia interessante vira pergunta para a equipe, não conclusão.</p>
+    </article>
+
+    <!-- 09 -->
+    <article class="prompt-card">
+      <span class="cat cat-comunicacao">Outlook · S5</span>
+      <h3>09 — Rascunhar e-mail no tom da casa</h3>
+      <p class="when"><strong>Quando usar:</strong> Você tem os pontos na cabeça e quer um e-mail pronto, na voz da PRIMETOUR.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s509', this)">Copiar</button><pre id="s509">Rascunhe um e-mail a partir destes pontos soltos:
+
+[liste seus pontos, mesmo desorganizados]
+
+PARA: [quem recebe e a relação]
+RESULTADO QUE QUERO: [o que deve acontecer depois]
+TOM: na voz da PRIMETOUR — caloroso, direto, sem floreio.
+
+Máximo [N] palavras. Estruture com uma abertura que vá ao ponto, o corpo e um fechamento que peça a ação. Se faltar algum dado, pergunte antes de inventar.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Rode no Project “Comunicação PRIMETOUR” para o tom sair certo sem você reexplicar a voz.</p>
+    </article>
+
+    <!-- 10 -->
+    <article class="prompt-card">
+      <span class="cat cat-decisao">Decisão · S5</span>
+      <h3>10 — Checklist antes de conectar</h3>
+      <p class="when"><strong>Quando usar:</strong> Antes de ligar um conector, para decidir com a cabeça fria o que autorizar.</p>
+      <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('s510', this)">Copiar</button><pre id="s510">Estou pensando em conectar o Claude a [Outlook / OneDrive / SharePoint] para o seguinte uso:
+
+USO PRETENDIDO: [o que eu quero que ele faça]
+O QUE ESSA FONTE CONTÉM: [tipo de informação, incluindo o sensível]
+
+Me ajude a decidir, em perguntas e respostas curtas:
+1. Que escopo mínimo atende esse uso (pasta, caixa, site específico)?
+2. O que esse conector passaria a enxergar que eu talvez não queira expor?
+3. O que eu deveria confirmar com a TI antes de ligar?
+4. Vale conectar, ou neste caso o upload pontual é mais seguro?
+
+Seja conservador: na dúvida, recomende o caminho de menor exposição.</pre></div>
+      <p class="tip"><strong>Dica:</strong> Este é o prompt-ponte para a Sessão 6. A resposta dele vira insumo da política de uso de IA da PRIMETOUR.</p>
+    </article>
+  </section>
+
+  <!-- ====== GLOSSÁRIO ====== -->
+  <section class="non-slide" id="glossario" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem;border-top:1px solid var(--claude-light-gray)">
+    <div class="section-tag">Glossário</div>
+    <h2>Termos que apareceram nesta sessão</h2>
+    <hr class="accent-bar">
+    <dl class="gloss grid grid-2" style="gap:0 3rem">
+      <div><dt>Conector</dt><dd>Integração que liga o Claude a um sistema externo (Outlook, OneDrive, SharePoint) para ler de lá sem você baixar e subir. Fica nos planos pagos e costuma depender da TI.</dd></div>
+      <div><dt>Upload (anexo)</dt><dd>Subir um arquivo direto para a conversa, arrastando-o. Funciona em qualquer plano, sem configuração — o caminho que nunca falha.</dd></div>
+      <div><dt>Escopo de permissão</dt><dd>O limite do que um conector pode acessar — uma pasta, uma caixa, um site. Quanto mais estreito, menor a exposição.</dd></div>
+      <div><dt>OneDrive / SharePoint</dt><dd>Onde a PRIMETOUR guarda documentos na nuvem Microsoft. O Claude pode lê-los via conector, respeitando o escopo autorizado.</dd></div>
+      <div><dt>Dado vivo vs. foto</dt><dd>O conector traz a informação do momento (dado vivo); um arquivo no conhecimento de um Project é uma foto, que envelhece até você atualizar.</dd></div>
+    </dl>
+  </section>
+
+  <!-- ====== FOOTER GLOBAL ====== -->
+  <footer class="session-footer non-slide">
+    <div class="flex justify-between wrap gap-l items-center">
+      <div>
+        <div class="section-tag" style="margin-bottom:.6rem">Progresso do treinamento</div>
+        <div class="progress-7"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div>
+        <p class="muted" style="margin:.3rem 0 0;font-family:var(--font-head);font-size:.85rem">Sessão 5 de 7 concluída</p>
+      </div>
+      <div class="flex gap-s wrap">
+        <a class="btn btn-ghost" href="../sessao-04/index.html">← Sessão 4</a>
+        <a class="next-link btn btn-orange" href="../sessao-06/index.html">Próxima: Sessão 6 · Governança →</a>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:2rem;font-size:.82rem">Renê Junio · Marketing PRIMETOUR · Treinamento Claude para a liderança</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="../assets/claude.js"></script>
+</body>
+</html>
