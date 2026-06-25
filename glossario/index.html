@@ -20,6 +20,11 @@
   <hr class="accent-bar">
   <p class="lead">Definições curtas e diretas. Cresce conforme o treinamento avança.</p>
 
+  <div class="page-tools mb-2">
+    <button class="btn-tool" onclick="downloadPDF()"><svg class="ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg> Baixar PDF</button>
+    <button class="btn-tool" onclick="copyLink(this)"><svg class="ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> <span class="tool-label">Copiar link</span></button>
+  </div>
+
   <dl class="gloss grid grid-2" style="gap:0 3rem">
     <div><dt>Modelo (LLM)</dt><dd>O cérebro da IA. Recebe texto, devolve texto. Exemplos: Claude Sonnet 4.6, GPT-4o, Gemini 2.5 Pro. <span class="muted">(LLM = Large Language Model, modelo de linguagem de grande escala.)</span></dd></div>
     <div><dt>Agente</dt><dd>Um modelo equipado com ferramentas (web search, leitura de arquivos, conectores), memória e autonomia para decidir quando usar cada uma. O Claude em claude.ai é um agente.</dd></div>

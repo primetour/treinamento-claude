@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avaliador de prompt — Claude para a liderança PRIMETOUR</title>
+<meta name="description" content="Ferramenta local que avalia a qualidade de um prompt segundo os fundamentos das Sessões 1 e 2 do treinamento Claude para a liderança da PRIMETOUR.">
+<link rel="stylesheet" href="../assets/claude.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Avaliador de prompt</div>
+  <a class="btn btn-ghost" href="../index.html">← Início</a>
+</header>
+
+<section class="home-section">
+  <div class="section-tag">Ferramenta de prática</div>
+  <h1>Avaliador de prompt</h1>
+  <hr class="accent-bar">
+  <p class="lead">Cole um prompt e veja como ele se sai nos critérios que o treinamento ensina — papel, contexto, tarefa, formato e restrições. Tudo roda aqui no seu navegador; nada é enviado para lugar nenhum.</p>
+
+  <div class="eval-wrap">
+    <label for="promptInput" style="font-family:var(--font-head);font-weight:600;font-size:.85rem;display:block;margin-bottom:.5rem">Seu prompt</label>
+    <textarea id="promptInput" class="eval-input" placeholder="Ex.: Você é um analista sênior. Anexei um relatório de 40 páginas. Resuma em 5 linhas, liste 3 riscos e 2 oportunidades, em tom executivo. Não repita o óbvio do documento."></textarea>
+
+    <div class="page-tools mt-2">
+      <button class="btn btn-orange" onclick="avaliar()">Avaliar prompt</button>
+      <button class="btn-tool" onclick="exemplo()">Carregar exemplo</button>
+      <button class="btn-tool" onclick="limpar()">Limpar</button>
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="resultado" style="display:none" class="mt-3">
+      <div class="card" style="padding:1.6rem 1.8rem">
+        <div class="eval-score-ring">
+          <div>
+            <span id="scoreNum" class="eval-score-num">0</span>
+            <span class="muted" style="font-family:var(--font-head);font-size:1.1rem">/100</span>
+          </div>
+          <div style="flex:1 1 200px">
+            <div id="scoreBand" class="eval-band" style="margin-bottom:.5rem">—</div>
+            <div class="eval-bar"><span id="scoreBar" style="width:0%"></span></div>
+          </div>
+        </div>
+        <p id="scoreMsg" class="serif mt-2" style="font-size:1.05rem;margin-bottom:0"></p>
+      </div>
+
+      <h3 class="mt-3">Critério a critério</h3>
+      <div id="criterios" class="card" style="padding:.4rem 1.6rem"></div>
+
+      <div id="proximoPasso" class="card-dark side-orange mt-2"></div>
+    </div>
+  </div>
+
+  <!-- LEMBRETE DOS FUNDAMENTOS -->
+  <div class="mt-3" style="border-top:1px solid var(--claude-light-gray);padding-top:2rem">
+    <div class="section-tag">Lembrete</div>
+    <h3>Os critérios que esta ferramenta verifica</h3>
+    <p class="lead">São os mesmos do <a href="../sessao-02/index.html">caderno da Sessão 2</a> — a anatomia do bom prompt.</p>
+    <div class="grid grid-3">
+      <div class="card side-orange"><strong style="font-family:var(--font-head)">Papel</strong><div class="ft-desc">Quem o Claude deve “ser” (“você é um analista sênior”).</div></div>
+      <div class="card side-blue"><strong style="font-family:var(--font-head)">Contexto</strong><div class="ft-desc">Situação, público, material — o que ele precisa para acertar.</div></div>
+      <div class="card side-green"><strong style="font-family:var(--font-head)">Tarefa</strong><div class="ft-desc">Um verbo claro: resuma, compare, reescreva, liste.</div></div>
+      <div class="card side-orange"><strong style="font-family:var(--font-head)">Formato</strong><div class="ft-desc">Tamanho, estrutura e tom da resposta esperada.</div></div>
+      <div class="card side-blue"><strong style="font-family:var(--font-head)">Restrições</strong><div class="ft-desc">O que evitar: “sem jargão”, “não invente”, “não me elogie”.</div></div>
+      <div class="card side-green"><strong style="font-family:var(--font-head)">Clareza</strong><div class="ft-desc">Específico em vez de vago. “Me ajuda com isso” não é tarefa.</div></div>
+    </div>
+    <div class="card card-soft side-gray mt-2">
+      <p style="margin:0" class="muted"><strong>Honestidade:</strong> esta é uma avaliação automática por heurística — ela reconhece padrões de um bom prompt, mas não entende o seu objetivo. Use como termômetro e treino, não como juiz final. Um prompt pode pontuar alto e ainda não ser o ideal para o seu caso — e vice-versa.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="session-footer">
+  <p class="muted" style="font-size:.82rem">Renê Castro · Diretor de Marketing e Comunicação da PRIMETOUR · Ferramenta de prática do treinamento</p>
+</footer>
+
+<script src="../assets/claude.js"></script>
+<script>
+/* =========================================================================
+   AVALIADOR DE PROMPT — heurística 100% local
+   Baseado nos critérios das Sessões 1 e 2: papel, contexto, tarefa,
+   formato, restrições e clareza. Sem backend, sem envio de dados.
+   ========================================================================= */
+(function () {
+  'use strict';
+
+  // Cada critério: peso, teste (retorna 0..1) e dicas por faixa.
+  var CRITERIOS = [
+    {
+      nome: 'Papel', peso: 18,
+      teste: function (t) {
+        // obs.: evitar \b após vogal acentuada — em JS, á/é/ê não são "word chars"
+        return /(\bvoc[êe]\s+[ée](?=\s|[,.;:!?]|$)|\batue\s+como\b|\baja\s+como\b|\bassuma\s+o\s+papel\b|\bno\s+papel\s+de\b|\bseja\s+(um|uma)\s+[a-zà-ú]+|\bcomo\s+(um|uma)\s+[a-zà-ú]+)/i.test(t) ? 1 : 0;
+      },
+      ok: 'Você atribuiu um papel ao Claude — isso ativa o repertório certo.',
+      miss: 'Falta papel. Comece com “Você é…” ou “Atue como…” (ex.: “Atue como analista sênior”).'
+    },
+    {
+      nome: 'Contexto', peso: 20,
+      teste: function (t) {
+        var marcadores = /(\bcontexto\b|\bp[úu]blico\b|\bsitua[çc][ãa]o\b|\banexei\b|\banexad|\bsegue\s+abaixo\b|\bhist[óo]rico\b|\bvou\s+(te\s+)?(dar|colar|passar|mostrar)\b|\bcolei?\b|\bpara\s+\[|\bo\s+que\s+eu\s+(j[áa]\s+)?sei\b)/i.test(t);
+        if (marcadores) return 1;
+        if (t.length > 240) return 0.6;   // texto longo sugere algum contexto
+        if (t.length > 120) return 0.3;
+        return 0;
+      },
+      ok: 'Há contexto suficiente para o Claude trabalhar sem adivinhar.',
+      partial: 'Há algum contexto, mas vale ser explícito: quem é o público, o que está em jogo, e anexar a fonte.',
+      miss: 'Falta contexto. Diga a situação, o público e anexe (ou cole) o material — ele só sabe o que você conta.'
+    },
+    {
+      nome: 'Tarefa', peso: 24,
+      teste: function (t) {
+        var verbos = /\b(resuma|resumir|liste|listar|compare|comparar|escreva|escrever|reescreva|reescrever|analise|analisar|critique|traduza|traduzir|classifique|classificar|gere|gerar|crie|criar|monte|montar|devolva|devolver|identifique|identificar|sugira|sugerir|explique|explicar|antecipe|antecipar|estruture|estruturar|avalie|avaliar|proponha|propor|redija|redigir|descreva|descrever|ordene|priorize|extraia|extrair|resolva|resolver|revise|revisar|me\s+d[êe]|fa[çc]a)\b/i;
+        return verbos.test(t) ? 1 : 0;
+      },
+      ok: 'A tarefa está clara — há um verbo de comando inequívoco.',
+      miss: 'A tarefa está vaga. Use um verbo claro: “resuma”, “compare”, “reescreva”, “liste”. “Me ajuda com isso” não é tarefa.'
+    },
+    {
+      nome: 'Formato', peso: 20,
+      teste: function (t) {
+        return /(\bem\s+\d+\s+(palavras|linhas|t[óo]picos|frases|par[áa]grafos|itens)\b|\bm[áa]ximo\b|\bno\s+m[áa]ximo\b|\bat[ée]\s+\d+\b|\bem\s+t[óo]picos\b|\bbullets?\b|\btabela\b|\bem\s+lista\b|\bem\s+formato\b|\btom\s+\w+|\b\d+\s+(itens|vers[õo]es|pontos|exemplos|op[çc][õo]es|ideias|[âa]ngulos|linhas|frases|cen[áa]rios)\b|\bem\s+uma\s+(frase|linha|p[áa]gina)\b|\bpar[áa]grafos?\b)/i.test(t) ? 1 : 0;
+      },
+      ok: 'Você especificou o formato da resposta — isso economiza iteração.',
+      miss: 'Falta formato. Diga o tamanho, a estrutura e o tom: “máximo 150 palavras”, “em 3 tópicos”, “tom executivo”.'
+    },
+    {
+      nome: 'Restrições', peso: 10,
+      teste: function (t) {
+        return /(\bn[ãa]o\s+[a-zà-ú]+|\bsem\s+[a-zà-ú]+|\bevite\b|\bevitar\b|\bnunca\b|\bjamais\b|\bexceto\b|\bnada\s+de\b)/i.test(t) ? 1 : 0;
+      },
+      ok: 'Você incluiu uma restrição — ótimo para cortar os vícios do Claude.',
+      miss: 'Sem restrições. Dizer o que NÃO quer corta reescritas: “sem jargão”, “não invente”, “não me elogie”.'
+    },
+    {
+      nome: 'Clareza', peso: 8,
+      teste: function (t) {
+        var vago = /(\bme\s+ajuda\b|\bo\s+que\s+voc[êe]\s+acha\b|\bd[áa]\s+uma\s+olhada\b|\bfala\s+sobre\b|\bqualquer\s+coisa\b)/i.test(t);
+        if (t.trim().length < 40) return 0;          // curto demais
+        if (vago && t.trim().length < 120) return 0.2;
+        if (vago) return 0.6;
+        return 1;
+      },
+      ok: 'O pedido é específico, não genérico.',
+      partial: 'Há sinais de pedido vago. Troque “me ajuda” / “o que você acha” por um comando concreto.',
+      miss: 'O pedido é curto ou vago demais para render. Seja específico no que você quer.'
+    }
+  ];
+
+  function classifica(score) {
+    if (score >= 90) return { txt: 'Excelente', cor: 'var(--claude-green)', msg: 'Prompt completo e bem estruturado. Tem tudo o que o Claude precisa para entregar de primeira.' };
+    if (score >= 70) return { txt: 'Bom', cor: 'var(--claude-blue)', msg: 'Bom prompt. Um ou dois ajustes nos pontos abaixo levam ele ao nível de excelência.' };
+    if (score >= 40) return { txt: 'Mediano', cor: 'var(--claude-orange)', msg: 'Vai funcionar, mas você vai gastar iteração. Reforce os critérios marcados em laranja e cinza.' };
+    return { txt: 'Precisa de trabalho', cor: 'var(--claude-mid-gray)', msg: 'Este prompt provavelmente renderá uma resposta genérica. Monte-o pelos quatro elementos antes de enviar.' };
+  }
+
+  window.avaliar = function () {
+    var t = (document.getElementById('promptInput').value || '').trim();
+    if (!t) { document.getElementById('promptInput').focus(); return; }
+
+    var total = 0, html = '', faltas = [];
+    CRITERIOS.forEach(function (c) {
+      var r = c.teste(t);                 // 0..1
+      total += r * c.peso;
+      var pts = Math.round(r * c.peso);
+      var estado, classe, dica;
+      if (r >= 0.99) { estado = '✓'; classe = 'ok'; dica = c.ok; }
+      else if (r > 0) { estado = '~'; classe = 'partial'; dica = c.partial || c.miss; faltas.push(c); }
+      else { estado = '×'; classe = 'miss'; dica = c.miss; faltas.push(c); }
+      html += '<div class="eval-crit">'
+        + '<span class="eval-dot ' + classe + '">' + estado + '</span>'
+        + '<div><div class="ec-name">' + c.nome + '</div><div class="ec-tip">' + dica + '</div></div>'
+        + '<span class="eval-pts">' + pts + '/' + c.peso + '</span>'
+        + '</div>';
+    });
+
+    var score = Math.round(total);
+    var band = classifica(score);
+
+    document.getElementById('scoreNum').textContent = score;
+    var bar = document.getElementById('scoreBar');
+    bar.style.width = score + '%';
+    bar.style.background = band.cor;
+    var bandEl = document.getElementById('scoreBand');
+    bandEl.textContent = band.txt;
+    bandEl.style.background = band.cor;
+    document.getElementById('scoreMsg').textContent = band.msg;
+    document.getElementById('criterios').innerHTML = html;
+
+    // próximo passo: as 2 maiores lacunas (por peso)
+    var prox = document.getElementById('proximoPasso');
+    if (faltas.length) {
+      faltas.sort(function (a, b) { return b.peso - a.peso; });
+      var top = faltas.slice(0, 2);
+      var li = top.map(function (c) { return '<li style="color:var(--claude-light)"><strong>' + c.nome + ':</strong> ' + c.miss + '</li>'; }).join('');
+      prox.innerHTML = '<div class="section-tag" style="color:var(--claude-orange)">Próximo passo</div>'
+        + '<p style="margin:0 0 .4rem;color:var(--claude-light)">Comece por estes, que mais pesam:</p>'
+        + '<ul class="sq-list" style="margin:0">' + li + '</ul>';
+    } else {
+      prox.innerHTML = '<div class="section-tag" style="color:var(--claude-orange)">Próximo passo</div>'
+        + '<p style="margin:0;color:var(--claude-light)">Nada a corrigir nos critérios. Agora a parte que a máquina não vê: o prompt está realmente alinhado ao que <em>você</em> precisa? Gere a resposta e itere se faltar algo.</p>';
+    }
+
+    document.getElementById('resultado').style.display = '';
+    document.getElementById('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  window.limpar = function () {
+    document.getElementById('promptInput').value = '';
+    document.getElementById('resultado').style.display = 'none';
+    document.getElementById('promptInput').focus();
+  };
+
+  window.exemplo = function () {
+    document.getElementById('promptInput').value =
+      'Você é um gerente de relacionamento de uma operadora de luxo. Anexei a troca de e-mails com um cliente VIP que reclamou de um traslado atrasado. Contexto: cliente de 4 anos, alto valor, a falha foi do parceiro. Reescreva minha resposta assumindo o problema e oferecendo uma solução concreta. Formato: máximo 140 palavras, tom caloroso e firme. Não use juridiquês e não prometa nada que eu não possa cumprir.';
+  };
+})();
+</script>
+</body>
+</html>

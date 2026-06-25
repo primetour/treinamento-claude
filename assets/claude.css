@@ -502,6 +502,59 @@ a.session-card:hover { text-decoration: none; transform: translateY(-3px); box-s
   .eq-plus { padding: .4rem 0; }
   .slide { padding: 3rem 1.3rem 3.5rem; }
 }
+/* =========================================================================
+   BARRA DE FERRAMENTAS DE PÁGINA (PDF, copiar link)
+   ========================================================================= */
+.page-tools { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; }
+.btn-tool {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-family: var(--font-head); font-weight: 600; font-size: .8rem;
+  padding: .5rem 1rem; border-radius: var(--radius);
+  border: 1px solid var(--claude-light-gray); background: var(--claude-light); color: var(--claude-dark);
+  cursor: pointer;
+}
+.btn-tool:hover { background: var(--claude-light-gray); text-decoration: none; }
+.btn-tool.copied { background: var(--claude-green); border-color: var(--claude-green); color: #fff; }
+.btn-tool .ico-sm { width: 16px; height: 16px; }
+
+/* =========================================================================
+   AVALIADOR DE PROMPT
+   ========================================================================= */
+.eval-wrap { max-width: 860px; margin: 0 auto; }
+.eval-input {
+  width: 100%; min-height: 180px; resize: vertical;
+  font-family: var(--font-mono); font-size: .9rem; line-height: 1.6;
+  padding: 1.1rem 1.2rem; border: 1px solid var(--claude-light-gray); border-radius: var(--radius-lg);
+  background: var(--claude-light); color: var(--text-body);
+}
+.eval-input:focus { outline: 2px solid var(--claude-orange); outline-offset: 1px; border-color: var(--claude-orange); }
+.eval-score-ring { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+.eval-score-num { font-family: var(--font-head); font-weight: 700; font-size: 3.4rem; line-height: 1; }
+.eval-band { font-family: var(--font-head); font-weight: 600; font-size: .95rem; padding: .25rem .8rem; border-radius: 999px; color: #fff; display: inline-block; }
+.eval-bar { height: 12px; border-radius: 999px; background: var(--claude-light-gray); overflow: hidden; flex: 1 1 200px; min-width: 160px; }
+.eval-bar > span { display: block; height: 100%; border-radius: 999px; transition: width .5s ease; }
+.eval-crit { display: flex; gap: .9rem; align-items: flex-start; padding: .9rem 0; border-bottom: 1px solid var(--claude-light-gray); }
+.eval-crit:last-child { border-bottom: 0; }
+.eval-dot { width: 26px; height: 26px; border-radius: 50%; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-weight: 700; font-size: .8rem; color: #fff; }
+.eval-dot.ok { background: var(--claude-green); }
+.eval-dot.partial { background: var(--claude-orange); }
+.eval-dot.miss { background: var(--claude-mid-gray); }
+.eval-crit .ec-name { font-family: var(--font-head); font-weight: 600; }
+.eval-crit .ec-tip { color: var(--text-muted); font-size: .9rem; margin-top: .15rem; }
+.eval-pts { margin-left: auto; font-family: var(--font-head); font-size: .8rem; color: var(--text-muted); white-space: nowrap; }
+
+/* =========================================================================
+   IMPRESSÃO / PDF
+   Glossário e biblioteca de prompts saem limpos ao "Salvar como PDF"
+   ========================================================================= */
 @media print {
-  .topbar, .session-nav, .present-ctrl, .present-zone, .copy-btn { display: none !important; }
+  .topbar, .session-nav, .present-ctrl, .present-zone, .copy-btn,
+  .page-tools, .session-footer .next-link, .btn, .quick-links { display: none !important; }
+  body { background: #fff; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .home-section, .session-footer { padding-top: 1rem; padding-bottom: 1rem; }
+  .prompt-card, .gloss > div { break-inside: avoid; page-break-inside: avoid; }
+  .prompt-block { border: 1px solid #333; }
+  a { color: var(--text-body); text-decoration: none; }
+  .accent-bar { background: var(--claude-orange) !important; }
 }

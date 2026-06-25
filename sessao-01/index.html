@@ -26,7 +26,7 @@
 <!-- ============ TOPBAR ============ -->
 <header class="topbar non-slide">
   <div class="crumb"><a href="../index.html">Claude para a liderança</a> &nbsp;›&nbsp; Sessão 1</div>
-  <button class="btn btn-orange" data-action="present">▶ Apresentar</button>
+  <div class="flex gap-s items-center"><button class="btn-tool" onclick="copyLink(this)" title="Copiar o link desta sessão"><svg class="ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> <span class="tool-label">Copiar link</span></button><button class="btn btn-orange" data-action="present">▶ Apresentar</button></div>
 </header>
 
 <div class="session-layout">
@@ -43,6 +43,7 @@
     <a href="#bloco3">Bloco 3 · Discussão</a>
 
     <div class="nav-section">Consulta</div>
+    <a href="#quando-usar">Quando usar IA (ou não)</a>
     <a href="#caderno">Caderno de prompts</a>
     <a href="#glossario">Glossário</a>
     <a href="#tarefa">Tarefa da semana</a>
@@ -399,7 +400,7 @@
           <div class="flex justify-between items-center"><div class="num-big t-orange">02</div>
             <svg class="ico t-orange" viewBox="0 0 24 24"><circle cx="8" cy="8" r="5"/><path d="M13 13a5 5 0 1 1-5-5"/></svg></div>
           <h3>Custo</h3>
-          <p class="muted" style="margin:0">Cada token tem um custo. No claude.ai, isso aparece como limite de mensagens por plano. Via API (usado pela TI), cada milhão de tokens custa de centavos a dólares — viável para volume.</p>
+          <p class="muted" style="margin:0">Cada token tem um custo. No claude.ai, isso aparece como limite de mensagens por plano. Via interface de programação (API), usada pela área de tecnologia, cada milhão de tokens custa de centavos a dólares — viável para volume.</p>
         </div>
         <div class="card top-green">
           <div class="flex justify-between items-center"><div class="num-big t-green">03</div>
@@ -483,7 +484,7 @@
             <div class="cell"><div class="q-title t-orange">IA CONVERSACIONAL</div><div class="q-desc">claude.ai, ChatGPT, você no comando</div></div>
             <div class="cell"><div class="q-title t-green">IA VIA AGENTE / API</div><div class="q-desc">automatiza a IA dentro do sistema</div></div>
             <div class="cell"><div class="q-title t-gray">HUMANO + JULGAMENTO</div><div class="q-desc">decisão única, baixa repetição</div></div>
-            <div class="cell"><div class="q-title t-blue">AUTOMAÇÃO TRADICIONAL</div><div class="q-desc">RPA, scripts, integrações simples</div></div>
+            <div class="cell"><div class="q-title t-blue">AUTOMAÇÃO TRADICIONAL</div><div class="q-desc">automação robótica de processos (RPA), scripts, integrações</div></div>
           </div>
           <div class="muted center" style="font-family:var(--font-head);font-size:.75rem;margin-top:.4rem">Volume / repetição ▶</div>
         </div>
@@ -543,7 +544,7 @@
       <hr class="accent-bar">
       <p class="lead">Esperar tudo de uma ferramenta é o caminho mais rápido para frustração e desconfiança da equipe.</p>
       <div class="card side-orange mb-1"><div class="ft-title">Cálculo financeiro complexo</div><div class="ft-desc">Para modelagem séria, use Excel. Claude pode até ajudar a estruturar a planilha — mas a conta final é da ferramenta certa.</div></div>
-      <div class="card side-orange mb-1"><div class="ft-title">Decisão final em assunto crítico</div><div class="ft-desc">Diagnóstico médico, parecer jurídico vinculante, lance de M&amp;A. Ele apoia, não decide.</div></div>
+      <div class="card side-orange mb-1"><div class="ft-title">Decisão final em assunto crítico</div><div class="ft-desc">Diagnóstico médico, parecer jurídico vinculante, lance de fusões e aquisições (M&amp;A). Ele apoia, não decide.</div></div>
       <div class="card side-orange mb-1"><div class="ft-title">Dado de mercado em tempo real</div><div class="ft-desc">Câmbio de hoje, agenda do CEO, preço de passagem agora. Esses dados ele só tem se você anexar ou se a pesquisa web encontrar.</div></div>
       <div class="card side-orange"><div class="ft-title">Substituir o time</div><div class="ft-desc">IA amplia capacidade humana. Quem trata como redução de pessoas erra duas vezes: na adoção e no resultado.</div></div>
     </div>
@@ -841,6 +842,65 @@
   <!-- ============================================================
        SEÇÕES DE CONSULTA (não aparecem no modo apresentação)
        ============================================================ -->
+
+  <!-- ====== GUIA: QUANDO USAR IA, QUANDO NÃO ====== -->
+  <section class="non-slide" id="quando-usar" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem">
+    <div class="section-tag">Aprofundamento</div>
+    <h2>Quando vale usar IA — e quando nem vale pensar nela</h2>
+    <hr class="accent-bar">
+    <p class="lead">A pergunta que mais economiza tempo não é “como uso IA aqui?”, e sim “isto é problema de IA?”. Três famílias de tarefa, com casos reais da PRIMETOUR.</p>
+
+    <div class="grid grid-3">
+      <div class="card top-green">
+        <div style="font-family:var(--font-head);font-weight:700;color:var(--claude-green);font-size:1.1rem">USE IA</div>
+        <p class="muted" style="margin:.3rem 0 .8rem">Quando a tarefa é de <strong>linguagem e julgamento</strong>, varia a cada vez e se beneficia de contexto.</p>
+        <ul class="sq-list" style="margin:0">
+          <li>Ler um relatório setorial de 80 páginas e sintetizar</li>
+          <li>Reescrever um e-mail difícil para um parceiro</li>
+          <li>Estressar as premissas de uma decisão antes do conselho</li>
+          <li>Gerar 20 ângulos para uma campanha</li>
+        </ul>
+      </div>
+      <div class="card top-blue">
+        <div style="font-family:var(--font-head);font-weight:700;color:var(--claude-blue);font-size:1.1rem">NÃO É IA, É AUTOMAÇÃO</div>
+        <p class="muted" style="margin:.3rem 0 .8rem">Quando a tarefa é <strong>repetitiva e estruturada</strong>, sempre igual. Aqui IA é canhão para matar mosca.</p>
+        <ul class="sq-list" style="margin:0">
+          <li>Confirmar reserva e disparar o voucher padrão</li>
+          <li>Enviar boleto e lembrete de pagamento</li>
+          <li>Agendar o traslado quando a regra é fixa</li>
+          <li>Sincronizar planilha entre dois sistemas</li>
+        </ul>
+      </div>
+      <div class="card top-orange" style="border-top-color:var(--claude-mid-gray)">
+        <div style="font-family:var(--font-head);font-weight:700;color:var(--claude-dark);font-size:1.1rem">NEM PENSE EM IA</div>
+        <p class="muted" style="margin:.3rem 0 .8rem">Quando o que está em jogo é <strong>responsabilidade humana</strong> — decisão única, crítica ou de confiança.</p>
+        <ul class="sq-list" style="margin:0">
+          <li>A palavra final numa fusão ou aquisição (M&amp;A)</li>
+          <li>O diagnóstico que vincula juridicamente a empresa</li>
+          <li>Demitir, promover, mediar um conflito de equipe</li>
+          <li>A ligação pessoal ao cliente de 10 anos que reclamou</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid-2 mt-3" style="align-items:start">
+      <div>
+        <h3 class="mt-0">Três perguntas que resolvem a dúvida</h3>
+        <div class="task-row" style="padding-top:.4rem"><span class="num-circle">1</span><div><div class="ft-title">A tarefa muda a cada vez?</div><div class="ft-desc">Se é sempre idêntica, é automação. Se cada caso é diferente e pede julgamento, é terreno de IA.</div></div></div>
+        <div class="task-row"><span class="num-circle">2</span><div><div class="ft-title">O custo de errar é irreversível?</div><div class="ft-desc">Se um erro é caro e sem volta — capital, jurídico, vida —, a decisão é humana. A IA, no máximo, prepara o terreno.</div></div></div>
+        <div class="task-row"><span class="num-circle">3</span><div><div class="ft-title">É relação ou é conteúdo?</div><div class="ft-desc">Confiança, escuta, presença não terceirizam. Texto, análise e síntese, sim. A IA cuida do conteúdo; a relação é sua.</div></div></div>
+      </div>
+      <div class="card-dark side-orange">
+        <div class="section-tag">A armadilha mais comum</div>
+        <p style="margin:0 0 .8rem;color:var(--claude-light)">Forçar IA onde ela não cabe queima confiança no time mais rápido que qualquer erro. Quem tenta “resolver tudo com IA” logo descobre o oposto: a ferramenta perde credibilidade pelo uso errado, não pela falha.</p>
+        <p class="italic" style="margin:0;color:var(--claude-mid-gray)">Saber dizer “aqui não é IA” é tão parte da maturidade quanto saber usá-la bem.</p>
+      </div>
+    </div>
+
+    <div class="card card-soft side-blue mt-2">
+      <p style="margin:0"><strong>E quando você precisa mesmo de IA?</strong> Quando o volume de leitura, a frequência da redação ou a necessidade de gerar e comparar muitas opções passam do que um humano dá conta no tempo disponível. É aí que ela deixa de ser luxo e vira alavanca — devolvendo horas para o que só a pessoa faz.</p>
+    </div>
+  </section>
 
   <!-- ====== CADERNO COMPLETO DE PROMPTS ====== -->
   <section class="non-slide" id="caderno-completo" style="max-width:var(--maxw);margin:0 auto;padding:4rem 2.2rem">

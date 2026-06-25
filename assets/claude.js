@@ -145,6 +145,41 @@
   };
 
   /* ----------------------------------------------------------------------
+     COPIAR LINK desta página/sessão (botão com feedback)
+     ---------------------------------------------------------------------- */
+  window.copyLink = function (btn) {
+    var url = window.location.href.split('#')[0];
+    var label = btn.querySelector('.tool-label');
+    var original = label ? label.textContent : btn.textContent;
+    var done = function () {
+      btn.classList.add('copied');
+      if (label) label.textContent = 'Link copiado!'; else btn.textContent = 'Link copiado!';
+      setTimeout(function () {
+        btn.classList.remove('copied');
+        if (label) label.textContent = original; else btn.textContent = original;
+      }, 2000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done).catch(fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = url; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+  };
+
+  /* ----------------------------------------------------------------------
+     BAIXAR PDF — usa a impressão do navegador (Salvar como PDF)
+     ---------------------------------------------------------------------- */
+  window.downloadPDF = function () {
+    if (presenting) exitPresent();
+    window.print();
+  };
+
+  /* ----------------------------------------------------------------------
      SUMÁRIO LATERAL — destaque do item ativo conforme o scroll
      ---------------------------------------------------------------------- */
   function setupScrollSpy() {
