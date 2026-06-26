@@ -13,7 +13,7 @@ treinamento-claude/
 ├── index.html              # Home: manifesto + mapa das 7 sessões + atalhos
 ├── sessao-01/index.html    # Sessão 1 completa (34 slides + caderno + glossário)
 ├── sessao-02/ … 07/        # As 7 sessões completas (cada uma com slides, caderno e glossário)
-├── prompts/index.html      # Biblioteca consolidada — 70 prompts (10 por sessão)
+├── prompts/index.html      # Biblioteca consolidada — 73 prompts (10 por sessão + 3 complementos CFO/RH/TI)
 ├── glossario/index.html    # Glossário transversal
 ├── assets/
 │   ├── claude.css          # Sistema de design compartilhado

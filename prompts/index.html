@@ -33,6 +33,7 @@
     <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s5"><strong style="font-family:var(--font-head)">Sessão 5 · Microsoft</strong><span class="muted"> — 10 prompts para Outlook, OneDrive e Excel.</span></a>
     <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s6"><strong style="font-family:var(--font-head)">Sessão 6 · Governança</strong><span class="muted"> — 10 ferramentas de LGPD e política.</span></a>
     <a class="card card-soft side-orange" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#s7"><strong style="font-family:var(--font-head)">Sessão 7 · Adoção</strong><span class="muted"> — 10 ferramentas de plano e hábito.</span></a>
+    <a class="card card-soft side-green" style="padding:.8rem 1.1rem;flex:1 1 200px" href="#extra"><strong style="font-family:var(--font-head)">Complementos · CFO, RH e TI</strong><span class="muted"> — 3 prompts por cadeira.</span></a>
   </div>
   <h2 id="s1" style="scroll-margin-top:80px">Sessão 1 · Fundamentos</h2>
 
@@ -1364,6 +1365,71 @@ Me ajude:
 
 A adoção não termina. Mostre como o segundo ciclo sobe um degrau em relação ao primeiro.</pre></div>
     <p class="tip"><strong>Dica:</strong> O segundo ciclo costuma ser sobre escala e profundidade: menos “aprender a usar”, mais “fazer a casa usar”.</p>
+  </article>
+
+  <h2 id="extra" style="scroll-margin-top:80px;margin-top:3rem">Complementos · CFO, RH e TI</h2>
+  <hr class="accent-bar">
+  <p class="lead">Prompts dedicados às três cadeiras cujas necessidades pediam um modelo próprio. Use no Project da sua área.</p>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">CFO · Complemento</span>
+    <h3>71 — Estruturar um business case para o board</h3>
+    <p class="when"><strong>Quando usar:</strong> Você precisa levar uma decisão de investimento ao conselho com a análise financeira bem estruturada — sem a IA inventar números.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q71', this)">Copiar</button><pre id="q71">Atue como analista financeiro sênior. Quero estruturar o business case de uma decisão de investimento para o conselho — você organiza o raciocínio; os números entram de fonte minha.
+
+A DECISÃO: [o investimento ou projeto, em 2 a 3 frases]
+O QUE EU JÁ TENHO: [dados, premissas, restrições — anexe a planilha se houver]
+HORIZONTE: [prazo de análise e de retorno esperado]
+
+Devolva:
+1. As premissas que esta análise precisa ter — e onde eu mais posso errar nelas
+2. Três cenários (conservador, base, otimista) com as variáveis que mais pesam em cada
+3. As 2 ou 3 sensibilidades que mais mudam o resultado
+4. A pergunta financeira que o conselho fará primeiro
+5. Uma síntese de meia página para o board
+
+Não invente número que eu não forneci. A conta final é minha, no Excel — você expõe a lógica e as premissas.</pre></div>
+    <p class="tip"><strong>Dica:</strong> O valor está nos itens 1 e 3 — premissas e sensibilidades. O Claude não substitui a modelagem; garante que você não esqueceu nada antes de fechar a conta.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-preparacao">RH · Complemento</span>
+    <h3>72 — Roteiro de entrevista por competências</h3>
+    <p class="when"><strong>Quando usar:</strong> Você vai entrevistar para uma vaga e quer perguntas que revelem competência e fit cultural de verdade — não respostas decoradas.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q72', this)">Copiar</button><pre id="q72">Atue como especialista em recrutamento. Quero um roteiro de entrevista por competências para a vaga abaixo, que revele fit cultural de verdade — não respostas ensaiadas.
+
+A VAGA: [cargo, área, senioridade]
+O QUE A VAGA EXIGE: [competências técnicas e comportamentais que importam]
+NOSSA CULTURA: [3 a 4 traços do jeito PRIMETOUR de trabalhar]
+
+Devolva:
+1. 8 perguntas, cada uma ligada a uma competência ou traço cultural
+2. Para cada pergunta: o que uma boa resposta revela e qual o sinal de alerta
+3. Duas perguntas situacionais sobre dilemas reais do dia a dia da área
+4. Um critério simples para comparar candidatos ao final, sem viés
+
+Use perguntas abertas e situacionais; evite as que se respondem com sim ou não. Não inclua dado pessoal real de candidato — trabalhe só com a descrição da vaga.</pre></div>
+    <p class="tip"><strong>Dica:</strong> Para avaliar candidatos reais, use codinome (Sessão 6). O roteiro fica no Project “Gente &amp; políticas” e serve para toda vaga parecida.</p>
+  </article>
+
+  <article class="prompt-card">
+    <span class="cat cat-analise">TI · Complemento</span>
+    <h3>73 — Traduzir uma decisão técnica para o board</h3>
+    <p class="when"><strong>Quando usar:</strong> O board (não-técnico) precisa decidir sobre uma escolha de tecnologia, e a decisão depende de explicar os trade-offs sem jargão.</p>
+    <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt('q73', this)">Copiar</button><pre id="q73">Atue como diretor de tecnologia explicando uma decisão a um board não-técnico. Quero traduzir uma escolha de tecnologia em termos que a liderança consiga decidir.
+
+A DECISÃO TÉCNICA: [a escolha — ex.: trocar o sistema de reservas, adotar tal ferramenta]
+AS OPÇÕES: [as alternativas reais sobre a mesa]
+O QUE PESA: [custo, risco, prazo, segurança, dependência de fornecedor]
+
+Devolva:
+1. A decisão explicada em 3 frases, sem jargão, ligada ao impacto no negócio
+2. Uma comparação das opções por custo, risco e prazo — em tabela
+3. O risco técnico mais sério de cada opção, traduzido para consequência de negócio
+4. A recomendação técnica e a pergunta que o board precisa responder para decidir
+
+Substitua todo termo técnico pelo seu efeito prático. Se algum for inevitável manter, explique em uma linha.</pre></div>
+    <p class="tip"><strong>Dica:</strong> É a ponte entre a TI e a mesa de decisão. O board decide melhor quando enxerga o risco técnico como consequência de negócio, não como sigla.</p>
   </article>
 
 </section>
